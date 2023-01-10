@@ -17,7 +17,7 @@ export const Hero = () => {
         {/* <Image src={profilePictureSq} ref={profilePictureRef} alt="Profile Picture of Sean" className="pixelated h-32 w-32 rounded-full border border-black object-cover object-center shadow-xl" /> */}
         <h1 className="mb-8 text-4xl font-bold text-gray-800 sm:mb-4">Hi! I&apos;m Sean Swanson. 👋</h1>
         <p className="mb-8 text-xl text-gray-700 sm:mb-4">I&apos;m a web developer, artist, and bboy based in Seattle, WA. My work is focused on creating beautiful and intuitive experiences for users.</p>
-        <p className="mb-8 text-xl text-gray-700 sm:mb-4">My diverse range of passions allow me to challenges in the software development life cycle, from design to DevOps, with a well-rounded and empathetic perspective.</p>
+        <p className="mb-8 text-xl text-gray-700 sm:mb-4">My diverse range of passions allow me to tackle most challenges in the software development life cycle, from design to DevOps, with a well-rounded and empathetic perspective.</p>
         <p className="mb-8 text-xl text-gray-700 sm:mb-4">Currently, I&apos;m working as a Front-End Engineer at DreamBox Learning creating reports, data visualizations for educators.</p>
         <div className="flex gap-2 ">
           <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#97;&#110;&#99;&#115;&#119;&#97;&#110;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" className="social-link email">
@@ -37,7 +37,7 @@ export const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="mb-8 rounded-lg border border-black bg-purple-300 shadow-xl sm:mb-0">
+      <div className="mb-8 h-full rounded-lg border border-black bg-purple-300 shadow-xl sm:mb-0">
         <Image src={profilePicture} ref={profilePictureRef} alt="Profile Picture of Sean" className="h-full w-full rounded-lg object-cover object-center" />
       </div>
     </div>
