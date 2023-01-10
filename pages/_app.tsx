@@ -1,6 +1,12 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { Space_Grotesk } from "@next/font/google";
+import type { AppProps } from "next/app";
+import "../styles/globals.css";
+const SpaceGrotesk = Space_Grotesk({ weight: ["400", "700"], subsets: ["latin"], variable: "--skin-font" });
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <div className={`${SpaceGrotesk.variable}`}>
+      <Component {...pageProps} />
+    </div>
+  );
 }
