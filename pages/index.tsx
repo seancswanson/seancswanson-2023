@@ -1,5 +1,6 @@
 import Head from "next/head";
-import sacrificePreview from "../assets/me-2.webp";
+import sacrificePreview from "../assets/art/sacrifice.webm";
+import whenItFallsPreview from "../assets/art/when-it-falls.webm";
 import { ArtProject } from "../components/ArtProject";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
@@ -17,12 +18,12 @@ export default function Home() {
       </Head>
       <Header />
       <main className="m-auto flex min-h-screen w-full  max-w-[1268px] flex-col justify-between px-6">
-        <div className=" mx-auto  px-4 py-8">
+        <div className="mx-auto py-8 sm:px-4">
           <Hero />
           <div className="mx-auto flex flex-col items-start px-4 py-8">
-            <h2 className="mb-8 rounded border-4 border-double border-slate-800 bg-white p-2 text-3xl font-extrabold text-slate-800 shadow">Featured Projects</h2>
-            <div className="flex justify-around gap-2">
-              <div className="flex w-1/2 flex-col ">
+            <h2 className="mb-8 rounded border-4 border-double border-slate-800 bg-white p-2 text-2xl font-extrabold text-slate-800 shadow sm:text-3xl">Featured Projects</h2>
+            <div className="flex flex-col justify-between md:flex-row">
+              <div className="flex w-full flex-col md:w-1/2 ">
                 <h3 className="mb-6 self-start rounded bg-slate-800 px-2 text-2xl font-bold text-white shadow-lg">WebDev</h3>
                 <WebDevProject
                   project={{
@@ -41,9 +42,12 @@ export default function Home() {
                   }}
                 />
               </div>
-              <div className="flex flex-col ">
+              <div className="flex flex-col items-start">
                 <h3 className="mb-6 self-start rounded bg-slate-800 px-2 text-2xl font-bold text-white shadow-lg">Art</h3>
-                <ArtProject project={{ title: "Sacrifice", description: "", infoUrl: "/art/sacrifice", img: sacrificePreview }} />
+                <div className="flex flex-col items-center gap-2 sm:flex-row sm:items-start">
+                  <ArtProject project={{ title: "Sacrifice", description: "", infoUrl: "/art/sacrifice", media: sacrificePreview }} />
+                  <ArtProject project={{ title: "When It Falls", description: "", infoUrl: "/art/sacrifice", media: whenItFallsPreview }} />
+                </div>
               </div>
             </div>
             <div className="my-8 flex flex-col items-start gap-2">
