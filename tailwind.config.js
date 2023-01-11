@@ -15,6 +15,5 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss-image-rendering')(), // no options to configure
-
   ],
 }
