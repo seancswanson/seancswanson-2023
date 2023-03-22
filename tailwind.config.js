@@ -11,6 +11,9 @@ module.exports = {
       fontFamily: {
         'skin': ['var(--skin-font)', ...defaultTheme.fontFamily.sans]
       },
+      colors: {
+        'off-white': '#F5F5F5'
+      }
     },
   },
   plugins: [

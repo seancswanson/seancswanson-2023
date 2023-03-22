@@ -6,15 +6,14 @@ import githubIcon from "../assets/icons/github.svg";
 import linkedinIcon from "../assets/icons/linkedin.svg";
 import mediumIcon from "../assets/icons/medium.svg";
 import twitterIcon from "../assets/icons/twitter.svg";
-import profilePicture from "../assets/me-2.webp";
+import profilePicture from "../assets/me.webp";
 
 export const Hero = () => {
   const profilePictureRef = useRef<HTMLImageElement>(null);
   console.log(profilePictureRef);
   return (
-    <div className="mb-8 flex flex-col-reverse justify-evenly gap-4 md:flex-row md:gap-12">
-      <div className="flex w-full flex-col items-center justify-evenly rounded-lg border-4 border-double border-slate-500 bg-white p-6 text-center shadow-lg md:w-3/5 md:items-start md:text-left">
-        {/* <Image src={profilePictureSq} ref={profilePictureRef} alt="Profile Picture of Sean" className="pixelated h-32 w-32 rounded-full border border-double border-4 border-slate-500 object-cover object-center shadow-xl" /> */}
+    <div className="mb-4 pb-8 border-b  flex flex-col-reverse justify-evenly gap-4 md:flex-row md:gap-12">
+      <div className="flex w-full flex-col items-center justify-evenly rounded-lg border  border-slate-200 bg-off-white p-6 text-center shadow md:w-3/5 md:items-start md:text-left">
         <h1 className="mb-8 text-4xl font-bold text-gray-800 md:mb-4">Hi! I&apos;m Sean Swanson. 👋</h1>
         <p className="mb-8 text-xl text-gray-700 md:mb-4">I&apos;m a web developer, artist, and bboy based in Seattle, WA. My work is focused on creating novel, beautiful, and intuitive experiences for users.</p>
         <p className="mb-8 text-xl text-gray-700 md:mb-4">My diverse range of passions allow me to tackle most challenges in the software development life cycle, from design to DevOps, with a well-rounded and empathetic perspective.</p>
@@ -37,7 +36,7 @@ export const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="grow-1 m-auto my-4 h-64 w-64 rounded-full border-4 border-double  border-slate-500 bg-purple-300 shadow-xl md:m-0 md:mb-0 md:h-full md:rounded-lg ">
+      <div className="grow-1 m-auto my-4 h-64 w-64 rounded-full border border-slate-200 bg-purple-200 shadow md:m-0 md:mb-0 md:h-full md:rounded-lg ">
         <Image priority src={profilePicture} ref={profilePictureRef} alt="Profile Picture of Sean" className="h-full w-full rounded-full object-cover object-[0px,-15px] md:rounded-lg md:object-center" />
       </div>
     </div>

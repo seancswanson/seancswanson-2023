@@ -7,6 +7,7 @@ import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
 import { RecentBlogPost } from "../components/RecentBlogPost";
 import { WebDevProject } from "../components/WebDevProject";
+import fuji from "../assets/project_images/fuji-sm.png";
 export default function Home() {
   return (
     <>
@@ -21,29 +22,33 @@ export default function Home() {
         <div className="mx-auto py-8 sm:px-4">
           <Hero />
           <div className="mx-auto flex flex-col items-start px-4 py-8">
-            <h2 className="mb-8 rounded border-4 border-double border-slate-800 bg-white p-2 text-2xl font-extrabold text-slate-800 shadow sm:text-3xl">Featured Projects</h2>
-            <div className="flex flex-col justify-between md:flex-row">
-              <div className="flex w-full flex-col md:w-1/2 ">
-                <h3 className="mb-6 self-start rounded bg-slate-800 px-2 text-2xl font-bold text-white shadow-lg">WebDev</h3>
-                <WebDevProject
-                  project={{
-                    title: "Cypher Queenz",
-                    description: "Statically generated website built for local Bgirl organization. I used Astro with Tailwind CSS and integrated Sanity CMS for blog posts, media, and events. Optimized for performance and SEO from the beginning.",
-                    liveUrl: "https://www.cypherqueenz.com",
-                    infoUrl: "https://www.cypherqueenz.com",
-                  }}
-                />
-                <WebDevProject
-                  project={{
-                    title: "The Majesty of the 36 Views of Mt. Fuji",
-                    description: "An interactive tribute to Katsushika Hokusai utilizing modern web design techniques, Angular, and OpenSeadragon for ultra-smooth high-resolution gallery viewing.",
-                    liveUrl: "https://osd-woodblocks-angular.pages.dev/home",
-                    infoUrl: "https://osd-woodblocks-angular.pages.dev/home",
-                  }}
-                />
+            <h2 className="mb-8 rounded  p-2 text-2xl font-extrabold text-slate-800 shadow sm:text-3xl">Featured Projects</h2>
+            <div className="flex flex-col gap-2 justify-between md:flex-row">
+              <div className="flex w-full gap-6 flex-col md:w-1/2 ">
+                <h3 className="self-start rounded bg-slate-800 px-2 text-2xl font-bold text-white shadow-lg">WebDev</h3>
+                <div className="flex flex-col items-center gap-2 sm:flex-row sm:items-start">
+                  <WebDevProject
+                    project={{
+                      title: "Cypher Queenz",
+                      description: "Statically generated website built for local Bgirl organization. I used Astro with Tailwind CSS and integrated Sanity CMS for blog posts, media, and events. Optimized for performance and SEO from the beginning.",
+                      liveUrl: "https://www.cypherqueenz.com",
+                      infoUrl: "https://www.cypherqueenz.com",
+                      media: fuji
+                    }}
+                  />
+                  <WebDevProject
+                    project={{
+                      title: "The Majesty of the 36 Views of Mt. Fuji",
+                      description: "An interactive tribute to Katsushika Hokusai utilizing modern web design techniques, Angular, and OpenSeadragon for ultra-smooth high-resolution gallery viewing.",
+                      liveUrl: "https://osd-woodblocks-angular.pages.dev/home",
+                      infoUrl: "https://osd-woodblocks-angular.pages.dev/home",
+                      media: fuji
+                    }}
+                  />
+                </div>
               </div>
-              <div className="flex flex-col items-start">
-                <h3 className="mb-6 self-start rounded bg-slate-800 px-2 text-2xl font-bold text-white shadow-lg">Art</h3>
+              <div className="flex flex-col gap-6  items-start">
+                <h3 className="self-start rounded bg-slate-800 px-2 text-2xl font-bold text-white shadow-lg">Art</h3>
                 <div className="flex flex-col items-center gap-2 sm:flex-row sm:items-start">
                   <ArtProject project={{ title: "Sacrifice", description: "", infoUrl: "/art/sacrifice", media: sacrificePreview }} />
                   <ArtProject project={{ title: "When It Falls", description: "", infoUrl: "/art/sacrifice", media: whenItFallsPreview }} />
@@ -51,7 +56,7 @@ export default function Home() {
               </div>
             </div>
             <div className="my-8 flex flex-col items-start gap-2">
-              <h2 className="mb-4 rounded border-4 border-double border-slate-800 bg-white p-2 text-3xl font-extrabold text-slate-800 shadow">Recent Blog Posts</h2>
+              <h2 className="mb-4 rounded border-4 border-double border-slate-800 bg-off-white p-2 text-3xl font-extrabold text-slate-800 shadow">Recent Blog Posts</h2>
               <RecentBlogPost
                 post={{
                   title: "5 reasons I became a web dev",
