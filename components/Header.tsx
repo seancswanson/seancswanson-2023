@@ -5,10 +5,8 @@ import swansongLogo from "../assets/swansong-logo-128.webp";
 
 export const Header = () => {
   return (
-    <div className="border-b">
-
-      <div className="header m-auto flex w-full max-w-[1280px] flex-wrap justify-center px-6  pt-7 tracking-tight md:mb-8 md:justify-between ">
-
+    <div className="pb-8">
+      <div className="header m-auto flex w-full max-w-[1280px] flex-wrap justify-center px-6  pt-7 tracking-tight md:justify-between ">
         <Link
           href="/"
           className="mb-12 flex h-full flex-col gap-4 sm:flex-row md:mb-0"
@@ -65,7 +63,7 @@ export const Header = () => {
           </li>
           <li className="w-12">
             <Link href="/blog" className="group flex flex-col">
-              <span className="self-center border-2 border-slate-600 px-2 font-extrabold">
+              <span className="self-center border-2 border-slate-600 hover:bg-slate-800 hover:border-slate-6800 hover:text-white transition-all px-2 font-extrabold">
                 CV
               </span>
             </Link>

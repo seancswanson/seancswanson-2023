@@ -12,7 +12,7 @@ interface Post {
 
 export const RecentBlogPost = ({ post }: Props) => {
   return (
-    <div className="rounded border border-slate-200 bg-off-white p-4 shadow">
+    <div className="rounded gap-2 border border-slate-200 bg-off-white p-4 shadow flex flex-col">
       <h3 className="text-xl font-bold text-slate-800">{post.title}</h3>
       <span className="text-sm italic tracking-tighter opacity-80">
         {post.featuredOn} | {post.minToRead} min read

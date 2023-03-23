@@ -12,7 +12,7 @@ export const Hero = () => {
   const profilePictureRef = useRef<HTMLImageElement>(null);
   console.log(profilePictureRef);
   return (
-    <div className="mb-4 pb-8 border-b  flex flex-col-reverse justify-evenly gap-4 md:flex-row md:gap-12">
+    <div className="mb-4 py-8 border-b  flex flex-col-reverse justify-evenly gap-4 md:flex-row md:gap-12">
       <div className="flex w-full flex-col items-center justify-evenly rounded-lg border  border-slate-200 bg-off-white p-6 text-center shadow md:w-3/5 md:items-start md:text-left">
         <h1 className="mb-8 text-4xl font-bold text-gray-800 md:mb-4">Hi! I&apos;m Sean Swanson. 👋</h1>
         <p className="mb-8 text-xl text-gray-700 md:mb-4">I&apos;m a web developer, artist, and bboy based in Seattle, WA. My work is focused on creating novel, beautiful, and intuitive experiences for users.</p>

@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body>
+      <body className="bg-[url('https://www.transparenttextures.com/patterns/brilliant.png')]">
         <Main />
         <NextScript />
       </body>
