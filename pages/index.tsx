@@ -57,7 +57,7 @@ export default function Home() {
                 title: "5 reasons I became a web dev",
                 featuredOn: "Educative.io, Medium",
                 minToRead: "15",
-                description: "There are many reasons to become a web developer. Here are a few of mine! Spoiler Alert: Salary isn't everything.",
+                description: "There are many reasons to become a web developer. Here are a few of mine! Spoiler Alert: Salary isn\'t everything.",
                 url: "/blog/5-reasons-I-became-a-web-dev",
               }} />
               <RecentBlogPost post={{
