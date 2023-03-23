@@ -71,7 +71,7 @@ export default function Home() {
           </div>
           <div className="my-8">
             <h2 className="mb-4 text-2xl font-bold">Contact Me</h2>
-            <p className="mb-4">If you're interested in working with me or have any questions, please don't hesitate to get in touch. I'm always open to new opportunities and collaborations.</p>
+            <p className="mb-4">If you&apos;re interested in working with me or have any questions, please don&apos;t hesitate to get in touch. I&apos;m always open to new opportunities and collaborations.</p>
             <a href="#" className="btn btn-secondary rounded-full py-2 px-4 font-bold text-white">Get in Touch</a>
           </div>
         </div>
