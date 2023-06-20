@@ -14,8 +14,8 @@ export const Hero = () => {
   const profilePictureRef = useRef<HTMLImageElement>(null);
   console.log(profilePictureRef);
   return (
-    <div className="flex flex-col-reverse md:flex-row md:gap-2">
-      <div className="flex w-full grow flex-col items-center justify-evenly rounded-lg   border-slate-200  p-6 text-center shadow md:w-3/5 md:items-start md:text-left">
+    <div className="flex flex-col-reverse justify-between md:flex-row md:gap-2">
+      <div className="flex flex-col items-center justify-evenly rounded-lg   border-slate-200  p-6 text-center shadow md:w-1/2 md:items-start md:text-left">
         <h1 className="mb-8 text-2xl font-bold text-gray-800 md:mb-4">
           Hi! I&apos;m Sean Swanson. 👋
         </h1>
@@ -53,7 +53,7 @@ export const Hero = () => {
           <SocialIcons />
         </div>
       </div>
-      <div className="m-auto my-4 h-64 w-64 rounded-full  border-slate-200 bg-purple-200 shadow md:m-0 md:mb-0 md:h-[initial] md:w-1/3 md:rounded-lg ">
+      <div className="m-auto my-4 h-64 w-64 rounded-full  border border-slate-200 bg-purple-200 shadow-inner md:m-0 md:h-[initial] md:w-1/2 md:rounded-lg md:border-0 md:shadow ">
         <Image
           priority
           src={profilePicture}

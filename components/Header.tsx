@@ -5,8 +5,8 @@ import swansongLogo from "../assets/swansong-logo-128.webp";
 
 export const Header = () => {
   return (
-    <div className="pb-12 md:pt-20">
-      <div className="header m-auto flex w-full max-w-[960px] flex-wrap justify-center px-6  pt-7 tracking-tight md:justify-between ">
+    <div className="m-auto max-w-[1000px] px-6 pb-12 pt-10 md:pt-20">
+      <div className="header flex w-full flex-wrap justify-center tracking-tighter md:justify-between ">
         <Link href="/" className="mb-8 flex h-full  gap-4  md:mb-0">
           <div className="logo-container m-auto w-16 rounded-full shadow-sm">
             <Image

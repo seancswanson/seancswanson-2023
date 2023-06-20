@@ -21,7 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="m-auto w-full max-w-[960px] px-6">
+      <main className="m-auto w-full max-w-[1010px] px-6">
         <Hero />
         <div className="py-8">
           <h2 className="mb-8 text-2xl font-extrabold">Featured Projects</h2>
