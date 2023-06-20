@@ -1,0 +1,60 @@
+Sean Swanson
+Front-End Web Developer
+Seattle, WA 98133 • seancswan@gmail.com • seancswanson.com • +1 (425) 458-8778
+
+SUMMARY
+
+A passionate and skilled front-end developer with experience building with technologies such as HTML, CSS w/ SCSS, JavaScript w/ TypeScript, Angular, CMS, 3rd Party APIs. Strong problem-solving abilities and a proven ability to work effectively in an agile team environment. A lifelong learner with a proven ability to teach and lead others. My diverse range of interests allow me to tackle most challenges in the software development life cycle, from design to DevOps, with a well-rounded and empathetic perspective.
+
+PROFESSIONAL EXPERIENCE
+
+DREAMBOX LEARNING Bellevue, WA
+Website/Digital Marketing Manager 2023-Present
+• Collaborated with marketing teams to create and distribute content, improving brand visibility and customer engagement
+• Designed and implemented landing pages optimized for conversions, utilizing UI/UX best practices and SEO guidelines
+• Developed features and bug fixes as part of an Agile team, using technologies such as JavaScript, HTML, and CSS
+• Acted as Scrum Master, facilitating Scrum ceremonies and supporting a team of developers, while adhering to project requirements and user stories
+• Managed relationships with external vendors, such as SEO agencies and development teams, to optimize website performance and maintain a strong digital presence
+• Wrote and maintained unit tests to ensure code quality and stability, while managing and reviewing pull requests for production deployments
+• Implemented cookie consent management to ensure website compliance with data protection regulations
+• Utilized various DevOps practices, including monitoring website health through dashboards to triage issues and identify root causes
+• Collaborated with cross-functional team members to deliver successful projects on time and within scope
+
+DREAMBOX LEARNING Bellevue, WA
+Software Development Engineer – Front-End (I) 2021-2023
+Client Support Specialist 2019-2021
+• Internally promoted to Engineer from Client Support
+• Contributed code on the Math Insights Dashboard, developing reports, data visualizations, and classroom management tools for educators
+• Utilized technologies such as Angular, JavaScript w/ TypeScript, SCSS, and Storybook
+• Refactored the client application build process to improve compilation time from ~100 seconds to <5 seconds shortening the feedback loop for developers to see their code changes live
+• Participated in a cross-functional, self-organizing Scrum team that used test-driven development and a CI/CD pipeline to deliver value quickly and reduce risks
+• Supported the development process from test planning to deployment and monitoring using tools such as Amazon Web Services S3, New Relic, Nomad, Drone, Kibana, Docker, Postman, Jira, and Jenkins
+• As a certified Scrum Master, successfully supported a team of 8 developers as both a technical contributor and agile coach, ensuring that our project was delivered efficiently and effectively.
+
+TRADITIONS OF THE ANCESTORS Seattle, WA
+Junior Web Developer 2018-2019
+• Collaborated on a team of ~20 to build a platform for exploring and connecting with the world's cultures
+• Contributed to the implementation of a data visualization, work on the user-facing and site admin UI, and event tracking with Google Analytics
+• Used technologies such as JavaScript, Node.js, Express.js, jQuery, Underscore, MySQL, and Google Analytics
+
+IAN GILMAN Seattle, WA
+Apprentice Web Developer 2018-2019
+• Collaborated with senior web engineers and clients (e.g. Schema Design Agency) to bring projects from conception to deployment
+• Engaged in pair programming, with a focus on front-end frameworks and languages as well as some exposure to back-end development
+• Utilized a wide range of technologies including JavaScript, ES6, React.js, Node.js, Express.js, Three.js, Pixi.js, Hammer.js, WebGL, Aframe.js, WebVR, Lodash, Underscore, templating, WordPress, HTML, and CSS
+• Leveraged various telecom, version control, and project management tools including Git, SVN, GitHub, BitBucket, Asana, Jira, and Slack to efficiently deliver high-quality software solutions
+
+EDUCATION
+
+GENERAL ASSEMBLY Seattle, WA
+Web Development Immersive Graduate 2018-2019
+UNIVERSITY OF WASHINGTON Seattle, WA
+Bachelor of Arts in Philosophy 2014-2015
+
+ADDITIONAL INFORMATION
+
+● Software:
+o Design and Prototyping tools, including Figma, Sketch, and InVision
+o Multimedia: DaVinci Resolve, Blender 3D, Photoshop
+● Certifications: Certified Scrum Master (2021), Certified SAFe Scrum Master (2022)
+● Awards: DreamBox Learning Step Up (2019)
