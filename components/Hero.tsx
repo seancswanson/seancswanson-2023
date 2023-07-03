@@ -19,7 +19,7 @@ export const Hero = () => {
         <h1 className="mb-8 text-2xl font-bold text-gray-800 md:mb-4">
           Hi! I&apos;m Sean Swanson. 👋
         </h1>
-        <p className="relativew mb-8 text-lg text-gray-700 md:mb-4">
+        <p className="relativew mb-8 text-sm text-gray-700 md:mb-4">
           I&apos;m a
           <span className="relative inline-block px-2">
             <span className="absolute inset-0 rotate-[-1deg] rounded-highlight bg-highlight-bg p-highlight opacity-90"></span>
@@ -30,12 +30,12 @@ export const Hero = () => {
           based in Seattle, WA. I love creating novel, beautiful, and intuitive
           experiences for users.
         </p>
-        <p className="mb-8 text-lg text-gray-700 md:mb-4">
+        <p className="mb-8 text-sm text-gray-700 md:mb-4">
           My diverse range of passions allow me to tackle most challenges in the
           software development life cycle, from design to DevOps, with a
           well-rounded and empathetic perspective.
         </p>
-        <p className="relative mb-8 text-lg text-gray-700 md:mb-4">
+        <p className="relative mb-8 text-sm text-gray-700 md:mb-4">
           Currently, I&apos;m the
           <span className="relative inline-block px-2">
             <span className="absolute inset-0 rotate-1 rounded-highlight bg-highlight-bg p-highlight opacity-90"></span>
