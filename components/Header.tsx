@@ -2,123 +2,106 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./header.module.scss";
 import swansongLogo from "../assets/swansong-logo-128.webp";
+import upRightArrow from "../assets/icons/up-right-arrow.png";
+import { useState } from "react";
+
+const LogoAndName = () => (
+  <Link href="/" className="mb-4 flex h-full  gap-4  md:mb-0">
+    <div className="logo-container m-auto w-16 rounded-full shadow-sm">
+      <Image
+        className="logo w-full rounded-full"
+        src={swansongLogo}
+        alt="Swansong Logo"
+      />
+    </div>
+    <div className="name-container flex flex-col">
+      <span className="name block text-3xl font-extrabold">Sean Swanson</span>
+      <span className="name flex items-center justify-center gap-2 italic sm:justify-start">
+        Web Dev <span className="text-xs">❖</span> Helpful Human
+      </span>
+    </div>
+  </Link>
+);
+interface LinkProps {
+  href: string;
+  number: string;
+  title: string;
+}
+
+const LinkItem = ({ href, number, title }: LinkProps) => (
+  <li className=" w-full border-t border-slate-600 md:w-3/12">
+    <Link href={href} className="group flex flex-col">
+      <div className="flex justify-between">
+        <span>
+          {number}
+          <span className="px-2 font-extrabold">{title}</span>
+        </span>
+        <Image src={upRightArrow} width="20" height="20" alt="up-right-arrow" />{" "}
+      </div>
+    </Link>
+  </li>
+);
 
 export const Header = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const handleMenuClick = () => {
+    console.log("clicked");
+    setMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <div className="m-auto max-w-[1000px] px-6 pb-12 pt-10 md:pt-20">
-      <div className="header flex w-full flex-wrap justify-center tracking-tighter md:justify-between ">
-        <Link href="/" className="mb-8 flex h-full  gap-4  md:mb-0">
-          <div className="logo-container m-auto w-16 rounded-full shadow-sm">
-            <Image
-              className="logo w-full rounded-full"
-              src={swansongLogo}
-              alt="Swansong Logo"
-            />
+    <div className="m-auto max-w-[1000px] px-6 pt-4 md:pb-12">
+      <div className="header flex w-full flex-wrap items-start justify-between tracking-tighter">
+        <LogoAndName />
+        <button
+          className="block p-2 text-lg md:hidden"
+          onClick={handleMenuClick}
+        >
+          &times;
+        </button>
+        <div
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } absolute top-0 left-0 z-50 h-screen w-full bg-white  py-4 px-6`}
+        >
+          <div className="flex w-full items-start justify-between">
+            <LogoAndName />
+            <button className="p-2 text-lg" onClick={handleMenuClick}>
+              &times;
+            </button>
           </div>
-          <div className="name-container flex flex-col">
-            <span className="name block text-3xl font-extrabold">
-              Sean Swanson
-            </span>
-            <span className="name flex items-center justify-center gap-2 italic sm:justify-start">
-              Web Dev <span className="text-xs">❖</span> Helpful Human
-            </span>
-          </div>
-        </Link>
-        <ul className="hidden justify-end gap-8 pt-2 md:flex md:basis-1/2 md:flex-row">
-          <li className=" w-full border-t border-slate-600 md:w-3/12">
-            <Link href="/dev" className="group flex flex-col">
-              <div className="flex justify-between">
-                <span>
-                  001
-                  <span className="px-2 font-extrabold">Dev</span>
+          <ul className="flex flex-col justify-end gap-8 pt-2">
+            <LinkItem href="/dev" number="001" title="Dev" />
+            <LinkItem href="/about" number="002" title="Art" />
+            <LinkItem href="/blog" number="003" title="Blog" />
+            <li className="w-12">
+              <Link
+                href="/Sean_Swanson_Resume_(Plain_Text)_-_April_2023.txt"
+                className="group flex flex-col"
+              >
+                <span className="hocus:border-slate-6800 self-center border-2 border-slate-600 px-2 font-extrabold transition-all hocus:bg-slate-800 hocus:text-white">
+                  CV
                 </span>
-                <span className="font-extrabold">↗</span>
-              </div>
-            </Link>
-          </li>
-          <li className=" w-full border-t border-slate-600 md:w-3/12">
-            <Link href="/about" className="group flex flex-col">
-              <div className="flex justify-between">
-                <span>
-                  002
-                  <span className="px-2 font-extrabold">Art</span>
-                </span>
-                <span className="font-extrabold">↗</span>
-              </div>
-            </Link>
-          </li>
-          <li className="w-full border-t border-slate-600 md:w-3/12">
-            <Link href="/blog" className="group flex flex-col">
-              <div className="flex justify-between">
-                <span>
-                  003
-                  <span className="px-2 font-extrabold">Blog</span>
-                </span>
-                <span className="font-extrabold">↗</span>
-              </div>
-            </Link>
-          </li>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <ul className="hidden justify-end gap-8 pt-2 md:flex">
+          <LinkItem href="/dev" number="001" title="Dev" />
+          <LinkItem href="/about" number="002" title="Art" />
+          <LinkItem href="/blog" number="003" title="Blog" />
           <li className="w-12">
             <Link
               href="/Sean_Swanson_Resume_(Plain_Text)_-_April_2023.txt"
               className="group flex flex-col"
             >
-              <span className="hover:border-slate-6800 self-center border-2 border-slate-600 px-2 font-extrabold transition-all hover:bg-slate-800 hover:text-white">
+              <span className="hocus:border-slate-6800 self-center border-2 border-slate-600 px-2 font-extrabold transition-all hocus:bg-slate-800 hocus:text-white">
                 CV
               </span>
             </Link>
           </li>
         </ul>
-        <ul className="flex-0 flex w-full basis-full justify-center gap-8 md:hidden">
-          <li className="h-20 w-20 rounded-sm border border-slate-600 shadow-md">
-            <Link
-              href="/dev"
-              className="group flex h-full flex-col justify-between p-1"
-            >
-              <div className="top flex justify-between">
-                <span>001</span>
-                <span className="font-extrabold">↗</span>
-              </div>
-
-              <div className="text-3xl font-extrabold">Dev</div>
-            </Link>
-          </li>
-          <li className="h-20 w-20 rounded-sm border border-slate-600 shadow-md">
-            <Link
-              href="/"
-              className="group flex h-full flex-col justify-between p-1"
-            >
-              <div className="top flex justify-between">
-                <span>002</span>
-                <span className="font-extrabold">↗</span>
-              </div>
-
-              <div className="text-3xl font-extrabold">Art</div>
-            </Link>
-          </li>
-          <li className="h-20 w-20 rounded-sm border border-slate-600 shadow-md">
-            <Link
-              href="/"
-              className="group flex h-full flex-col justify-between p-1"
-            >
-              <div className="top flex justify-between">
-                <span>003</span>
-                <span className="font-extrabold">↗</span>
-              </div>
-
-              <div className="text-3xl font-extrabold">Blog</div>
-            </Link>
-          </li>
-          <li className="h-20 w-20 rounded-sm border-2 border-slate-600 px-2 shadow-md">
-            <Link
-              href="/Sean_Swanson_Resume_(Plain_Text)_-_April_2023.txt"
-              className="group flex h-full justify-center p-1"
-            >
-              <span className="self-center  text-2xl font-extrabold">CV</span>
-            </Link>
-          </li>
-        </ul>
-      </div>
+      </div>{" "}
     </div>
   );
 };

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   content: [
@@ -26,6 +27,10 @@ module.exports = {
     },
   },
   plugins: [
+    plugin(function({ addVariant }) {
+    addVariant("not-last", "&:not(:last-child)");
+    addVariant('hocus', ['&:hover', '&:focus']);
+    }),
     require("tailwindcss-image-rendering")(), // no options to configure
   ],
 };

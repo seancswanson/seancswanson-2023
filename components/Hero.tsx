@@ -1,59 +1,76 @@
 import Image from "next/image";
-
 import { useRef } from "react";
-import emailIcon from "../assets/icons/email.svg";
-import githubIcon from "../assets/icons/github.svg";
-import linkedinIcon from "../assets/icons/linkedin.svg";
-import mediumIcon from "../assets/icons/medium.svg";
-import twitterIcon from "../assets/icons/twitter.svg";
-// import profilePicture from "../assets/me-v4.png";
-import profilePicture from "../assets/me-v8.webp";
 import { SocialIcons } from "./SocialIcons";
+import profilePicture from "../assets/me-v8.webp";
+
+const HighlightedText = ({
+  children,
+  rotation,
+}: {
+  children: string;
+  rotation: number;
+}) => {
+  return (
+    <span className="relative inline-block px-2">
+      <span
+        className={`absolute inset-0 rounded-highlight bg-highlight-bg p-highlight opacity-90 rotate-[${rotation}deg]`}
+      />
+      <span className="relative z-10">{children}</span>
+    </span>
+  );
+};
+const getRandomDegree = () => Math.floor(Math.random() * 5) - 4; // This will generate a random integer between -2 and 2
 
 export const Hero = () => {
   const profilePictureRef = useRef<HTMLImageElement>(null);
   console.log(profilePictureRef);
   return (
     <div className="flex flex-col-reverse justify-between md:flex-row md:gap-2">
-      <div className="flex flex-col items-center justify-evenly rounded-lg   border-slate-200  p-6 text-center shadow md:w-1/2 md:items-start md:text-left">
-        <h1 className="mb-8 text-2xl font-bold text-gray-800 md:mb-4">
-          Hi! I&apos;m Sean Swanson. 👋
-        </h1>
-        <p className="relativew mb-8 text-sm text-gray-700 md:mb-4">
-          I&apos;m a
-          <span className="relative inline-block px-2">
-            <span className="absolute inset-0 rotate-[-1deg] rounded-highlight bg-highlight-bg p-highlight opacity-90"></span>
-            <span className="relative z-10">
-              web developer, artist, and bboy
-            </span>
-          </span>
-          based in Seattle, WA. I love creating novel, beautiful, and intuitive
-          experiences for users.
-        </p>
-        <p className="mb-8 text-sm text-gray-700 md:mb-4">
-          My diverse range of passions allow me to tackle most challenges in the
-          software development life cycle, from design to DevOps, with a
-          well-rounded and empathetic perspective.
-        </p>
-        <p className="relative mb-8 text-sm text-gray-700 md:mb-4">
-          Currently, I&apos;m the
-          <span className="relative inline-block px-2">
-            <span className="absolute inset-0 rotate-1 rounded-highlight bg-highlight-bg p-highlight opacity-90"></span>
-            <span className="relative z-10">
-              Website/Digital Marketing Manager
-            </span>
-          </span>
-          at <span className="whitespace-nowrap">DreamBox Learning</span>, using
-          a blend of modern technologies and project management skills to
-          increase brand visibility, optimize customer engagement, and ensure
-          smooth execution of data-compliant, conversion-optimized web
-          solutions.
-        </p>
+      <div className="flex flex-col items-center justify-between rounded-lg border-slate-200 p-6 text-center shadow md:basis-[50%] md:items-start md:text-left">
+        <div className="flex grow flex-col">
+          <h1 className="mb-8 text-2xl font-bold text-gray-800 md:mb-4">
+            Hi! I&apos;m Sean Swanson. 👋
+          </h1>
+          <div className="flex basis-1/2 flex-col justify-evenly text-sm">
+            <p className="relative mb-8  text-gray-700 md:mb-4">
+              I&apos;m a{" "}
+              <HighlightedText rotation={getRandomDegree()}>
+                web developer
+              </HighlightedText>
+              ,{" "}
+              <HighlightedText rotation={getRandomDegree()}>
+                artist
+              </HighlightedText>
+              , and{" "}
+              <HighlightedText rotation={getRandomDegree()}>
+                bboy
+              </HighlightedText>
+              based in Seattle, WA. I love creating novel, beautiful, and
+              intuitive experiences for users.
+            </p>
+            <p className="mb-8 text-gray-700 md:mb-4">
+              My diverse range of passions allow me to tackle most challenges in
+              the software development life cycle, from design to DevOps, with a
+              well-rounded and empathetic perspective.
+            </p>
+            <p className="relative mb-8  text-gray-700 md:mb-4">
+              Currently, I&apos;m the{" "}
+              <HighlightedText rotation={getRandomDegree()}>
+                Website/Digital Marketing Manager
+              </HighlightedText>
+              at <span className="whitespace-nowrap">DreamBox Learning</span>,
+              using a blend of modern technologies and project management skills
+              to increase brand visibility, optimize customer engagement, and
+              ensure smooth execution of data-compliant, conversion-optimized
+              web solutions.
+            </p>
+          </div>
+        </div>
         <div className="flex items-center gap-3">
           <SocialIcons />
         </div>
       </div>
-      <div className="m-auto my-4 h-64 w-64 rounded-full  border border-slate-200 bg-purple-200 shadow-inner md:m-0 md:h-[initial] md:w-1/2 md:rounded-lg md:border-0 md:shadow ">
+      <div className="m-auto my-4 h-64 w-64 rounded-full border border-slate-200 bg-purple-200 shadow-inner md:m-0 md:h-[initial] md:basis-[50%] md:rounded-lg md:border-0 md:shadow">
         <Image
           priority
           src={profilePicture}

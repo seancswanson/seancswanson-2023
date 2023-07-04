@@ -3,6 +3,8 @@ import ArtProjects from "../pages/art/projects/art-projects.js";
 interface Props {
   project: (typeof ArtProjects.data)[0];
 }
+import Image from "next/image";
+import upRightArrow from "../assets/icons/up-right-arrow.png";
 
 export const ArtProject = ({ project }: Props) => {
   console.log(project);
@@ -18,8 +20,8 @@ export const ArtProject = ({ project }: Props) => {
         muted
         className="h-full w-full object-cover object-center"
       />
-      <span className="absolute top-[-1px] right-[-1px] rounded-bl-lg border border-slate-800 bg-off-white p-1 px-2 text-xs font-extrabold opacity-50 shadow-md group-hover:opacity-100">
-        ↗
+      <span className="absolute top-[2px] right-[2px] rounded-bl-sm border border-slate-800 bg-off-white text-xs font-extrabold opacity-20 shadow-md transition-opacity group-hover:opacity-100">
+        <Image src={upRightArrow} width="20" height="20" alt="up-right-arrow" />
       </span>
     </Link>
   );

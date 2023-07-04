@@ -7,6 +7,8 @@ import { RecentBlogPost } from "../components/RecentBlogPost";
 import { WebDevProject } from "../components/WebDevProject";
 import fuji from "../assets/project_images/fuji-sm.png";
 import ArtProjects from "./art/projects/art-projects.js";
+import Link from "next/link";
+
 export default function Home() {
   console.log(ArtProjects);
   const ArtProjectsObj = ArtProjects.data;
@@ -28,14 +30,24 @@ export default function Home() {
           <h2 className="mb-8 text-2xl font-extrabold">Featured Projects</h2>
           <div className="flex w-full flex-col justify-evenly gap-6">
             <div className="flex flex-col gap-2">
-              <h3 className="relative self-start rounded-sm p-2 text-center text-2xl font-bold">
-                WebDev
-                <span className="absolute left-[-7px] top-[-7px] text-3xl font-normal tracking-tighter opacity-10">
-                  {" "}
-                  001
-                </span>
-              </h3>
-              <div className="flex justify-evenly gap-6">
+              <div className="flex justify-between">
+                <h3 className="relative self-start rounded-sm p-2 text-center text-2xl font-bold">
+                  <Link href="/dev">
+                    WebDev
+                    <span className="absolute left-[-7px] top-[-7px] text-3xl font-normal tracking-tighter opacity-10">
+                      {" "}
+                      001
+                    </span>
+                  </Link>
+                </h3>
+                <Link
+                  href="/dev"
+                  className="self-start border border-black px-2 text-sm opacity-50 transition-opacity hocus:opacity-100"
+                >
+                  View all
+                </Link>
+              </div>
+              <div className="grid grid-cols-2 grid-rows-2 gap-6 sm:grid md:grid md:grid-cols-4 md:grid-rows-1">
                 <WebDevProject
                   project={{
                     title: "Cypher Queenz",
@@ -45,7 +57,7 @@ export default function Home() {
                     infoUrl: "https://www.cypherqueenz.com",
                     media: fuji,
                     tech: ["foo", "baz", "bar"],
-                    featuredTech: ["fooScript", "bazScript", "barScript"],
+                    featuredTech: ["apollo", "sanity", "SSG"],
                   }}
                 />
                 <WebDevProject
@@ -88,13 +100,22 @@ export default function Home() {
               </div>
             </div>
             <div className="flex w-full flex-col gap-2 ">
-              <h3 className="relative self-start rounded-sm p-2 text-center text-2xl font-bold">
-                Art
-                <span className="absolute left-[-7px] top-[-7px] text-3xl font-normal tracking-tighter opacity-10">
-                  {" "}
-                  002
-                </span>
-              </h3>{" "}
+              <div className="flex justify-between">
+                <h3 className="relative self-start rounded-sm p-2 text-center text-2xl font-bold">
+                  Art
+                  <span className="absolute left-[-7px] top-[-7px] text-3xl font-normal tracking-tighter opacity-10">
+                    {" "}
+                    002
+                  </span>
+                </h3>
+                <Link
+                  href="/dev"
+                  className="self-start border border-black px-2 text-sm opacity-50 transition-opacity hocus:opacity-100"
+                >
+                  View all
+                </Link>
+              </div>
+
               <div className="flex  justify-evenly gap-6">
                 {ArtProjects.data
                   .filter((project) => project.featured)

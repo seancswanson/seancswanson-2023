@@ -18,7 +18,7 @@ export const SocialIcons = () => {
           alt="Email Icon"
           width="32"
           height="32"
-          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hover:opacity-90"
+          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hocus:opacity-90"
         />
       </a>
       <a
@@ -32,7 +32,7 @@ export const SocialIcons = () => {
           alt="Github Icon"
           width="32"
           height="32"
-          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hover:opacity-90"
+          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hocus:opacity-90"
         />
       </a>
       <a
@@ -46,7 +46,7 @@ export const SocialIcons = () => {
           alt="Medium Icon"
           width="32"
           height="32"
-          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hover:opacity-90"
+          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hocus:opacity-90"
         />
       </a>
       <a
@@ -60,7 +60,7 @@ export const SocialIcons = () => {
           alt="LinkedIn Icon"
           width="32"
           height="32"
-          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hover:opacity-90"
+          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hocus:opacity-90"
         />
       </a>
       <a
@@ -74,7 +74,7 @@ export const SocialIcons = () => {
           alt="Twitter Icon"
           width="32"
           height="32"
-          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hover:opacity-90"
+          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hocus:opacity-90"
         />
       </a>
     </>
