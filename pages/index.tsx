@@ -1,6 +1,4 @@
 import Head from "next/head";
-import sacrificePreview from "../assets/art/sacrifice.webm";
-import whenItFallsPreview from "../assets/art/when-it-falls.webm";
 import { ArtProject } from "../components/ArtProject";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
@@ -8,7 +6,10 @@ import { Hero } from "../components/Hero";
 import { RecentBlogPost } from "../components/RecentBlogPost";
 import { WebDevProject } from "../components/WebDevProject";
 import fuji from "../assets/project_images/fuji-sm.png";
+import ArtProjects from "./art/projects/art-projects.js";
 export default function Home() {
+  console.log(ArtProjects);
+  const ArtProjectsObj = ArtProjects.data;
   return (
     <>
       <Head>
@@ -43,6 +44,8 @@ export default function Home() {
                     liveUrl: "https://www.cypherqueenz.com",
                     infoUrl: "https://www.cypherqueenz.com",
                     media: fuji,
+                    tech: ["foo", "baz", "bar"],
+                    featuredTech: ["fooScript", "bazScript", "barScript"],
                   }}
                 />
                 <WebDevProject
@@ -53,17 +56,21 @@ export default function Home() {
                     liveUrl: "https://osd-woodblocks-angular.pages.dev/home",
                     infoUrl: "https://osd-woodblocks-angular.pages.dev/home",
                     media: fuji,
+                    tech: ["foo", "baz", "bar"],
+                    featuredTech: ["fooScript", "bazScript", "barScript"],
                   }}
                 />
 
                 <WebDevProject
                   project={{
-                    title: "Cypher Queenz",
+                    title: "OP-T3",
                     description:
                       "Statically generated website built for local Bgirl organization. I used Astro with Tailwind CSS and integrated Sanity CMS for blog posts, media, and events. Optimized for performance and SEO from the beginning.",
                     liveUrl: "https://www.cypherqueenz.com",
                     infoUrl: "https://www.cypherqueenz.com",
                     media: fuji,
+                    tech: ["foo", "baz", "bar"],
+                    featuredTech: ["fooScript", "bazScript", "barScript"],
                   }}
                 />
                 <WebDevProject
@@ -74,6 +81,8 @@ export default function Home() {
                     liveUrl: "https://osd-woodblocks-angular.pages.dev/home",
                     infoUrl: "https://osd-woodblocks-angular.pages.dev/home",
                     media: fuji,
+                    tech: ["foo", "baz", "bar"],
+                    featuredTech: ["fooScript", "bazScript", "barScript"],
                   }}
                 />
               </div>
@@ -87,39 +96,11 @@ export default function Home() {
                 </span>
               </h3>{" "}
               <div className="flex  justify-evenly gap-6">
-                <ArtProject
-                  project={{
-                    title: "Sacrifice",
-                    description: "",
-                    infoUrl: "/art/sacrifice",
-                    media: sacrificePreview,
-                  }}
-                />
-                <ArtProject
-                  project={{
-                    title: "When It Falls",
-                    description: "",
-                    infoUrl: "/art/sacrifice",
-                    media: whenItFallsPreview,
-                  }}
-                />
-
-                <ArtProject
-                  project={{
-                    title: "Sacrifice",
-                    description: "",
-                    infoUrl: "/art/sacrifice",
-                    media: sacrificePreview,
-                  }}
-                />
-                <ArtProject
-                  project={{
-                    title: "When It Falls",
-                    description: "",
-                    infoUrl: "/art/sacrifice",
-                    media: whenItFallsPreview,
-                  }}
-                />
+                {ArtProjects.data
+                  .filter((project) => project.featured)
+                  .map((project, key) => (
+                    <ArtProject key={key} project={project} />
+                  ))}
               </div>
             </div>
             <div className="flex w-full flex-col gap-2 ">
