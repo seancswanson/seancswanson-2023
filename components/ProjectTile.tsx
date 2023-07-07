@@ -29,6 +29,7 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
       <div className="relative w-full rounded-md bg-off-white ">
         {isVideoThumbnail ? (
           <video
+            // @ts-ignore
             src={project.media}
             autoPlay
             loop
