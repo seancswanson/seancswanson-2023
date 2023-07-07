@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ArtProjects from "../pages/art/projects/art-projects.js";
+import ArtProjects from "../data/projects/art-projects.js";
 interface Props {
   project: (typeof ArtProjects.data)[0];
 }
@@ -7,7 +7,6 @@ import Image from "next/image";
 import upRightArrow from "../assets/icons/up-right-arrow.png";
 
 export const ArtProject = ({ project }: Props) => {
-  console.log(project);
   return (
     <Link
       href={`/art/${project.slug}`}

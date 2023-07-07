@@ -31,12 +31,12 @@ interface LinkProps {
 const LinkItem = ({ href, number, title }: LinkProps) => (
   <li className=" w-full border-t border-slate-600 md:w-3/12">
     <Link href={href} className="group flex flex-col">
-      <div className="flex justify-between">
+      <div className="flex items-center justify-between">
         <span>
           {number}
           <span className="px-2 font-extrabold">{title}</span>
         </span>
-        <Image src={upRightArrow} width="20" height="20" alt="up-right-arrow" />{" "}
+        <Image src={upRightArrow} width="15" height="15" alt="up-right-arrow" />{" "}
       </div>
     </Link>
   </li>
@@ -45,7 +45,6 @@ const LinkItem = ({ href, number, title }: LinkProps) => (
 export const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const handleMenuClick = () => {
-    console.log("clicked");
     setMenuOpen(!isMenuOpen);
   };
 

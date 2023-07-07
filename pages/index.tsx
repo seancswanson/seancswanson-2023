@@ -4,10 +4,11 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
 import { RecentBlogPost } from "../components/RecentBlogPost";
-import { WebDevProject } from "../components/WebDevProject";
+import { ProjectTile } from "../components/ProjectTile";
 import fuji from "../assets/project_images/fuji-sm.png";
-import ArtProjects from "./art/projects/art-projects.js";
+import ArtProjects from "../data/projects/art-projects.js";
 import Link from "next/link";
+import { Fragment } from "react";
 
 export default function Home() {
   console.log(ArtProjects);
@@ -40,17 +41,12 @@ export default function Home() {
                     </span>
                   </Link>
                 </h3>
-                <Link
-                  href="/dev"
-                  className="self-start border border-black px-2 text-sm opacity-50 transition-opacity hocus:opacity-100"
-                >
-                  View all
-                </Link>
               </div>
-              <div className="grid grid-cols-2 grid-rows-2 gap-6 sm:grid md:grid md:grid-cols-4 md:grid-rows-1">
-                <WebDevProject
+              <div className="grid grid-cols-2 grid-rows-2 justify-items-center gap-4 md:grid-cols-4 md:grid-rows-1">
+                <ProjectTile
                   project={{
                     title: "Cypher Queenz",
+                    type: "web",
                     description:
                       "Statically generated website built for local Bgirl organization. I used Astro with Tailwind CSS and integrated Sanity CMS for blog posts, media, and events. Optimized for performance and SEO from the beginning.",
                     liveUrl: "https://www.cypherqueenz.com",
@@ -60,9 +56,10 @@ export default function Home() {
                     featuredTech: ["apollo", "sanity", "SSG"],
                   }}
                 />
-                <WebDevProject
+                <ProjectTile
                   project={{
                     title: "The Majesty of the 36 Views of Mt. Fuji",
+                    type: "web",
                     description:
                       "An interactive tribute to Katsushika Hokusai utilizing modern web design techniques, Angular, and OpenSeadragon for ultra-smooth high-resolution gallery viewing.",
                     liveUrl: "https://osd-woodblocks-angular.pages.dev/home",
@@ -73,9 +70,10 @@ export default function Home() {
                   }}
                 />
 
-                <WebDevProject
+                <ProjectTile
                   project={{
                     title: "OP-T3",
+                    type: "web",
                     description:
                       "Statically generated website built for local Bgirl organization. I used Astro with Tailwind CSS and integrated Sanity CMS for blog posts, media, and events. Optimized for performance and SEO from the beginning.",
                     liveUrl: "https://www.cypherqueenz.com",
@@ -85,9 +83,10 @@ export default function Home() {
                     featuredTech: ["fooScript", "bazScript", "barScript"],
                   }}
                 />
-                <WebDevProject
+                <ProjectTile
                   project={{
                     title: "The Majesty of the 36 Views of Mt. Fuji",
+                    type: "web",
                     description:
                       "An interactive tribute to Katsushika Hokusai utilizing modern web design techniques, Angular, and OpenSeadragon for ultra-smooth high-resolution gallery viewing.",
                     liveUrl: "https://osd-woodblocks-angular.pages.dev/home",
@@ -98,6 +97,12 @@ export default function Home() {
                   }}
                 />
               </div>
+              <Link
+                href="/dev"
+                className="self-end border border-black px-2 text-sm opacity-50 transition-opacity hocus:opacity-100"
+              >
+                View all
+              </Link>
             </div>
             <div className="flex w-full flex-col gap-2 ">
               <div className="flex justify-between">
@@ -108,21 +113,38 @@ export default function Home() {
                     002
                   </span>
                 </h3>
-                <Link
-                  href="/dev"
-                  className="self-start border border-black px-2 text-sm opacity-50 transition-opacity hocus:opacity-100"
-                >
-                  View all
-                </Link>
               </div>
 
-              <div className="flex  justify-evenly gap-6">
+              <div className="grid grid-cols-2 grid-rows-2 justify-items-center gap-4 sm:grid md:grid md:grid-cols-4 md:grid-rows-1">
                 {ArtProjects.data
                   .filter((project) => project.featured)
                   .map((project, key) => (
-                    <ArtProject key={key} project={project} />
+                    <Fragment key={key}>
+                      <ProjectTile
+                        isVideoThumbnail={!!project.cover.animation_url}
+                        key={key}
+                        project={{
+                          title: project.title,
+                          type: project.type,
+                          description: project.description,
+                          liveUrl: project.permalink,
+                          infoUrl: `/art/${project.slug}`,
+                          media: project.cover.animation_url
+                            ? project.cover.animation_url
+                            : project.cover.small_square_url,
+                          tech: project.tech,
+                          featuredTech: project.featuredTech,
+                        }}
+                      />
+                    </Fragment>
                   ))}
               </div>
+              <Link
+                href="/art"
+                className="self-end border border-black px-2 text-sm opacity-50 transition-opacity hocus:opacity-100"
+              >
+                View all
+              </Link>
             </div>
             <div className="flex w-full flex-col gap-2 ">
               <h3 className="relative self-start rounded-sm p-2 text-center text-2xl font-bold">

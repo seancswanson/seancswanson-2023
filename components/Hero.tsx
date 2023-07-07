@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { SocialIcons } from "./SocialIcons";
 import profilePicture from "../assets/me-v8.webp";
 
@@ -19,11 +19,17 @@ const HighlightedText = ({
     </span>
   );
 };
-const getRandomDegree = () => Math.floor(Math.random() * 5) - 4; // This will generate a random integer between -2 and 2
 
 export const Hero = () => {
   const profilePictureRef = useRef<HTMLImageElement>(null);
-  console.log(profilePictureRef);
+  const [rotations, setRotations] = useState<number[]>([]);
+  useEffect(() => {
+    // Generate an array of 4 random numbers between -4 and 4
+    const newRotations = Array.from({ length: 4 }, () => getRandomDegree());
+    setRotations(newRotations);
+  }, []);
+
+  const getRandomDegree = () => Math.floor(Math.random() * 9) - 4;
   return (
     <div className="flex flex-col-reverse justify-between md:flex-row md:gap-2">
       <div className="flex flex-col items-center justify-between rounded-lg border-slate-200 p-6 text-center shadow md:basis-[50%] md:items-start md:text-left">
@@ -31,18 +37,18 @@ export const Hero = () => {
           <h1 className="mb-8 text-2xl font-bold text-gray-800 md:mb-4">
             Hi! I&apos;m Sean Swanson. 👋
           </h1>
-          <div className="flex basis-1/2 flex-col justify-evenly text-sm">
+          <div className="text-md flex basis-1/2 flex-col justify-evenly">
             <p className="relative mb-8  text-gray-700 md:mb-4">
               I&apos;m a{" "}
-              <HighlightedText rotation={getRandomDegree()}>
+              <HighlightedText key={0} rotation={rotations[0]}>
                 web developer
               </HighlightedText>
               ,{" "}
-              <HighlightedText rotation={getRandomDegree()}>
+              <HighlightedText key={1} rotation={rotations[1]}>
                 artist
               </HighlightedText>
               , and{" "}
-              <HighlightedText rotation={getRandomDegree()}>
+              <HighlightedText key={2} rotation={rotations[2]}>
                 bboy
               </HighlightedText>
               based in Seattle, WA. I love creating novel, beautiful, and
@@ -55,7 +61,7 @@ export const Hero = () => {
             </p>
             <p className="relative mb-8  text-gray-700 md:mb-4">
               Currently, I&apos;m the{" "}
-              <HighlightedText rotation={getRandomDegree()}>
+              <HighlightedText key={3} rotation={rotations[3]}>
                 Website/Digital Marketing Manager
               </HighlightedText>
               at <span className="whitespace-nowrap">DreamBox Learning</span>,
