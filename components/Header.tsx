@@ -71,7 +71,7 @@ export const Header = () => {
           </div>
           <ul className="flex flex-col justify-end gap-8 pt-2">
             <LinkItem href="/dev" number="001" title="Dev" />
-            <LinkItem href="/about" number="002" title="Art" />
+            <LinkItem href="/art" number="002" title="Art" />
             <LinkItem href="/blog" number="003" title="Blog" />
             <li className="w-12">
               <Link
@@ -87,7 +87,7 @@ export const Header = () => {
         </div>
         <ul className="hidden justify-end gap-8 pt-2 md:flex">
           <LinkItem href="/dev" number="001" title="Dev" />
-          <LinkItem href="/about" number="002" title="Art" />
+          <LinkItem href="/art" number="002" title="Art" />
           <LinkItem href="/blog" number="003" title="Blog" />
           <li className="w-12">
             <Link

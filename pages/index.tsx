@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { ArtProject } from "../components/ArtProject";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
@@ -11,8 +10,6 @@ import Link from "next/link";
 import { Fragment } from "react";
 
 export default function Home() {
-  console.log(ArtProjects);
-  const ArtProjectsObj = ArtProjects.data;
   return (
     <>
       <Head>
@@ -51,7 +48,7 @@ export default function Home() {
                       "Statically generated website built for local Bgirl organization. I used Astro with Tailwind CSS and integrated Sanity CMS for blog posts, media, and events. Optimized for performance and SEO from the beginning.",
                     liveUrl: "https://www.cypherqueenz.com",
                     infoUrl: "https://www.cypherqueenz.com",
-                    media: fuji,
+                    media: fuji.src,
                     tech: ["foo", "baz", "bar"],
                     featuredTech: ["apollo", "sanity", "SSG"],
                   }}
@@ -64,7 +61,7 @@ export default function Home() {
                       "An interactive tribute to Katsushika Hokusai utilizing modern web design techniques, Angular, and OpenSeadragon for ultra-smooth high-resolution gallery viewing.",
                     liveUrl: "https://osd-woodblocks-angular.pages.dev/home",
                     infoUrl: "https://osd-woodblocks-angular.pages.dev/home",
-                    media: fuji,
+                    media: fuji.src,
                     tech: ["foo", "baz", "bar"],
                     featuredTech: ["fooScript", "bazScript", "barScript"],
                   }}
@@ -78,7 +75,7 @@ export default function Home() {
                       "Statically generated website built for local Bgirl organization. I used Astro with Tailwind CSS and integrated Sanity CMS for blog posts, media, and events. Optimized for performance and SEO from the beginning.",
                     liveUrl: "https://www.cypherqueenz.com",
                     infoUrl: "https://www.cypherqueenz.com",
-                    media: fuji,
+                    media: fuji.src,
                     tech: ["foo", "baz", "bar"],
                     featuredTech: ["fooScript", "bazScript", "barScript"],
                   }}
@@ -91,7 +88,7 @@ export default function Home() {
                       "An interactive tribute to Katsushika Hokusai utilizing modern web design techniques, Angular, and OpenSeadragon for ultra-smooth high-resolution gallery viewing.",
                     liveUrl: "https://osd-woodblocks-angular.pages.dev/home",
                     infoUrl: "https://osd-woodblocks-angular.pages.dev/home",
-                    media: fuji,
+                    media: fuji.src,
                     tech: ["foo", "baz", "bar"],
                     featuredTech: ["fooScript", "bazScript", "barScript"],
                   }}
@@ -121,7 +118,7 @@ export default function Home() {
                   .map((project, key) => (
                     <Fragment key={key}>
                       <ProjectTile
-                        isVideoThumbnail={!!project.cover.animation_url}
+                        isVideoThumbnail={!!project.cover.animation_preview}
                         key={key}
                         project={{
                           title: project.title,
@@ -129,9 +126,9 @@ export default function Home() {
                           description: project.description,
                           liveUrl: project.permalink,
                           infoUrl: `/art/${project.slug}`,
-                          media: project.cover.animation_url
-                            ? project.cover.animation_url
-                            : project.cover.small_square_url,
+                          media: project.cover.animation_preview
+                            ? project.cover.animation_preview
+                            : project.cover.still_url,
                           tech: project.tech,
                           featuredTech: project.featuredTech,
                         }}

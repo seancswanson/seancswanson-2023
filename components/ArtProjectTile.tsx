@@ -6,14 +6,14 @@ interface Props {
 import Image from "next/image";
 import upRightArrow from "../assets/icons/up-right-arrow.png";
 
-export const ArtProject = ({ project }: Props) => {
+export const ArtProjectTile = ({ project }: Props) => {
   return (
     <Link
       href={`/art/${project.slug}`}
       className="group relative h-auto max-w-[250px] rounded border border-slate-800 bg-off-white shadow sm:w-1/2"
     >
       <video
-        src={project.cover.animation_url}
+        src={project.cover.animation_preview}
         autoPlay
         loop
         muted

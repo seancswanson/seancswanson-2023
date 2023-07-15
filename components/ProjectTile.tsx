@@ -17,10 +17,11 @@ interface Project {
   infoUrl: string;
   tech: string[];
   featuredTech: string[];
-  media: string | StaticImageData;
+  media?: any;
 }
 
 export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
+  console.log(project);
   return (
     <Link
       href={project.infoUrl}
@@ -41,7 +42,7 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
             src={project.media}
             width="250"
             height="250"
-            alt="project.title"
+            alt={project.title}
             className="h-full w-full rounded-md object-cover object-center"
           />
         )}

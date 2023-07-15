@@ -1,8 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
   reactStrictMode: true,
-}
-const withVideos = require('next-videos')
+};
+const withVideos = require("next-videos");
 
-module.exports = nextConfig
-module.exports = withVideos()
+module.exports = nextConfig;
+module.exports = withVideos();
