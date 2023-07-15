@@ -1,16 +1,16 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
-import artProjects from "../../data/projects/art-projects.js";
+import artProjects, { Project } from "../../data/projects/art-projects";
 import Link from "next/link";
 import YouTube from "react-youtube";
-import { ArtProjectProps } from "../../lib/types.js";
-
-export default function ArtProject({ project }: ArtProjectProps) {
+import Layout from "../../components/layout";
+export default function ArtProject(project: { project: Project }) {
   const router = useRouter();
-
+  console.log(project);
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
+
   const youtubeOpts = {
     height: "390",
     width: "640",
@@ -18,67 +18,123 @@ export default function ArtProject({ project }: ArtProjectProps) {
       autoplay: 1,
     },
   };
+
+  const month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const parsedCreationDate = new Date(project.project.created_at);
   return (
-    <div className="align-center mx-auto flex max-w-screen-lg flex-col justify-center p-4">
-      <Link href="/">Yoooo</Link>
-      <div className="my-6 text-center text-4xl">{project.title}</div>
-      <div className="mx-auto">
-        {/* generate if image, show image, if animation_preview_url, show that */}
-        {project.cover.animation_full ? (
-          project.cover.animation_source === "youtube" ? (
-            <YouTube
-              videoId={project.cover.animation_full}
-              opts={youtubeOpts}
-            />
-          ) : (
-            <video
-              className="mx-auto"
-              autoPlay
-              loop
-              muted
-              playsInline
-              src={project.cover.animation_full}
-            />
-          )
-        ) : (
-          <img
-            className="mx-auto"
-            src={project.cover.still_url}
-            alt={project.title}
+    <Layout>
+      <div className="breadcrumbs mb-4 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity hover:opacity-100">
+        /{" "}
+        <Link
+          href="/art"
+          className="border-b-2 border-transparent transition-all hover:border-blue-500"
+        >
+          Art
+        </Link>{" "}
+        / {project.project.title}
+      </div>
+      <h1 className="relative self-start rounded-sm text-2xl font-bold">
+        {project.project.title}
+      </h1>
+      <div className="info-row">
+        <span className="text-sm">
+          Published:{" "}
+          {`${
+            month[parsedCreationDate.getMonth()]
+          } ${parsedCreationDate.getFullYear()}`}
+        </span>
+      </div>
+
+      <div className="flex flex-col justify-between gap-2 sm:flex-row">
+        {project.project.type === "youtube" ? (
+          <YouTube
+            videoId={project.project.media.youtube_id}
+            opts={youtubeOpts}
           />
-        )}
+        ) : project.project.type === "animation" ? (
+          <>
+            {/* Render still and animation */}
+            <div className="flex basis-[50%] flex-col">
+              <video
+                className="mx-auto rounded shadow-lg"
+                autoPlay
+                loop
+                muted
+                playsInline
+                src={project.project.media.animation_full}
+              />
+              <span className="mt-2 text-center text-xs uppercase opacity-75">
+                Animation
+              </span>
+            </div>
+            <div className="flex basis-[50%] flex-col">
+              <img
+                className="mx-auto rounded shadow-lg"
+                src={project.project.media.still_url}
+                alt={project.project.title}
+              />
+              <span className="mt-2 text-center text-xs uppercase opacity-75">
+                Still
+              </span>
+            </div>
+          </>
+        ) : (
+          // Render only still image
+          <div className="basis_[50%]">
+            <img
+              className="mx-auto rounded shadow-lg"
+              src={project.project.media.still_url}
+              alt={project.project.title}
+            />
+          </div>
+        )}{" "}
       </div>
-      <div className="text-center">{project.description}</div>
-      <div className="mt-6 flex justify-between">
-        <div>{project.created_at}</div>
-        <div>{project.updated_at}</div>
+
+      <div className="mt-4 rounded-lg border-slate-200 p-6 shadow">
+        {project.project.description}
+        <div className="tools">
+          Tools used:
+          <div className="flex flex-wrap gap-2">
+            {project.project.tech.map((technology, index) => (
+              <span key={index} className="rounded-sm border border-black px-3">
+                {technology}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="my-6 flex flex-wrap justify-center">
-        {project.tech.map((technology, index) => (
-          <span key={index} className="m-1 rounded-full bg-blue-200 px-3 py-1">
-            {technology}
-          </span>
-        ))}
-      </div>
+
       <div className="mt-6 text-center">
         <a
-          href={project.permalink}
+          href={project.project.permalink}
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-500 underline"
         >
           View on{" "}
-          {project.cover.animation_source === "youtube"
-            ? "YouTube"
-            : "Artstation"}
+          {project.project.type === "youtube" ? "YouTube" : "Artstation"}
         </a>
       </div>
-    </div>
+    </Layout>
   );
 }
 
 export async function getStaticPaths() {
-  const paths = artProjects.data.map((artwork) => ({
+  const paths = artProjects.map((artwork) => ({
     params: { id: artwork.slug },
   }));
 
@@ -86,8 +142,12 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const artProjectsObj = artProjects.data;
-  const project = artProjectsObj.find((artwork) => artwork.slug === params?.id);
+  const artProjectsArr = artProjects;
+
+  const project = artProjectsArr.filter(
+    (artwork) => artwork.slug === params?.id
+  )[0];
+  console.log(project);
 
   return { props: { project }, revalidate: 1 };
 };

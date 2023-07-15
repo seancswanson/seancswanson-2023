@@ -1,7 +1,7 @@
 import Link from "next/link";
-import ArtProjects from "../data/projects/art-projects.js";
+import ArtProjects, { Project } from "../data/projects/art-projects";
 interface Props {
-  project: (typeof ArtProjects.data)[0];
+  project: Project;
 }
 import Image from "next/image";
 import upRightArrow from "../assets/icons/up-right-arrow.png";
@@ -13,7 +13,7 @@ export const ArtProjectTile = ({ project }: Props) => {
       className="group relative h-auto max-w-[250px] rounded border border-slate-800 bg-off-white shadow sm:w-1/2"
     >
       <video
-        src={project.cover.animation_preview}
+        src={project.media.animation_preview}
         autoPlay
         loop
         muted

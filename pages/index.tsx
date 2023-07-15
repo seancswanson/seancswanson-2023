@@ -5,9 +5,10 @@ import { Hero } from "../components/Hero";
 import { RecentBlogPost } from "../components/RecentBlogPost";
 import { ProjectTile } from "../components/ProjectTile";
 import fuji from "../assets/project_images/fuji-sm.png";
-import ArtProjects from "../data/projects/art-projects.js";
+import ArtProjects from "../data/projects/art-projects";
 import Link from "next/link";
 import { Fragment } from "react";
+import Layout from "../components/layout";
 
 export default function Home() {
   return (
@@ -21,8 +22,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <main className="m-auto w-full max-w-[1010px] px-6">
+      <Layout>
         <Hero />
         <div className="py-8">
           <h2 className="mb-8 text-2xl font-extrabold">Featured Projects</h2>
@@ -113,12 +113,11 @@ export default function Home() {
               </div>
 
               <div className="grid grid-cols-2 grid-rows-2 justify-items-center gap-4 sm:grid md:grid md:grid-cols-4 md:grid-rows-1">
-                {ArtProjects.data
-                  .filter((project) => project.featured)
-                  .map((project, key) => (
+                {ArtProjects.filter((project) => project.featured).map(
+                  (project, key) => (
                     <Fragment key={key}>
                       <ProjectTile
-                        isVideoThumbnail={!!project.cover.animation_preview}
+                        isVideoThumbnail={!!project.media.animation_preview}
                         key={key}
                         project={{
                           title: project.title,
@@ -126,15 +125,16 @@ export default function Home() {
                           description: project.description,
                           liveUrl: project.permalink,
                           infoUrl: `/art/${project.slug}`,
-                          media: project.cover.animation_preview
-                            ? project.cover.animation_preview
-                            : project.cover.still_url,
+                          media: project.media.animation_preview
+                            ? project.media.animation_preview
+                            : project.media.still_url,
                           tech: project.tech,
                           featuredTech: project.featuredTech,
                         }}
                       />
                     </Fragment>
-                  ))}
+                  )
+                )}
               </div>
               <Link
                 href="/art"
@@ -192,9 +192,8 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </main>
-
-      <Footer />
+        <Footer />
+      </Layout>
     </>
   );
 }

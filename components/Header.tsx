@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./header.module.scss";
 import swansongLogo from "../assets/swansong-logo-128.webp";
 import upRightArrow from "../assets/icons/up-right-arrow.png";
+import hamburger from "../assets/icons/hamburger.png";
 import { useState } from "react";
 
 const LogoAndName = () => (
@@ -53,10 +54,10 @@ export const Header = () => {
       <div className="header flex w-full flex-wrap items-start justify-between tracking-tighter">
         <LogoAndName />
         <button
-          className="block p-2 text-lg md:hidden"
+          className="block pr-[6px] pt-[14px] text-lg md:hidden"
           onClick={handleMenuClick}
         >
-          &times;
+          <Image src={hamburger} width="15" height="15" alt="menu icon" />
         </button>
         <div
           className={`${

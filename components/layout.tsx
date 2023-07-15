@@ -1,3 +1,10 @@
+import { Header } from "./Header";
+
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <div className="mx-auto max-w-3xl">{children}</div>;
+  return (
+    <>
+      <Header />
+      <main className="m-auto w-full max-w-[1010px] px-6">{children}</main>
+    </>
+  );
 }
