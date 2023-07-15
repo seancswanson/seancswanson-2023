@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import artProjects from "../../data/projects/art-projects.js";
 import Link from "next/link";
 import YouTube from "react-youtube";
-import { ArtProjectProps } from "./types.js";
+import { ArtProjectProps } from "../../lib/types.js";
 
 export default function ArtProject({ project }: ArtProjectProps) {
   const router = useRouter();

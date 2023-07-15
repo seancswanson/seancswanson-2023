@@ -3,7 +3,7 @@ import artProjects from "../../data/projects/art-projects";
 import { Fragment } from "react";
 import { ProjectTile } from "../../components/ProjectTile";
 import Layout from "../../components/layout";
-import { ArtProjectProps, ArtProjectsProps, Project } from "./types";
+import { ArtProjectProps, ArtProjectsProps, Project } from "../../lib/types";
 
 const Art = () => {
   console.log(artProjects);
