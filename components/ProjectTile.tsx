@@ -21,7 +21,6 @@ interface Project {
 }
 
 export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
-  console.log(project);
   return (
     <Link
       href={project.infoUrl}

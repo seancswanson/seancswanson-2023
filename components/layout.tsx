@@ -1,3 +1,4 @@
+import { Footer } from "./Footer";
 import { Header } from "./Header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -5,6 +6,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <Header />
       <main className="m-auto w-full max-w-[1010px] px-6">{children}</main>
+      <Footer />
     </>
   );
 }

@@ -17,7 +17,7 @@ const LogoAndName = () => (
     </div>
     <div className="name-container flex flex-col">
       <span className="name block text-3xl font-extrabold">Sean Swanson</span>
-      <span className="name flex items-center justify-center gap-2 italic sm:justify-start">
+      <span className="name flex items-center justify-start gap-2 italic">
         Web Dev <span className="text-xs">❖</span> Helpful Human
       </span>
     </div>
@@ -30,7 +30,7 @@ interface LinkProps {
 }
 
 const LinkItem = ({ href, number, title }: LinkProps) => (
-  <li className=" w-full border-t border-slate-600 md:w-3/12">
+  <li className="w-full border-t border-slate-600 md:w-3/12">
     <Link href={href} className="group flex flex-col">
       <div className="flex items-center justify-between">
         <span>

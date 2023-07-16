@@ -37,7 +37,7 @@ export default function ArtProject(project: { project: Project }) {
   const parsedCreationDate = new Date(project.project.created_at);
   return (
     <Layout>
-      <div className="breadcrumbs mb-4 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity hover:opacity-100">
+      <div className="breadcrumbs mb-2 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity hover:opacity-100">
         /{" "}
         <Link
           href="/art"
@@ -47,19 +47,13 @@ export default function ArtProject(project: { project: Project }) {
         </Link>{" "}
         / {project.project.title}
       </div>
-      <h1 className="relative self-start rounded-sm text-2xl font-bold">
-        {project.project.title}
+      <h1 className="relative mb-4 flex flex-col items-center gap-1 rounded-sm text-2xl md:flex-row md:gap-8">
+        <div className="black-block h-[2px] w-full grow bg-black md:w-[initial]"></div>
+        <span className="block font-bold">{project.project.title}</span>
+        <div className="black-block h-[2px] w-full grow bg-black md:w-[initial]"></div>
       </h1>
-      <div className="info-row">
-        <span className="text-sm">
-          Published:{" "}
-          {`${
-            month[parsedCreationDate.getMonth()]
-          } ${parsedCreationDate.getFullYear()}`}
-        </span>
-      </div>
 
-      <div className="flex flex-col justify-between gap-2 sm:flex-row">
+      <div className="flex flex-col justify-between gap-2 font-bold sm:flex-row">
         {project.project.type === "youtube" ? (
           <YouTube
             videoId={project.project.media.youtube_id}
@@ -70,7 +64,7 @@ export default function ArtProject(project: { project: Project }) {
             {/* Render still and animation */}
             <div className="flex basis-[50%] flex-col">
               <video
-                className="mx-auto rounded shadow-lg"
+                className="rounded shadow-lg"
                 autoPlay
                 loop
                 muted
@@ -83,7 +77,7 @@ export default function ArtProject(project: { project: Project }) {
             </div>
             <div className="flex basis-[50%] flex-col">
               <img
-                className="mx-auto rounded shadow-lg"
+                className="rounded shadow-lg"
                 src={project.project.media.still_url}
                 alt={project.project.title}
               />
@@ -94,7 +88,7 @@ export default function ArtProject(project: { project: Project }) {
           </>
         ) : (
           // Render only still image
-          <div className="basis_[50%]">
+          <div className="basis-[50%]">
             <img
               className="mx-auto rounded shadow-lg"
               src={project.project.media.still_url}
@@ -104,8 +98,19 @@ export default function ArtProject(project: { project: Project }) {
         )}{" "}
       </div>
 
-      <div className="mt-4 rounded-lg border-slate-200 p-6 shadow">
-        {project.project.description}
+      <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 p-6 shadow">
+        <p>
+          <b>
+            <em>{project.project.title}</em>
+          </b>
+          , {parsedCreationDate.getFullYear()}
+        </p>
+        <p>{project.project.mediaCategory}</p>
+        {project.project.description.split("\n").map((paragraph, index) => (
+          <p key={index} className="mb-4">
+            {paragraph}
+          </p>
+        ))}
         <div className="tools">
           Tools used:
           <div className="flex flex-wrap gap-2">
@@ -116,14 +121,11 @@ export default function ArtProject(project: { project: Project }) {
             ))}
           </div>
         </div>
-      </div>
-
-      <div className="mt-6 text-center">
         <a
           href={project.project.permalink}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 underline"
+          className="block text-xs text-blue-500 underline"
         >
           View on{" "}
           {project.project.type === "youtube" ? "YouTube" : "Artstation"}

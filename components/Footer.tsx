@@ -1,3 +1,8 @@
 export const Footer = () => {
-  return <div className=" m-auto flex w-full max-w-[1280px] flex-wrap justify-center border-t px-6 pt-10 tracking-tight sm:justify-between"></div>;
+  return (
+    <footer className="flex flex-col items-center justify-center gap-2 pb-4 text-center">
+      <hr className="w-24 " />
+      <span className=""> Made with ♡ by Sean Swanson</span>
+    </footer>
+  );
 };
