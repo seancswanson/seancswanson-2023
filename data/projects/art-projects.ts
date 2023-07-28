@@ -58,7 +58,7 @@ const data: Project[] = [
     type: "youtube",
     mediaCategory: "Digital Mixed Media",
     description:
-      '"Sacrifice" - 3d Animation | Mixed Digital Media | Made with Blender \n\nIn dedication to the sacrifices made in Ukraine\'s fight for sovereignty.',
+      '"Sacrifice" - 3d Animation | Mixed Digital Media | Made with Blender \nIn dedication to the sacrifices made in Ukraine\'s fight for sovereignty.',
     created_at: "2021-01-24T21:26:49.679-06:00",
     updated_at: "2021-01-24T21:26:49.679-06:00",
     slug: "sacrifice-2",
@@ -80,7 +80,7 @@ const data: Project[] = [
     type: "animation",
     mediaCategory: "Digital Mixed Media",
     description:
-      "🌹“The Garden” - 2021 - Modeled, textured, and animated in #Blender. Video edited in DaVinci Resolve.\n⠀\n🎶 Back again with another album art remix from Zero 7… this time “The Garden”! There is just something about album art that leaves me wishing it was more than just a static image. So I gave this one the 3D treatment to bring it to life!\n\n🖼The original album art depicted a tear with a collage by Gideon London revealed underneath. To translate this into 3D meant extracting each layer painstakingly with Photoshop. With each layer now a separate piece in a stack, the pieces will look subtly different/askew depending on the camera perspective because of the variation in distance away from the lens.\n\nAdd some “dust” particles, a bit of movement, and a textured background that dynamically responds to light and 💥 BOOM ~ art ~\n\nHow does your music inspire you? Stay well, lovely people of the internet.",
+      "🌹“The Garden” - 2021 - Modeled, textured, and animated in #Blender. Video edited in DaVinci Resolve.\n🎶 Back again with another album art remix from Zero 7… this time “The Garden”! There is just something about album art that leaves me wishing it was more than just a static image. So I gave this one the 3D treatment to bring it to life!\n🖼The original album art depicted a tear with a collage by Gideon London revealed underneath. To translate this into 3D meant extracting each layer painstakingly with Photoshop. With each layer now a separate piece in a stack, the pieces will look subtly different/askew depending on the camera perspective because of the variation in distance away from the lens.\nAdd some “dust” particles, a bit of movement, and a textured background that dynamically responds to light and 💥 BOOM ~ art ~\nHow does your music inspire you? Stay well, lovely people of the internet.",
     created_at: "2021-10-20T12:33:22.906-05:00",
     updated_at: "2022-11-15T01:37:16.050-06:00",
     slug: "zero-7-the-garden-remix",
@@ -102,7 +102,7 @@ const data: Project[] = [
     type: "animation",
     mediaCategory: "Digital Mixed Media",
     description:
-      "This project is my 3D take on the album art from Zero 7's \"When It Falls\". The scene really comes together at Frame 50, where the original art lines up perfectly with my work. I used different tricks like converting the artwork into SVG and then turning those into 3D meshes to make this happen. \n\nTo give it a little extra something, I added some compositing effects like chromatic aberration and film grain. The original artwork is a piece from Blue Source Studios, but not much is known about them. With this piece, I've tried to keep the spirit of the original while putting my own spin on it. It's art meets music, in 3D.",
+      "This project is my 3D take on the album art from Zero 7's \"When It Falls\". The scene really comes together at Frame 50, where the original art lines up perfectly with my work. I used different tricks like converting the artwork into SVG and then turning those into 3D meshes to make this happen. \nTo give it a little extra something, I added some compositing effects like chromatic aberration and film grain. The original artwork is a piece from Blue Source Studios, but not much is known about them. With this piece, I've tried to keep the spirit of the original while putting my own spin on it. It's art meets music, in 3D.",
     created_at: "2021-01-24T21:25:42.240-06:00",
     updated_at: "2021-03-27T22:20:55.764-05:00",
     slug: "zero-7-when-it-falls-remix",
@@ -189,7 +189,7 @@ const data: Project[] = [
     type: "animation",
     mediaCategory: "Digital Mixed Media",
     description:
-      "Praise the Sun! 🌞 \n\nModeled and animated in Blender 2.92.\n\nInspired by the item design in the Dark Souls series.\n\n",
+      "Praise the Sun! 🌞 \nModeled and animated in Blender 2.92.\nInspired by the item design in the Dark Souls series.",
     created_at: "2021-06-03T20:53:04.341-05:00",
     updated_at: "2021-12-08T19:00:49.700-06:00",
     slug: "sol-amulet",
@@ -211,7 +211,7 @@ const data: Project[] = [
     type: "animation",
     mediaCategory: "Digital Mixed Media",
     description:
-      "This one-of-a-kind guitar was hand crafted by a luthier named Mark Swanson for my pops (also named Mark Swanson). I grew up hearing this instrument and wanted to honor its role in the family. 🎸\n⠀\nThe inlay and sound chamber cover are sustainably sourced abalone shell (from Kauai, I believe). Iridescence from the shell is incredibly difficult to get right in CG imagery but I think I managed it reasonably well here. 😎 I took a couple creative liberties here and there but its essence is retained.\n\nThe only assets that are not made from scratch are the rug (CC0), guitar stand(CC0), and clamps(Purchased) and some of the materials (CC0).",
+      "This one-of-a-kind guitar was hand crafted by a luthier named Mark Swanson for my pops (also named Mark Swanson). I grew up hearing this instrument and wanted to honor its role in the family. 🎸\nThe inlay and sound chamber cover are sustainably sourced abalone shell (from Kauai, I believe). Iridescence from the shell is incredibly difficult to get right in CG imagery but I think I managed it reasonably well here. 😎 I took a couple creative liberties here and there but its essence is retained.\nThe only assets that are not made from scratch are the rug (CC0), guitar stand(CC0), and clamps(Purchased) and some of the materials (CC0).",
     created_at: "2021-06-03T21:03:27.212-05:00",
     updated_at: "2021-07-17T14:26:59.824-05:00",
     slug: "heirloom",

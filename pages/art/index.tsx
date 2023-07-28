@@ -3,11 +3,21 @@ import artProjects, { Project } from "../../data/projects/art-projects";
 import { Fragment } from "react";
 import { ProjectTile } from "../../components/ProjectTile";
 import Layout from "../../components/layout";
+import Link from "next/link";
 
 const Art = () => {
   console.log(artProjects);
   return (
     <Layout>
+      <div className="breadcrumbs mb-2 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity hover:opacity-100">
+        /{" "}
+        <Link
+          href="/art"
+          className="border-b-2 border-transparent transition-all hover:border-blue-500"
+        >
+          Art
+        </Link>
+      </div>
       <h1>Art Page</h1>
       <div className="grid grid-cols-2 grid-rows-2 justify-items-center gap-4 sm:grid md:grid md:grid-cols-4 md:grid-rows-1">
         {artProjects.map((project: Project, key: number) => (

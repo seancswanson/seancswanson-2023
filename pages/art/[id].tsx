@@ -107,11 +107,11 @@ export default function ArtProject(project: { project: Project }) {
         </p>
         <p>{project.project.mediaCategory}</p>
         {project.project.description.split("\n").map((paragraph, index) => (
-          <p key={index} className="mb-4">
+          <p key={index} className="">
             {paragraph}
           </p>
         ))}
-        <div className="tools">
+        <div className="tools mb-4">
           Tools used:
           <div className="flex flex-wrap gap-2">
             {project.project.tech.map((technology, index) => (
