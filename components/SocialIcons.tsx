@@ -18,11 +18,11 @@ export const SocialIcons = () => {
           alt="Email Icon"
           width="32"
           height="32"
-          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hocus:opacity-90"
+          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity duration-150 hocus:opacity-90"
         />
       </a>
       <a
-        href="https://github.com/seanthaswan/"
+        href="https://github.com/seancswanson/"
         className="social-link github"
         aria-label="github link"
         title="github link"
@@ -32,7 +32,7 @@ export const SocialIcons = () => {
           alt="Github Icon"
           width="32"
           height="32"
-          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hocus:opacity-90"
+          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity duration-150 hocus:opacity-90"
         />
       </a>
       <a
@@ -46,7 +46,7 @@ export const SocialIcons = () => {
           alt="Medium Icon"
           width="32"
           height="32"
-          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hocus:opacity-90"
+          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity duration-150 hocus:opacity-90"
         />
       </a>
       <a
@@ -60,7 +60,7 @@ export const SocialIcons = () => {
           alt="LinkedIn Icon"
           width="32"
           height="32"
-          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hocus:opacity-90"
+          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity duration-150 hocus:opacity-90"
         />
       </a>
       <a
@@ -74,7 +74,7 @@ export const SocialIcons = () => {
           alt="Twitter Icon"
           width="32"
           height="32"
-          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity hocus:opacity-90"
+          className="fill-pink-800 stroke-pink-800 opacity-70 transition-opacity duration-150 hocus:opacity-90"
         />
       </a>
     </>

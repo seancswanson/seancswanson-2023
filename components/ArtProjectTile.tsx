@@ -19,7 +19,7 @@ export const ArtProjectTile = ({ project }: Props) => {
         muted
         className="h-full w-full object-cover object-center"
       />
-      <span className="absolute top-[2px] right-[2px] rounded-bl-sm border border-slate-800 bg-off-white text-xs font-extrabold opacity-20 shadow-md transition-opacity group-hover:opacity-100">
+      <span className="absolute top-[2px] right-[2px] rounded-bl-sm border border-slate-800 bg-off-white text-xs font-extrabold opacity-20 shadow-md transition-opacity duration-150 group-hover:opacity-100">
         <Image src={upRightArrow} width="20" height="20" alt="up-right-arrow" />
       </span>
     </Link>

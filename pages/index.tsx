@@ -96,7 +96,7 @@ export default function Home() {
               </div>
               <Link
                 href="/dev"
-                className="self-end border border-black px-2 text-sm opacity-50 transition-opacity hocus:opacity-100"
+                className="self-end border border-black px-2 text-sm opacity-50 transition-opacity duration-75 hocus:opacity-100"
               >
                 View all
               </Link>
@@ -138,7 +138,7 @@ export default function Home() {
               </div>
               <Link
                 href="/art"
-                className="self-end border border-black px-2 text-sm opacity-50 transition-opacity hocus:opacity-100"
+                className="self-end border border-black px-2 text-sm opacity-50 transition-opacity duration-75 hocus:opacity-100"
               >
                 View all
               </Link>

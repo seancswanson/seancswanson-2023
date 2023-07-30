@@ -9,7 +9,7 @@ const Art = () => {
   console.log(artProjects);
   return (
     <Layout>
-      <div className="breadcrumbs mb-2 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity hover:opacity-100">
+      <div className="breadcrumbs mb-2 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity duration-75 hover:opacity-100">
         /{" "}
         <Link
           href="/art"

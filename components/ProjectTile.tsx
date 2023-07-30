@@ -45,7 +45,7 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
             className="h-full w-full rounded-md object-cover object-center"
           />
         )}
-        <div className="opacity-0 shadow-md transition-opacity group-hover:opacity-100">
+        <div className="opacity-0 shadow-md transition-opacity duration-75 group-hover:opacity-100">
           <div className="absolute top-0 left-0 h-full w-full cursor-pointer rounded-md border border-slate-800 bg-[rgba(0,0,0,0.85)] text-4xl font-extrabold text-white">
             {project.title}
             <span className="ml-2 inline-block">

@@ -37,7 +37,7 @@ export default function ArtProject(project: { project: Project }) {
   const parsedCreationDate = new Date(project.project.created_at);
   return (
     <Layout>
-      <div className="breadcrumbs mb-2 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity hover:opacity-100">
+      <div className="breadcrumbs mb-2 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity duration-150 hover:opacity-100">
         /{" "}
         <Link
           href="/art"
@@ -55,10 +55,12 @@ export default function ArtProject(project: { project: Project }) {
 
       <div className="flex flex-col justify-between gap-2 font-bold sm:flex-row">
         {project.project.type === "youtube" ? (
-          <YouTube
-            videoId={project.project.media.youtube_id}
-            opts={youtubeOpts}
-          />
+          <div className="mx-auto">
+            <YouTube
+              videoId={project.project.media.youtube_id}
+              opts={youtubeOpts}
+            />
+          </div>
         ) : project.project.type === "animation" ? (
           <>
             {/* Render still and animation */}
