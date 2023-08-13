@@ -20,7 +20,17 @@ interface Project {
   media?: any;
 }
 
+function toKebabCase(title: string) {
+  return title
+    .replace(/[.,'!?]/g, "") // Remove punctuation
+    .toLowerCase() // Convert to lowercase
+    .trim() // Remove any leading or trailing spaces
+    .replace(/\s+/g, "-"); // Replace spaces with hyphens
+}
+
 export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
+  const kebabTitle = toKebabCase(project.title);
+  console.log(kebabTitle);
   return (
     <Link
       href={project.infoUrl}
@@ -38,7 +48,7 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
           />
         ) : (
           <Image
-            src={project.media}
+            src={project.media || `/project_images/${kebabTitle}.png`}
             width="250"
             height="250"
             alt={project.title}

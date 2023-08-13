@@ -4,8 +4,9 @@ import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
 import { RecentBlogPost } from "../components/RecentBlogPost";
 import { ProjectTile } from "../components/ProjectTile";
-import fuji from "../assets/project_images/fuji-sm.png";
+import fuji from "../assets/project_images/the-majesty-of-the-36-views-of-mt-fuji.png";
 import ArtProjects from "../data/projects/art-projects";
+import DevProjects from "../data/projects/dev-projects";
 import Link from "next/link";
 import { Fragment } from "react";
 import Layout from "../components/layout";
@@ -40,59 +41,24 @@ export default function Home() {
                 </h3>
               </div>
               <div className="grid grid-cols-2 grid-rows-2 justify-items-center gap-4 md:grid-cols-4 md:grid-rows-1">
-                <ProjectTile
-                  project={{
-                    title: "Cypher Queenz",
-                    type: "web",
-                    description:
-                      "Statically generated website built for local Bgirl organization. I used Astro with Tailwind CSS and integrated Sanity CMS for blog posts, media, and events. Optimized for performance and SEO from the beginning.",
-                    liveUrl: "https://www.cypherqueenz.com",
-                    infoUrl: "https://www.cypherqueenz.com",
-                    media: fuji.src,
-                    tech: ["foo", "baz", "bar"],
-                    featuredTech: ["apollo", "sanity", "SSG"],
-                  }}
-                />
-                <ProjectTile
-                  project={{
-                    title: "The Majesty of the 36 Views of Mt. Fuji",
-                    type: "web",
-                    description:
-                      "An interactive tribute to Katsushika Hokusai utilizing modern web design techniques, Angular, and OpenSeadragon for ultra-smooth high-resolution gallery viewing.",
-                    liveUrl: "https://osd-woodblocks-angular.pages.dev/home",
-                    infoUrl: "https://osd-woodblocks-angular.pages.dev/home",
-                    media: fuji.src,
-                    tech: ["foo", "baz", "bar"],
-                    featuredTech: ["fooScript", "bazScript", "barScript"],
-                  }}
-                />
-
-                <ProjectTile
-                  project={{
-                    title: "OP-T3",
-                    type: "web",
-                    description:
-                      "Statically generated website built for local Bgirl organization. I used Astro with Tailwind CSS and integrated Sanity CMS for blog posts, media, and events. Optimized for performance and SEO from the beginning.",
-                    liveUrl: "https://www.cypherqueenz.com",
-                    infoUrl: "https://www.cypherqueenz.com",
-                    media: fuji.src,
-                    tech: ["foo", "baz", "bar"],
-                    featuredTech: ["fooScript", "bazScript", "barScript"],
-                  }}
-                />
-                <ProjectTile
-                  project={{
-                    title: "The Majesty of the 36 Views of Mt. Fuji",
-                    type: "web",
-                    description:
-                      "An interactive tribute to Katsushika Hokusai utilizing modern web design techniques, Angular, and OpenSeadragon for ultra-smooth high-resolution gallery viewing.",
-                    liveUrl: "https://osd-woodblocks-angular.pages.dev/home",
-                    infoUrl: "https://osd-woodblocks-angular.pages.dev/home",
-                    media: fuji.src,
-                    tech: ["foo", "baz", "bar"],
-                    featuredTech: ["fooScript", "bazScript", "barScript"],
-                  }}
-                />
+                {DevProjects.filter((project) => project.featured).map(
+                  (project, key) => (
+                    <Fragment key={key}>
+                      <ProjectTile
+                        key={key}
+                        project={{
+                          title: project.title,
+                          type: project.type,
+                          description: project.description,
+                          liveUrl: project.liveUrl,
+                          infoUrl: `/dev/${project.slug}`,
+                          tech: project.tech,
+                          featuredTech: project.featuredTech,
+                        }}
+                      />
+                    </Fragment>
+                  )
+                )}
               </div>
               <Link
                 href="/dev"
