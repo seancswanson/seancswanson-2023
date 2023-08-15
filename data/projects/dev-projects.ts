@@ -1,11 +1,3 @@
-import sacrificePreview from "../../assets/art/sacrifice.webm";
-import sacrificeFull from "../../assets/art/sacrifice-full.webm";
-import whenItFallsFull from "../../assets/art/when-it-falls.webm";
-import jojoPreview from "../../assets/art/jojo.webm";
-import jojoFull from "../../assets/art/jojo-full.webm";
-import zaharaAlibiPreview from "../../assets/art/zahara-alibi-promo.webm";
-import theGardenFull from "../../assets/art/the-garden-full.webm";
-
 export interface Project {
   title: string;
   description: string;
@@ -26,32 +18,32 @@ const data: Project[] = [
       "An interactive tribute to Katsushika Hokusai utilizing modern web design techniques, Angular, and OpenSeadragon for ultra-smooth high-resolution gallery viewing.",
     slug: "the-majesty-of-the-36-views-of-mt-fuji",
     featured: true,
-    tech: ["foo", "baz", "bar"],
-    featuredTech: ["fooScript", "bazScript", "barScript"],
+    tech: ["TypeScript", "Angular", "OpenSeadragon"],
+    featuredTech: ["TypeScript", "Angular", "OpenSeadragon"],
     liveUrl: "https://osd-woodblocks-angular.pages.dev/home",
-    repoUrl: "https://osd-woodblocks-angular.pages.dev/home", // 'infoUrl' is used here, adjust if needed.
+    repoUrl: "https://github.com/seancswanson/osd-woodblocks-angular",
   },
   {
     title: "Cypher Queenz",
     type: "Web App",
     description:
-      "Statically generated website built for local Bgirl organization. I used Astro with Tailwind CSS and integrated Sanity CMS for blog posts, media, and events. Optimized for performance and SEO from the beginning.",
+      "Statically generated website designed and built for local Bgirl organization. I used Astro with Tailwind CSS and integrated Sanity CMS for blog posts, media, and events. Optimized for performance and SEO from the beginning.",
     slug: "cypher-queenz",
     featured: true,
-    tech: ["foo", "baz", "bar"],
+    tech: ["Astro", "Sanity CMS", "SSG", "Tailwind"],
     featuredTech: ["apollo", "sanity", "SSG"],
     liveUrl: "https://www.cypherqueenz.com",
-    repoUrl: "https://www.cypherqueenz.com", // 'infoUrl' is used here, adjust if needed.
+    repoUrl: "https://github.com/seancswanson/cypherqueenz-www",
   },
   {
     title: "Chairman of the Board",
     type: "Web App",
     description:
-      "Statically generated website built for local Bgirl organization. I used Astro with Tailwind CSS and integrated Sanity CMS for blog posts, media, and events. Optimized for performance and SEO from the beginning.",
+      '"Chairman of the Board" is a tongue-in-cheek web game where players start as a Mailroom Clerk and navigate through various scenarios to climb the corporate ladder, aiming to reach the coveted Chairman position. Play now for a humorous take on the corporate world!',
     slug: "chairman-of-the-board",
     featured: true,
-    tech: ["foo", "baz", "bar"],
-    featuredTech: ["fooScript", "bazScript", "barScript"],
+    tech: ["HTML", "CSS", "JavaScript", "jQuery"],
+    featuredTech: ["HTML", "CSS", "JavaScript", "jQuery"],
     liveUrl: "https://seancswanson.github.io/chairman-of-the-board/",
     repoUrl: "https://github.com/seancswanson/chairman-of-the-board",
   },
@@ -59,11 +51,18 @@ const data: Project[] = [
     title: "OP-T3",
     type: "Web App",
     description:
-      "OP-T3 is an application designed to rank Stands from JoJo's Bizarre Adventure. It leverages the power of the T3 Stack (TypeScript, tRPC, and Tailwind) and is built using Next.js.",
+      '"OP-T3" is a web app designed to rank Stands from JoJo\'s Bizarre Adventure. It leverages the power of the T3 Stack (TypeScript, tRPC, and Tailwind) and is built using Next.js. To persist data and interface with the database, MySQL is used with Prisma as the ORM.',
     slug: "op-t3",
     featured: true,
-    tech: ["foo", "baz", "bar"],
-    featuredTech: ["fooScript", "bazScript", "barScript"],
+    tech: ["Next.js", "TypeScript", "Tailwind", "tRPC", "Prisma", "MySQL"],
+    featuredTech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "tRPC",
+      "Prisma",
+      "MySQL",
+    ],
     liveUrl: "https://op-t3.vercel.app/",
     repoUrl: "https://github.com/seancswanson/op-t3",
   },

@@ -1,12 +1,13 @@
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import artProjects, { Project } from "../../data/projects/art-projects";
 import Link from "next/link";
 import YouTube from "react-youtube";
 import Layout from "../../components/layout";
+
 export default function ArtProject(project: { project: Project }) {
   const router = useRouter();
-  console.log(project);
+
   if (router.isFallback) {
     return <div>Loading...</div>;
   }

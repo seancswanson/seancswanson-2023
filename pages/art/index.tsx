@@ -5,6 +5,14 @@ import { ProjectTile } from "../../components/ProjectTile";
 import Layout from "../../components/layout";
 import Link from "next/link";
 
+function toKebabCase(title: string) {
+  return title
+    .replace(/[.,'!?]/g, "") // Remove punctuation
+    .toLowerCase() // Convert to lowercase
+    .trim() // Remove any leading or trailing spaces
+    .replace(/\s+/g, "-"); // Replace spaces with hyphens
+}
+
 const Art = () => {
   console.log(artProjects);
   return (
@@ -33,7 +41,9 @@ const Art = () => {
                 infoUrl: `/art/${project.slug}`,
                 media: project.media.animation_preview
                   ? project.media.animation_preview
-                  : project.media.still_url,
+                  : project.media.still_url
+                  ? project.media.still_url
+                  : `/art/${toKebabCase(project.title)}-still.jpeg`,
                 tech: project.tech,
                 featuredTech: project.featuredTech,
               }}

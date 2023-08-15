@@ -1,10 +1,12 @@
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
-import devProjects, { Project } from "../../data/projects/dev-projects";
 import Link from "next/link";
-import YouTube from "react-youtube";
-import Layout from "../../components/layout";
 import Image from "next/image";
+import Layout from "../../components/layout";
+import devProjects, { Project } from "../../data/projects/dev-projects";
+import globeIcon from "../../assets/icons/globe_icon.png";
+import githubIcon from "../../assets/icons/github_icon.png";
+
 function toKebabCase(title: string) {
   return title
     .replace(/[.,'!?]/g, "") // Remove punctuation
@@ -61,18 +63,11 @@ export default function ArtProject(project: { project: Project }) {
       </div>
 
       <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 p-6 shadow">
-        <p>
-          <b>
-            <em>{project.project.title}</em>
-          </b>
+        <p className="font-bold italic">
+          <span>{project.project.title}</span>
         </p>
-        {project.project.description.split("\n").map((paragraph, index) => (
-          <p key={index} className="">
-            {paragraph}
-          </p>
-        ))}
+        <p>{project.project.type}</p>
         <div className="tools mb-4">
-          Tools used:
           <div className="flex flex-wrap gap-2">
             {project.project.tech.map((technology, index) => (
               <span key={index} className="rounded-sm border border-black px-3">
@@ -81,21 +76,35 @@ export default function ArtProject(project: { project: Project }) {
             ))}
           </div>
         </div>
+        <div className="mb-4">
+          {project.project.description.split("\n").map((paragraph, index) => (
+            <p key={index} className="">
+              {paragraph}
+            </p>
+          ))}
+        </div>
         <a
           href={project.project.repoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-xs text-blue-500 underline"
+          className="flex items-center gap-2 text-sm text-blue-500 underline"
         >
-          View Live App
+          <Image alt="globe icon" src={globeIcon.src} width={32} height={32} />{" "}
+          View Live
         </a>
         <a
           href={project.project.repoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-xs text-blue-500 underline"
+          className="flex items-center gap-2 text-sm text-blue-500 underline"
         >
-          View on GitHub
+          <Image
+            alt="github icon"
+            src={githubIcon.src}
+            width={32}
+            height={32}
+          />{" "}
+          View Source
         </a>
       </div>
     </Layout>

@@ -11,6 +11,14 @@ import Link from "next/link";
 import { Fragment } from "react";
 import Layout from "../components/layout";
 
+function toKebabCase(title: string) {
+  return title
+    .replace(/[.,'!?]/g, "") // Remove punctuation
+    .toLowerCase() // Convert to lowercase
+    .trim() // Remove any leading or trailing spaces
+    .replace(/\s+/g, "-"); // Replace spaces with hyphens
+}
+
 export default function Home() {
   return (
     <>
@@ -93,7 +101,11 @@ export default function Home() {
                           infoUrl: `/art/${project.slug}`,
                           media: project.media.animation_preview
                             ? project.media.animation_preview
-                            : project.media.still_url,
+                            : project.media.still_url
+                            ? project.media.still_url
+                            : `/assets/art/${toKebabCase(
+                                project.title
+                              )}-still.webp`,
                           tech: project.tech,
                           featuredTech: project.featuredTech,
                         }}

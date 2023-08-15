@@ -1,10 +1,11 @@
-import sacrificePreview from "../../assets/art/sacrifice.webm";
-import sacrificeFull from "../../assets/art/sacrifice-full.webm";
-import whenItFallsFull from "../../assets/art/when-it-falls.webm";
-import jojoPreview from "../../assets/art/jojo.webm";
-import jojoFull from "../../assets/art/jojo-full.webm";
-import zaharaAlibiPreview from "../../assets/art/zahara-alibi-promo.webm";
-import theGardenFull from "../../assets/art/the-garden-full.webm";
+import sacrificePreview from "public/art/sacrifice-preview.webm";
+import sacrificeFull from "public/art/sacrifice-full.webm";
+import doctorWhoFull from "public/art/doctor-who-full.webm";
+import whenItFallsFull from "public/art/zero-7-when-it-falls-remix-full.webm";
+import jojoPreview from "public/art/is-that-a-jojo-reference-preview.webm";
+import jojoFull from "public/art/is-that-a-jojo-reference-full.webm";
+import zaharaAlibiPreview from "public/art/zahara-alibi-promo-preview.webm";
+import theGardenFull from "public/art/zero-7-the-garden-remix-full.webm";
 
 export interface Media {
   still_url?: string;
@@ -80,7 +81,7 @@ const data: Project[] = [
     type: "animation",
     mediaCategory: "Digital Mixed Media",
     description:
-      "🌹“The Garden” - 2021 - Modeled, textured, and animated in #Blender. Video edited in DaVinci Resolve.\n🎶 Back again with another album art remix from Zero 7… this time “The Garden”! There is just something about album art that leaves me wishing it was more than just a static image. So I gave this one the 3D treatment to bring it to life!\n🖼The original album art depicted a tear with a collage by Gideon London revealed underneath. To translate this into 3D meant extracting each layer painstakingly with Photoshop. With each layer now a separate piece in a stack, the pieces will look subtly different/askew depending on the camera perspective because of the variation in distance away from the lens.\nAdd some “dust” particles, a bit of movement, and a textured background that dynamically responds to light and 💥 BOOM ~ art ~\nHow does your music inspire you? Stay well, lovely people of the internet.",
+      "🌹“The Garden” - 2021 - Modeled, textured, and animated in #Blender. Video edited in DaVinci Resolve.\n🎶 Back again with another album art remix from Zero 7… this time “The Garden”! There is just something about album art that leaves me wishing it was more than just a static image. So I gave this one the 3D treatment to bring it to life!\n🖼The original album art depicted a tear with a collage by Gideon London revealed underneath. To translate this into 3D meant painstakingly extracting each layer with Photoshop. With each layer now a separate piece in a stack, the pieces will look subtly different/askew depending on the camera perspective because of the variation in distance away from the lens.\nAdd some “dust” particles, a bit of movement, and a textured background that dynamically responds to light and 💥 BOOM ~ art ~\nHow does your music inspire you? Stay well, lovely people of the internet.",
     created_at: "2021-10-20T12:33:22.906-05:00",
     updated_at: "2022-11-15T01:37:16.050-06:00",
     slug: "zero-7-the-garden-remix",
@@ -91,7 +92,7 @@ const data: Project[] = [
     tech: ["Blender", "Davinci Resolve", "Photoshop"],
     featuredTech: ["Blender"],
     media: {
-      animation_preview: sacrificePreview,
+      animation_preview: theGardenFull,
       animation_full: theGardenFull,
       still_url:
         "https://cdnb.artstation.com/p/assets/images/images/042/530/295/20211020123311/small_square/sean-swanson-1081-with-text.jpg?1634751191",
@@ -135,10 +136,7 @@ const data: Project[] = [
     tech: ["Blender", "Davinci Resolve", "Photoshop"],
     featuredTech: ["Blender"],
     media: {
-      animation_preview: whenItFallsFull,
       youtube_id: "iSqwFhvr_ys",
-      still_url:
-        "https://cdnb.artstation.com/p/assets/covers/images/034/150/777/small_square/sean-swanson-sean-swanson-thumb.jpg?1611546265",
     },
   },
   {
@@ -244,8 +242,8 @@ const data: Project[] = [
     tech: ["Blender", "Davinci Resolve", "Photoshop"],
     featuredTech: ["Blender"],
     media: {
-      animation_preview: sacrificePreview,
-      animation_full: sacrificeFull,
+      animation_preview: doctorWhoFull,
+      animation_full: doctorWhoFull,
       still_url:
         "https://cdna.artstation.com/p/assets/covers/images/042/531/230/small_square/sean-swanson-sean-swanson-artstation-thumbnail.jpg?1634751406",
     },

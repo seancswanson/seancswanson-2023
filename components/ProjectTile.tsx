@@ -30,7 +30,7 @@ function toKebabCase(title: string) {
 
 export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
   const kebabTitle = toKebabCase(project.title);
-  console.log(kebabTitle);
+  console.log(project.media);
   return (
     <Link
       href={project.infoUrl}
