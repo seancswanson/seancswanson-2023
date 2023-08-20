@@ -74,10 +74,7 @@ export const Header = () => {
           <LinkItem href="/art" number="002" title="Art" />
           <LinkItem href="/blog" number="003" title="Blog" />
           <li className="w-12">
-            <Link
-              href="/Sean_Swanson_Resume_(Plain_Text)_-_April_2023.txt"
-              className="group flex flex-col"
-            >
+            <Link href="/cv" className="group flex flex-col">
               <span className="hocus:border-slate-6800 self-center border-2 border-slate-600 px-2 font-extrabold transition-all hocus:bg-slate-800 hocus:text-white">
                 CV
               </span>
@@ -90,10 +87,7 @@ export const Header = () => {
         <LinkItem href="/art" number="002" title="Art" />
         <LinkItem href="/blog" number="003" title="Blog" />
         <li className="w-12">
-          <Link
-            href="/Sean_Swanson_Resume_(Plain_Text)_-_April_2023.txt"
-            className="group flex flex-col"
-          >
+          <Link href="/cv" className="group flex flex-col">
             <span className="hocus:border-slate-6800 self-center border-2 border-slate-600 px-2 font-extrabold transition-all hocus:bg-slate-800 hocus:text-white">
               CV
             </span>

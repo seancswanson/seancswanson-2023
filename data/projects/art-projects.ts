@@ -62,7 +62,7 @@ const data: Project[] = [
       '"Sacrifice" - 3d Animation | Mixed Digital Media | Made with Blender \nIn dedication to the sacrifices made in Ukraine\'s fight for sovereignty.',
     created_at: "2021-01-24T21:26:49.679-06:00",
     updated_at: "2021-01-24T21:26:49.679-06:00",
-    slug: "sacrifice-2",
+    slug: "sacrifice-ii",
     featured: false,
     published_at: "2021-01-24T21:26:49.679-06:00",
     hash_id: "rAKwGm",
@@ -70,10 +70,7 @@ const data: Project[] = [
     tech: ["Blender", "Davinci Resolve", "Photoshop"],
     featuredTech: ["Blender"],
     media: {
-      animation_preview: sacrificePreview,
       youtube_id: "MNdOG5oNWE8",
-      still_url:
-        "https://cdnb.artstation.com/p/assets/covers/images/034/150/777/small_square/sean-swanson-sean-swanson-thumb.jpg?1611546265",
     },
   },
   {

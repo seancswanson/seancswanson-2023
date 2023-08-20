@@ -9,36 +9,43 @@ A passionate and skilled front-end developer with experience building with techn
 PROFESSIONAL EXPERIENCE
 
 DREAMBOX LEARNING Bellevue, WA
-Website/Digital Marketing Manager 2023-Present
-• Collaborated with marketing teams to create and distribute content, improving brand visibility and customer engagement
+Website/Digital Marketing Manager Feb 2023 - Present
+• Collaborated with stakeholders across the org to create and distribute content, improving brand visibility and customer engagement
+• Successfully managed and lead wide range of projects including the sunsetting of two major product websites.
 • Designed and implemented landing pages optimized for conversions, utilizing UI/UX best practices and SEO guidelines
-• Developed features and bug fixes as part of an Agile team, using technologies such as JavaScript, HTML, and CSS
-• Acted as Scrum Master, facilitating Scrum ceremonies and supporting a team of developers, while adhering to project requirements and user stories
+• Leveraged tools such as SEMRush, Google Analytics, and Google Tag Manager to analyze website traffic, improve SEO efforts, and optimize user journey.
+• Developed features and bug fixes as part of an Agile team, using technologies such as Next.js, React, TypeScript, HTML, and CSS
 • Managed relationships with external vendors, such as SEO agencies and development teams, to optimize website performance and maintain a strong digital presence
-• Wrote and maintained unit tests to ensure code quality and stability, while managing and reviewing pull requests for production deployments
+• Wrote and maintained documentation to ensure code quality and stability, while managing and reviewing pull requests for production deployments
 • Implemented cookie consent management to ensure website compliance with data protection regulations
 • Utilized various DevOps practices, including monitoring website health through dashboards to triage issues and identify root causes
 • Collaborated with cross-functional team members to deliver successful projects on time and within scope
 
 DREAMBOX LEARNING Bellevue, WA
-Software Development Engineer – Front-End (I) 2021-2023
-Client Support Specialist 2019-2021
-• Internally promoted to Engineer from Client Support
+Software Development Engineer – Front-End May 2021 - Feb 2023
+• Internally promoted to Engineering from Client Support
 • Contributed code on the Math Insights Dashboard, developing reports, data visualizations, and classroom management tools for educators
 • Utilized technologies such as Angular, JavaScript w/ TypeScript, SCSS, and Storybook
 • Refactored the client application build process to improve compilation time from ~100 seconds to <5 seconds shortening the feedback loop for developers to see their code changes live
 • Participated in a cross-functional, self-organizing Scrum team that used test-driven development and a CI/CD pipeline to deliver value quickly and reduce risks
 • Supported the development process from test planning to deployment and monitoring using tools such as Amazon Web Services S3, New Relic, Nomad, Drone, Kibana, Docker, Postman, Jira, and Jenkins
 • As a certified Scrum Master, successfully supported a team of 8 developers as both a technical contributor and agile coach, ensuring that our project was delivered efficiently and effectively.
+Client Support Specialist May 2019 - May 2021
+• Collaborated with engineering, client experience, and marketing departments to deliver customized client solutions
+• Utilized JavaScript to develop internal scripts, including UI improvements and DOM manipulation for internal tools
+• Led technical training sessions, including troubleshooting and case operations
+• Created and implemented a method for efficiently processing client data and establishing best practices for documenting related casework, resulting in a significant increase in productivity (~33% faster completion of case reporting)
+• Provided specialized technical expertise to assist in the rapid implementation and onboarding of DreamBox Learning in schools nationwide
+• Offered specialized technical knowledge in collaboration with other internal teams to quickly implement and onboard DreamBox Learning in schools across the country.
 
 TRADITIONS OF THE ANCESTORS Seattle, WA
-Junior Web Developer 2018-2019
+Junior Web Developer April 2018 - May 2019
 • Collaborated on a team of ~20 to build a platform for exploring and connecting with the world's cultures
 • Contributed to the implementation of a data visualization, work on the user-facing and site admin UI, and event tracking with Google Analytics
 • Used technologies such as JavaScript, Node.js, Express.js, jQuery, Underscore, MySQL, and Google Analytics
 
 IAN GILMAN Seattle, WA
-Apprentice Web Developer 2018-2019
+Apprentice Web Developer March 2018 - May 2019
 • Collaborated with senior web engineers and clients (e.g. Schema Design Agency) to bring projects from conception to deployment
 • Engaged in pair programming, with a focus on front-end frameworks and languages as well as some exposure to back-end development
 • Utilized a wide range of technologies including JavaScript, ES6, React.js, Node.js, Express.js, Three.js, Pixi.js, Hammer.js, WebGL, Aframe.js, WebVR, Lodash, Underscore, templating, WordPress, HTML, and CSS

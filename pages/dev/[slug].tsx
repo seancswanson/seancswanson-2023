@@ -15,7 +15,7 @@ function toKebabCase(title: string) {
     .replace(/\s+/g, "-"); // Replace spaces with hyphens
 }
 
-export default function ArtProject(project: { project: Project }) {
+export default function DevProject(project: { project: Project }) {
   const router = useRouter();
   console.log(project);
   if (router.isFallback) {
