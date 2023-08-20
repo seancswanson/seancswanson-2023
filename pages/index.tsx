@@ -10,6 +10,8 @@ import DevProjects from "../data/projects/dev-projects";
 import Link from "next/link";
 import { Fragment } from "react";
 import Layout from "../components/layout";
+import upRightArrow from "../assets/icons/up-right-arrow.png";
+import Image from "next/image";
 
 function toKebabCase(title: string) {
   return title
@@ -70,9 +72,15 @@ export default function Home() {
               </div>
               <Link
                 href="/dev"
-                className="self-end border border-black px-2 text-sm opacity-50 transition-opacity duration-75 hocus:opacity-100"
+                className=" m-auto flex w-1/2 items-center justify-center gap-2 self-end border border-black p-2 text-sm opacity-75 transition-opacity duration-75 hocus:opacity-100 md:m-0 md:w-auto md:py-2"
               >
-                View all
+                View all{" "}
+                <Image
+                  src={upRightArrow}
+                  width="10"
+                  height="10"
+                  alt="up-right-arrow"
+                />
               </Link>
             </div>
             <div className="flex w-full flex-col gap-2 ">
@@ -116,9 +124,15 @@ export default function Home() {
               </div>
               <Link
                 href="/art"
-                className="self-end border border-black px-2 text-sm opacity-50 transition-opacity duration-75 hocus:opacity-100"
+                className=" m-auto flex w-1/2 items-center justify-center gap-2 self-end border border-black p-2 text-sm opacity-75 transition-opacity duration-75 hocus:opacity-100 md:m-0 md:w-auto md:py-2"
               >
-                View all
+                View all{" "}
+                <Image
+                  src={upRightArrow}
+                  width="10"
+                  height="10"
+                  alt="up-right-arrow"
+                />
               </Link>
             </div>
             <div className="flex w-full flex-col gap-2 ">

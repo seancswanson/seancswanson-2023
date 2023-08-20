@@ -1,10 +1,18 @@
-import { GetStaticProps } from "next";
+import Image from "next/image";
 import Resume from "../../data/cv.json";
-import { Fragment, useEffect, useState } from "react";
-import { ProjectTile } from "../../components/ProjectTile";
 import Layout from "../../components/layout";
+import download from "../../assets/icons/download.png";
 import Link from "next/link";
 import { saveAs } from "file-saver";
+
+function toKebabCase(title: string) {
+  return title
+    .replace(/[.,'!?]/g, "") // Remove punctuation
+    .toLowerCase() // Convert to lowercase
+    .trim() // Remove any leading or trailing spaces
+    .replace(/\s+/g, "-"); // Replace spaces with hyphens
+}
+
 const CV = () => {
   const {
     name,
@@ -47,26 +55,36 @@ const CV = () => {
       </h1>
       <div>
         <button
-          className="self-end border border-black px-2 text-sm opacity-50 transition-opacity duration-75 hocus:opacity-100"
+          className=" m-auto flex w-1/2 items-center justify-center gap-2 self-end border border-black p-2 text-sm opacity-75 transition-opacity duration-75 hocus:opacity-100 md:m-0 md:w-auto md:py-2"
           onClick={downloadCV}
         >
-          Download to .txt
+          Download to .txt{" "}
+          <Image src={download} width="15" height="15" alt="up-right-arrow" />
         </button>
       </div>
 
       {/* Professional Experience */}
       <div className="mt-4 flex flex-col gap-4 rounded-lg border border-slate-200 bg-gray-50 p-6 shadow transition-colors duration-200 hover:bg-white">
-        <p className="mb-3 text-lg font-bold italic">Professional Experience</p>
+        <p className="mb-3 font-bold italic">Professional Experience</p>
         {professionalExperience.map((experience, index) => (
-          <div key={index} className="mb-4">
-            <h2 className="mb-2 text-xl font-bold">
+          <div key={index} className="mb-8">
+            <h2 className="mb-2 flex items-end gap-2 font-bold">
+              <Image
+                src={`/cv-images/${toKebabCase(experience.company)}.png`}
+                alt={`Logo for ${experience.company}`}
+                width={40}
+                height={40}
+                className={`${
+                  experience.showLogo ? "block" : "hidden"
+                } rounded-full shadow-md`}
+              />
               {experience.company}, {experience.location}
             </h2>
 
             {experience.positions && experience.positions.length > 1 ? (
               experience.positions.map((position, posIndex) => (
-                <div key={posIndex} className="mb-3">
-                  <h3 className="mb-1 text-lg underline">
+                <div key={posIndex} className="mb-8">
+                  <h3 className="mb-2  underline">
                     {position.title} ({position.startDate} -{" "}
                     {position.endDate || "Present"})
                   </h3>
@@ -75,7 +93,7 @@ const CV = () => {
                       (responsibility, respIndex) => (
                         <li
                           key={respIndex}
-                          className="mb-1 transition-colors duration-150 hover:text-blue-500"
+                          className="mb-1 text-sm transition-colors duration-150 hover:text-blue-500"
                         >
                           {responsibility}
                         </li>
@@ -86,7 +104,7 @@ const CV = () => {
               ))
             ) : (
               <>
-                <h3 className="mb-1 text-lg underline">
+                <h3 className="mb-2  underline">
                   {experience.title} ({experience.startDate} -{" "}
                   {experience.endDate || "Present"})
                 </h3>
@@ -95,7 +113,7 @@ const CV = () => {
                     (responsibility, respIndex) => (
                       <li
                         key={respIndex}
-                        className="mb-1 transition-colors duration-150 hover:text-blue-500"
+                        className="mb-1 text-sm transition-colors duration-150 hover:text-blue-500"
                       >
                         {responsibility}
                       </li>
@@ -113,7 +131,14 @@ const CV = () => {
         <p className="font-bold italic">Education</p>
         {education.map((edu, index) => (
           <div key={index}>
-            <h2>
+            <h2 className="mb-2 flex items-end gap-2 font-bold">
+              <Image
+                src={`/cv-images/${toKebabCase(edu.institution)}.png`}
+                alt={`Logo for ${edu.institution}`}
+                width={40}
+                height={40}
+                className="rounded-full shadow-md"
+              />
               {edu.institution}, {edu.location}
             </h2>
             <p>

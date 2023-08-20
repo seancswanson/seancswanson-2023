@@ -12,6 +12,7 @@
         {
             "company": "DREAMBOX LEARNING",
             "location": "Bellevue, WA",
+            "showLogo": true,
             "positions": [
                 {
                     "title": "Website/Digital Marketing Manager",
@@ -65,6 +66,7 @@
             "title": "Junior Web Developer",
             "startDate": "April 2018",
             "endDate": "May 2019",
+            "showLogo": true,
             "responsibilities": [
                 "Collaborated on a team of ~20 to build a platform for exploring and connecting with the world's cultures",
                 "Contributed to the implementation of a data visualization, work on the user-facing and site admin UI, and event tracking with Google Analytics",
@@ -77,6 +79,7 @@
             "title": "Apprentice Web Developer",
             "startDate": "March 2018",
             "endDate": "May 2019",
+            "showLogo": false,
             "responsibilities": [
                 "Collaborated with senior web engineers and clients (e.g. Schema Design Agency) to bring projects from conception to deployment",
                 "Engaged in pair programming, with a focus on front-end frameworks and languages as well as some exposure to back-end development",
