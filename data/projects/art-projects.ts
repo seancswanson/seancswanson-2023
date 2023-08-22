@@ -44,7 +44,7 @@ const data: ArtProject[] = [
     type: "animation",
     mediaCategory: "Digital Mixed Media",
     description:
-      "🇺🇦 In dedication to the sacrifices made in Ukraine's fight for sovereignty.⁣\n🕊 I started this piece a couple of days after the war started. Over these months I've chiseled at it here and there to end up at this point.\n💛 To publish this when the war is still evolving- and sacrifices are continuing to be made- is to call out that the world is still watching. I'm honored to be able to share this piece with this audience.⁣ What do you feel when reflect on this?",
+      "🇺🇦 In dedication to the sacrifices made in Ukraine's fight for sovereignty.⁣\n🕊 I started this piece a couple of days after the war started. Over these months I've chiseled at it here and there to end up at this point.\n💛 To publish this when the war is still evolving- and sacrifices are continuing to be made- is to call out that the world is still watching. I'm honored to be able to share this piece with this audience.⁣ What do you feel when you reflect on this?",
     created_at: "2022-05-22T15:29:42.800-05:00",
     updated_at: "2022-09-06T11:29:09.917-05:00",
     slug: "sacrifice",
@@ -155,7 +155,7 @@ const data: ArtProject[] = [
     },
   },
   {
-    title: "Zahara - Alibi promo",
+    title: "Zahara - Alibi Promo",
     type: "animation",
     mediaCategory: "Digital Mixed Media",
     description:
