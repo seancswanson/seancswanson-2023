@@ -19,7 +19,7 @@
 }
 
 .markdownContent img {
-  @apply mx-auto;
+  @apply mx-auto rounded shadow;
 }
 
 .markdownContent blockquote {
@@ -27,11 +27,11 @@
 }
 
 .markdownContent ul {
-  @apply mb-8 list-inside list-disc;
+  @apply mb-8 list-inside list-disc pl-6;
 }
 
 .markdownContent ol {
-  @apply list-inside list-decimal;
+  @apply mb-8 list-inside list-decimal pl-6;
 }
 
 .markdownContent li {

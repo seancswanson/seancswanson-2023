@@ -45,7 +45,7 @@ export default function Post({ markdown, data }: { markdown: any; data: any }) {
   );
 }
 export async function getStaticPaths() {
-  const postsDirectory = path.join(process.cwd(), "data");
+  const postsDirectory = path.join(process.cwd(), "posts");
   const filenames = fs.readdirSync(postsDirectory);
 
   const paths = filenames.map((filename) => {
@@ -63,7 +63,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: { id: string } }) {
-  const filePath = path.join(process.cwd(), "data/posts", `${params.id}.mdx`);
+  const filePath = path.join(process.cwd(), "posts", `${params.id}.mdx`);
   const fileContent = fs.readFileSync(filePath, "utf8");
   const { content, data } = matter(fileContent);
   const processedContent = await remark().use(html).process(content);
