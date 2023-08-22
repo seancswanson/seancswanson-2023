@@ -140,7 +140,7 @@ const data: ArtProject[] = [
     type: "youtube",
     mediaCategory: "Digital Mixed Media",
     description:
-      " 👾 I had the honor to create visualizations (cover not by me) for “System Infinity”, the third release in a trilogy of EPs from my long time friend @fullbodybrainfreeze. This is the product of months of hard work in between everything else we have going on in life.🤖 Animating for these tracks was an absolute blast. I listened to this EP literally hundreds of times during production to capture the essence of the tracks, individually and as a collective story. Trippy, absurd, cerebral. Modeled and animated in Blender. Video produced by me in DaVinci Resolve 17.",
+      " 👾 Crafting visualizations for “System Infinity”, the third release in a trilogy of EPs from @Alterations, was a deep dive into the essence of music and animation.\n This journey entailed immersing myself in the tracks, wireframing their narratives, and playing the EP on repeat to truly grasp its core. Each listen inspired a facet of the story I aimed to depict.\n 🤖 The challenge and joy lay in bringing these auditory tales to life: surreal, contemplative, and wildly imaginative. Every element was meticulously modeled and animated in Blender, culminating in a final video piece seamlessly produced in DaVinci Resolve 17.",
     created_at: "2021-01-24T21:25:42.240-06:00",
     updated_at: "2021-03-27T22:20:55.764-05:00",
     slug: "alterations-system-infinity-ep-visuals",
