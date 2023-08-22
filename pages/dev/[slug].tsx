@@ -3,21 +3,14 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "../../components/layout";
-import devProjects, { Project } from "../../data/projects/dev-projects";
+import devProjects, { DevProject } from "../../data/projects/dev-projects";
 import globeIcon from "../../assets/icons/globe_icon.png";
 import githubIcon from "../../assets/icons/github_icon.png";
+import { toKebabCase } from "../../lib/util";
 
-function toKebabCase(title: string) {
-  return title
-    .replace(/[.,'!?]/g, "") // Remove punctuation
-    .toLowerCase() // Convert to lowercase
-    .trim() // Remove any leading or trailing spaces
-    .replace(/\s+/g, "-"); // Replace spaces with hyphens
-}
-
-export default function DevProject(project: { project: Project }) {
+export default function DevProjectComponent(project: { project: DevProject }) {
   const router = useRouter();
-  console.log(project);
+  project;
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
@@ -25,7 +18,7 @@ export default function DevProject(project: { project: Project }) {
 
   return (
     <Layout>
-      <div className="breadcrumbs mb-2 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity duration-150 hover:opacity-100">
+      <div className="breadcrumbs mb-4 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity duration-150 hover:opacity-100">
         /{" "}
         <Link
           href="/dev"
@@ -78,13 +71,13 @@ export default function DevProject(project: { project: Project }) {
         </div>
         <div className="mb-4">
           {project.project.description.split("\n").map((paragraph, index) => (
-            <p key={index} className="">
+            <p key={index} className="mb-4">
               {paragraph}
             </p>
           ))}
         </div>
         <a
-          href={project.project.repoUrl}
+          href={project.project.liveUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-sm text-blue-500 underline"
@@ -125,7 +118,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const project = devProjectsArr.filter(
     (project) => project.slug === params?.slug
   )[0];
-  console.log(project);
+  project;
 
   return { props: { project }, revalidate: 1 };
 };

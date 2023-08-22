@@ -1,9 +1,8 @@
-import { GetStaticProps } from "next";
-import DevProjects, { Project } from "../../data/projects/dev-projects";
+import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
+import DevProjects, { DevProject } from "../../data/projects/dev-projects";
 import { ProjectTile } from "../../components/ProjectTile";
 import Layout from "../../components/layout";
-import Link from "next/link";
 
 const Dev = () => {
   const [filter, setFilter] = useState("all");
@@ -21,9 +20,9 @@ const Dev = () => {
       : DevProjects.filter((project) => {
           return project.tech.includes(filter);
         });
-  console.log(techOptionsForFilter);
+  techOptionsForFilter;
   useEffect(() => {
-    console.log(filter);
+    filter;
   }, [filter]);
   return (
     <Layout>
@@ -69,7 +68,7 @@ const Dev = () => {
         ))}
       </div>
       <div className="grid grid-cols-2 grid-rows-2 justify-items-center gap-4 sm:grid md:grid md:grid-cols-4 md:grid-rows-1">
-        {filteredDevProjects.map((project: Project, key: number) => (
+        {filteredDevProjects.map((project: DevProject, key: number) => (
           <Fragment key={key}>
             <ProjectTile
               project={{

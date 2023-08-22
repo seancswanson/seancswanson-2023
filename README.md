@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sean Swanson's Portfolio
 
-## Getting Started
+## Welcome to my portfolio's repository!
 
-First, run the development server:
+Here, you'll find the source code for my latest personal website, which showcases my web development and art projects, as well as my blog posts. You can also download my CV from the website.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I built the website using Next.js, a popular React framework. I also used TypeScript for static type checking and Tailwind for styling.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+The project follows the standard Next.js file structure:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- pages/: Contains all the page components. Each file corresponds to a route on the website.
+- components/: Contains reusable React components.
+- public/: Contains static files like images and the downloadable CV.
+- data/: Contains JSON data for the CV and project details.
+  Running the Project Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To run the project on your local machine, use the following commands:
 
-## Learn More
+- `npm install`
+- `npm run dev`
 
-To learn more about Next.js, take a look at the following resources:
+Then, open http://localhost:3000 with your browser to see the result.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+I chose to use Vercel, a platform from the creators of Next.js, for deployment. The set up is painless and the app management is even easier.
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+I welcome feedback and contributions! Feel free to check out the repository and submit pull requests or create issues for any problems you find.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+This project is open source and available under the MIT License.

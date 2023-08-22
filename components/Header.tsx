@@ -37,7 +37,12 @@ const LinkItem = ({ href, number, title }: LinkProps) => (
           {number}
           <span className="px-2 font-extrabold">{title}</span>
         </span>
-        <Image src={upRightArrow} width="15" height="15" alt="up-right-arrow" />{" "}
+        <Image
+          src={upRightArrow}
+          width="15"
+          height="15"
+          alt="Arrow pointing up and to the right"
+        />{" "}
       </div>
     </Link>
   </li>
@@ -88,7 +93,7 @@ export const Header = () => {
         <LinkItem href="/blog" number="003" title="Blog" />
         <li className="w-12">
           <Link href="/cv" className="group flex flex-col">
-            <span className="hocus:border-slate-6800 self-center border-2 border-slate-600 px-2 font-extrabold transition-all hocus:bg-slate-800 hocus:text-white">
+            <span className="self-center border-2 border-slate-600 px-2 font-extrabold transition-all hocus:border-slate-800 hocus:bg-slate-800 hocus:text-white">
               CV
             </span>
           </Link>

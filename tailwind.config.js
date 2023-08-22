@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        skin: ["AuthenticSans", ...defaultTheme.fontFamily.sans],
+        skin: [...defaultTheme.fontFamily.sans],
       },
       colors: {
         "off-white": "#F5F5F5",

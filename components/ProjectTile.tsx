@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import upRightArrowWhite from "../assets/icons/up-right-arrow-white.png";
+import { toKebabCase } from "../lib/util";
 
 interface Props {
   project: Project;
@@ -18,19 +19,12 @@ interface Project {
   media?: any;
 }
 
-function toKebabCase(title: string) {
-  return title
-    .replace(/[.,'!?]/g, "") // Remove punctuation
-    .toLowerCase() // Convert to lowercase
-    .trim() // Remove any leading or trailing spaces
-    .replace(/\s+/g, "-"); // Replace spaces with hyphens
-}
-
 export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
   const kebabTitle = toKebabCase(project.title);
 
   return (
     <Link
+      role="button"
       href={project.infoUrl}
       className="group relative grid h-auto max-w-[250px] grid-cols-1 grid-rows-[1fr] rounded-md shadow-md transition-shadow hocus:shadow-xl"
     >
@@ -41,6 +35,8 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
             src={project.media}
             loop
             muted
+            playsInline
+            autoPlay
             className="h-full w-full rounded-md object-cover object-center"
           />
         ) : (
@@ -60,7 +56,7 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
                 src={upRightArrowWhite}
                 width="20"
                 height="20"
-                alt="up-right-arrow"
+                alt="Arrow pointing up and to the right"
               />
             </span>
           </div>

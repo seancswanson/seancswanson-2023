@@ -1,4 +1,4 @@
-export interface Project {
+export interface DevProject {
   title: string;
   description: string;
   type: string;
@@ -10,7 +10,7 @@ export interface Project {
   repoUrl: string;
 }
 
-const data: Project[] = [
+const data: DevProject[] = [
   {
     title: "The Majesty of the 36 Views of Mt. Fuji",
     type: "Web App",
@@ -27,7 +27,7 @@ const data: Project[] = [
     title: "Cypher Queenz",
     type: "Web App",
     description:
-      "Statically generated website designed and built for local Bgirl organization. I used Astro with Tailwind CSS and integrated Sanity CMS for blog posts, media, and events. Optimized for performance and SEO from the beginning.",
+      "A dynamic Astro.js-powered platform promoting CypherQueenz, a vibrant Bgirl collective. \nIntegrated with Sanity.io's CMS for seamless content management, the site showcases events, blogs, galleries, and more, highlighting the pivotal role of females in Hip Hop.\n Designed for optimal performance and user engagement, it embodies both modern web development aesthetics and best practices.",
     slug: "cypher-queenz",
     featured: true,
     tech: ["Astro", "Sanity CMS", "SSG", "Tailwind"],
@@ -39,7 +39,7 @@ const data: Project[] = [
     title: "Chairman of the Board",
     type: "Web App",
     description:
-      '"Chairman of the Board" is a tongue-in-cheek web game where players start as a Mailroom Clerk and navigate through various scenarios to climb the corporate ladder, aiming to reach the coveted Chairman position. Play now for a humorous take on the corporate world!',
+      '"Chairman of the Board" is a tongue-in-cheek web game where players start as a Mailroom Clerk and navigate through various scenarios to climb the corporate ladder, aiming to reach the coveted Chairman position.\n Play now for a humorous take on the corporate world!',
     slug: "chairman-of-the-board",
     featured: true,
     tech: ["HTML", "CSS", "JavaScript", "jQuery"],
@@ -51,7 +51,7 @@ const data: Project[] = [
     title: "OP-T3",
     type: "Web App",
     description:
-      '"OP-T3" is a web app designed to rank Stands from JoJo\'s Bizarre Adventure. It leverages the power of the T3 Stack (TypeScript, tRPC, and Tailwind) and is built using Next.js. To persist data and interface with the database, MySQL is used with Prisma as the ORM.',
+      '"OP-T3" is a web app designed to rank Stands from JoJo\'s Bizarre Adventure.\n It leverages the power of the T3 Stack (TypeScript, tRPC, and Tailwind) and is built using Next.js.\n To persist data and interface with the database, MySQL is used with Prisma as the ORM.',
     slug: "op-t3",
     featured: true,
     tech: ["Next.js", "TypeScript", "Tailwind", "tRPC", "Prisma", "MySQL"],

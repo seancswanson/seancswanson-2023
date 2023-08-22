@@ -1,0 +1,59 @@
+.markdownContent h1 {
+  @apply text-xl font-extrabold;
+}
+
+.markdownContent h2 {
+  @apply font-bold;
+}
+
+.markdownContent h3 {
+  @apply font-semibold;
+}
+
+.markdownContent p {
+  @apply mb-8;
+}
+
+.markdownContent a {
+  @apply text-blue-600;
+}
+
+.markdownContent img {
+  @apply mx-auto;
+}
+
+.markdownContent blockquote {
+  @apply my-8 border-l-4 border-gray-300 pl-4 italic;
+}
+
+.markdownContent ul {
+  @apply mb-8 list-inside list-disc;
+}
+
+.markdownContent ol {
+  @apply list-inside list-decimal;
+}
+
+.markdownContent li {
+  @apply my-2;
+}
+
+.markdownContent pre {
+  @apply overflow-x-auto;
+}
+
+.markdownContent code {
+  @apply text-sm;
+}
+
+.markdownContent table {
+  @apply my-8 w-full border-collapse border border-gray-300;
+}
+
+.markdownContent th {
+  @apply border border-gray-300 bg-gray-100 px-4 py-2;
+}
+
+.markdownContent td {
+  @apply border border-gray-300 px-4 py-2;
+}

@@ -4,7 +4,6 @@ import githubIcon from "../assets/icons/github.svg";
 import linkedinIcon from "../assets/icons/linkedin.svg";
 import mediumIcon from "../assets/icons/medium.svg";
 import twitterIcon from "../assets/icons/twitter.svg";
-import profilePicture from "../assets/me-v4.png";
 
 export const SocialIcons = () => {
   return (

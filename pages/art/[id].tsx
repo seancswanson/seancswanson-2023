@@ -1,11 +1,13 @@
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
-import artProjects, { Project } from "../../data/projects/art-projects";
+import Image from "next/image";
 import Link from "next/link";
 import YouTube from "react-youtube";
+import { toKebabCase } from "../../lib/util";
+import artProjects, { ArtProject } from "../../data/projects/art-projects";
 import Layout from "../../components/layout";
 
-export default function ArtProject(project: { project: Project }) {
+export default function ArtProjectComponent(project: { project: ArtProject }) {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -38,7 +40,7 @@ export default function ArtProject(project: { project: Project }) {
   const parsedCreationDate = new Date(project.project.created_at);
   return (
     <Layout>
-      <div className="breadcrumbs mb-2 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity duration-150 hover:opacity-100">
+      <div className="breadcrumbs mb-4 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity duration-150 hover:opacity-100">
         /{" "}
         <Link
           href="/art"
@@ -72,6 +74,7 @@ export default function ArtProject(project: { project: Project }) {
                 loop
                 muted
                 playsInline
+                controls
                 src={project.project.media.animation_full}
               />
               <span className="mt-2 text-center text-xs uppercase opacity-75">
@@ -79,10 +82,12 @@ export default function ArtProject(project: { project: Project }) {
               </span>
             </div>
             <div className="flex basis-[50%] flex-col">
-              <img
-                className="rounded shadow-lg"
-                src={project.project.media.still_url}
+              <Image
+                src={`/art/${toKebabCase(project.project.title)}-still.webp`}
+                width="500"
+                height="500"
                 alt={project.project.title}
+                className="h-full w-full rounded-md object-cover object-center"
               />
               <span className="mt-2 text-center text-xs uppercase opacity-75">
                 Still
@@ -91,11 +96,13 @@ export default function ArtProject(project: { project: Project }) {
           </>
         ) : (
           // Render only still image
-          <div className="basis-[50%]">
-            <img
-              className="mx-auto rounded shadow-lg"
-              src={project.project.media.still_url}
+          <div className="mx-auto basis-[50%]">
+            <Image
+              src={`/art/${toKebabCase(project.project.title)}-still.webp`}
+              width="500"
+              height="500"
               alt={project.project.title}
+              className="h-full w-full rounded-md object-cover object-center"
             />
           </div>
         )}{" "}
@@ -108,12 +115,14 @@ export default function ArtProject(project: { project: Project }) {
           </b>
           , {parsedCreationDate.getFullYear()}
         </p>
-        <p>{project.project.mediaCategory}</p>
-        {project.project.description.split("\n").map((paragraph, index) => (
-          <p key={index} className="">
-            {paragraph}
-          </p>
-        ))}
+        <p className="text-sm">{project.project.mediaCategory}</p>
+        <div className="description mb-4">
+          {project.project.description.split("\n").map((paragraph, index) => (
+            <p key={index} className="mb-4">
+              {paragraph}
+            </p>
+          ))}
+        </div>
         <div className="tools mb-4">
           Tools used:
           <div className="flex flex-wrap gap-2">
@@ -124,15 +133,17 @@ export default function ArtProject(project: { project: Project }) {
             ))}
           </div>
         </div>
-        <a
-          href={project.project.permalink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block text-xs text-blue-500 underline"
-        >
-          View on{" "}
-          {project.project.type === "youtube" ? "YouTube" : "Artstation"}
-        </a>
+        {project.project.permalink ? (
+          <a
+            href={project.project.permalink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-xs text-blue-500 underline"
+          >
+            View on{" "}
+            {project.project.type === "youtube" ? "YouTube" : "Artstation"}
+          </a>
+        ) : null}
       </div>
     </Layout>
   );
@@ -152,7 +163,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const project = artProjectsArr.filter(
     (artwork) => artwork.slug === params?.id
   )[0];
-  console.log(project);
 
   return { props: { project }, revalidate: 1 };
 };

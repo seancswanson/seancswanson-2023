@@ -1,23 +1,15 @@
-import { GetStaticProps } from "next";
-import artProjects, { Project } from "../../data/projects/art-projects";
+import artProjects, { ArtProject } from "../../data/projects/art-projects";
 import { Fragment } from "react";
 import { ProjectTile } from "../../components/ProjectTile";
 import Layout from "../../components/layout";
 import Link from "next/link";
-
-function toKebabCase(title: string) {
-  return title
-    .replace(/[.,'!?]/g, "") // Remove punctuation
-    .toLowerCase() // Convert to lowercase
-    .trim() // Remove any leading or trailing spaces
-    .replace(/\s+/g, "-"); // Replace spaces with hyphens
-}
+import { toKebabCase } from "../../lib/util";
 
 const Art = () => {
-  console.log(artProjects);
+  artProjects;
   return (
     <Layout>
-      <div className="breadcrumbs mb-2 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity duration-75 hover:opacity-100">
+      <div className="breadcrumbs mb-4 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity duration-75 hover:opacity-100">
         /{" "}
         <Link
           href="/art"
@@ -26,9 +18,9 @@ const Art = () => {
           Art
         </Link>
       </div>
-      <h1>Art Page</h1>
+      <h1 className="mb-4 text-3xl">Art Projects</h1>
       <div className="grid grid-cols-2 grid-rows-2 justify-items-center gap-4 sm:grid md:grid md:grid-cols-4 md:grid-rows-1">
-        {artProjects.map((project: Project, key: number) => (
+        {artProjects.map((project: ArtProject, key: number) => (
           <Fragment key={key}>
             <ProjectTile
               isVideoThumbnail={!!project.media.animation_preview}
@@ -43,7 +35,7 @@ const Art = () => {
                   ? project.media.animation_preview
                   : project.media.still_url
                   ? project.media.still_url
-                  : `/art/${toKebabCase(project.title)}-still.jpeg`,
+                  : `/art/${toKebabCase(project.title)}-still.webp`,
                 tech: project.tech,
                 featuredTech: project.featuredTech,
               }}

@@ -51,8 +51,9 @@ export const Hero = () => {
               <HighlightedText key={2} rotation={rotations[2]}>
                 bboy
               </HighlightedText>
-              based in Seattle, WA. I love creating novel, beautiful, and
-              intuitive experiences for users.
+              based in Seattle, WA. I have a passion for all facets of software
+              development, from ideation to execution, and I truly enjoy delving
+              into both project management and the entire software development .
             </p>
             <p className="mb-8 text-gray-700 md:mb-4">
               My diverse range of passions allow me to tackle most challenges in
@@ -65,10 +66,10 @@ export const Hero = () => {
                 Website/Digital Marketing Manager
               </HighlightedText>
               at <span className="whitespace-nowrap">DreamBox Learning</span>,
-              using a blend of modern technologies and project management skills
-              to increase brand visibility, optimize customer engagement, and
-              ensure smooth execution of data-compliant, conversion-optimized
-              web solutions.
+              using a blend of modern web development and project management
+              skills to increase brand visibility, optimize customer engagement,
+              and ensure smooth execution of data-compliant,
+              conversion-optimized web solutions.
             </p>
           </div>
         </div>
@@ -76,7 +77,7 @@ export const Hero = () => {
           <SocialIcons />
         </div>
       </div>
-      <div className="m-auto my-4 h-64 w-64 rounded-full border border-slate-200 bg-purple-200 shadow-inner md:m-0 md:h-[initial] md:basis-[50%] md:rounded-lg md:border-0 md:shadow">
+      <div className="m-auto my-4 h-64 w-64 rounded-full border border-slate-200 shadow-inner md:m-0 md:h-[initial] md:basis-[50%] md:rounded-lg md:border-0 md:shadow">
         <Image
           priority
           src={profilePicture}

@@ -1,17 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import Resume from "../../data/cv.json";
 import Layout from "../../components/layout";
 import download from "../../assets/icons/download.png";
-import Link from "next/link";
 import { saveAs } from "file-saver";
-
-function toKebabCase(title: string) {
-  return title
-    .replace(/[.,'!?]/g, "") // Remove punctuation
-    .toLowerCase() // Convert to lowercase
-    .trim() // Remove any leading or trailing spaces
-    .replace(/\s+/g, "-"); // Replace spaces with hyphens
-}
+import { toKebabCase } from "../../lib/util";
 
 const CV = () => {
   const {
@@ -59,7 +52,12 @@ const CV = () => {
           onClick={downloadCV}
         >
           Download to .txt{" "}
-          <Image src={download} width="15" height="15" alt="up-right-arrow" />
+          <Image
+            src={download}
+            width="15"
+            height="15"
+            alt="Arrow pointing up and to the right"
+          />
         </button>
       </div>
 
