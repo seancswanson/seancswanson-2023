@@ -81,7 +81,7 @@ const CV = () => {
 
             {experience.positions && experience.positions.length > 1 ? (
               experience.positions.map((position, posIndex) => (
-                <div key={posIndex} className="mb-8">
+                <div key={posIndex} className="mb-8 last:mb-0">
                   <h3 className="mb-2  underline">
                     {position.title} ({position.startDate} -{" "}
                     {position.endDate || "Present"})
