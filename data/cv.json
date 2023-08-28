@@ -79,7 +79,7 @@
             "title": "Apprentice Web Developer",
             "startDate": "March 2018",
             "endDate": "May 2019",
-            "showLogo": false,
+            "showLogo": true,
             "responsibilities": [
                 "Collaborated with senior web engineers and clients (e.g. Schema Design Agency) to bring projects from conception to deployment",
                 "Engaged in pair programming, with a focus on front-end frameworks and languages as well as some exposure to back-end development",
