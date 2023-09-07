@@ -7,6 +7,8 @@ import devProjects, { DevProject } from "../../data/projects/dev-projects";
 import globeIcon from "../../assets/icons/globe_icon.png";
 import githubIcon from "../../assets/icons/github_icon.png";
 import { toKebabCase } from "../../lib/util";
+import Markdown, { compiler } from "markdown-to-jsx";
+import styles from "./Project.module.css";
 
 export default function DevProjectComponent(project: { project: DevProject }) {
   const router = useRouter();
@@ -41,7 +43,7 @@ export default function DevProjectComponent(project: { project: DevProject }) {
             alt={project.project.title}
             width={400}
             height={400}
-            className="h-full w-full rounded-md object-cover object-center"
+            className="h-full w-full rounded-md object-cover object-center shadow-sm"
           />
         </div>
         <div className="basis-[50%]">
@@ -50,7 +52,7 @@ export default function DevProjectComponent(project: { project: DevProject }) {
             alt={project.project.title}
             width={400}
             height={400}
-            className="h-full w-full rounded-md object-cover object-center"
+            className="h-full w-full rounded-md object-cover object-center shadow-sm"
           />
         </div>
       </div>
@@ -69,14 +71,20 @@ export default function DevProjectComponent(project: { project: DevProject }) {
             ))}
           </div>
         </div>
-        <div className="mb-4">
-          {project.project.description.split("\n").map((paragraph, index) => (
-            <p key={index} className="mb-4">
-              {paragraph}
-            </p>
-          ))}
+        <div className=" mb-4">
+          <Markdown
+            options={{
+              wrapper: ({ children }) => (
+                <div className={styles.markdownContent}>{children}</div>
+              ),
+            }}
+          >
+            {project.project.description}
+          </Markdown>
         </div>
-        <a
+
+        {project.project.liveUrl
+          ? `<a
           href={project.project.liveUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -98,7 +106,8 @@ export default function DevProjectComponent(project: { project: DevProject }) {
             height={32}
           />{" "}
           View Source
-        </a>
+        </a>`
+          : null}
       </div>
     </Layout>
   );
