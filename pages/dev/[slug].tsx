@@ -83,31 +83,38 @@ export default function DevProjectComponent(project: { project: DevProject }) {
           </Markdown>
         </div>
 
-        {project.project.liveUrl
-          ? `<a
-          href={project.project.liveUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm text-blue-500 underline"
-        >
-          <Image alt="globe icon" src={globeIcon.src} width={32} height={32} />{" "}
-          View Live
-        </a>
-        <a
-          href={project.project.repoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm text-blue-500 underline"
-        >
-          <Image
-            alt="github icon"
-            src={githubIcon.src}
-            width={32}
-            height={32}
-          />{" "}
-          View Source
-        </a>`
-          : null}
+        {project.project.liveUrl ? (
+          <div className="links flex flex-col gap-2">
+            <a
+              href={project.project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-blue-500 underline"
+            >
+              <Image
+                alt="globe icon"
+                src={globeIcon.src}
+                width={32}
+                height={32}
+              />{" "}
+              View Live
+            </a>
+            <a
+              href={project.project.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-blue-500 underline"
+            >
+              <Image
+                alt="github icon"
+                src={githubIcon.src}
+                width={32}
+                height={32}
+              />{" "}
+              View Source
+            </a>
+          </div>
+        ) : null}
       </div>
     </Layout>
   );

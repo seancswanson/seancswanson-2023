@@ -46,7 +46,7 @@ const data: DevProject[] = [
     title: "Cypher Queenz",
     type: "Web App",
     description: `
-    ### Project Overview 🌟
+### Project Overview 🌟
   - **Promoting CypherQueenz**: Developed a dynamic platform to promote CypherQueenz, a vibrant Bgirl collective, highlighting the pivotal role of females in the Hip Hop scene.
   - **Astro.js-Powered**: Leveraged the capabilities of Astro.js to create a modern and dynamic platform that embodies the latest web development aesthetics and best practices.
 
@@ -77,7 +77,7 @@ const data: DevProject[] = [
     title: "Chairman of the Board",
     type: "Web App",
     description: `
-    ### The Game Idea 🤩
+### The Game Idea 🤩
   - **Climb the Corporate Ladder**: Step into the shoes of a Mailroom Clerk and navigate through a series of quirky and humorous scenarios with the ultimate goal of becoming the Chairman of the Board.
   - **Tongue-in-Cheek Humor**: Enjoy a light-hearted and funny take on the corporate world, bringing smiles and laughter to players.
 
