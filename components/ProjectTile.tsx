@@ -32,13 +32,15 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
         {isVideoThumbnail ? (
           <video
             // @ts-ignore
-            src={project.media}
             loop
             muted
             playsInline
             autoPlay
+            controls
             className="h-full w-full rounded-md object-cover object-center"
-          />
+          >
+            <source src={project.media} type="video/webm" />
+          </video>
         ) : (
           <Image
             src={project.media || `/project_images/${kebabTitle}.png`}
