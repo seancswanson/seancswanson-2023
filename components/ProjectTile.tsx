@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import upRightArrowWhite from "../assets/icons/up-right-arrow-white.png";
 import { toKebabCase } from "../lib/util";
+import { useState } from "react";
 
 interface Props {
   project: Project;
@@ -20,6 +21,8 @@ interface Project {
 }
 
 export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
+  const [videoError, setVideoError] = useState(false);
+
   const kebabTitle = toKebabCase(project.title);
 
   return (
@@ -30,17 +33,26 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
     >
       <div className="relative w-full rounded-md">
         {isVideoThumbnail ? (
-          <video
-            // @ts-ignore
-            loop
-            muted
-            playsInline
-            autoPlay
-            controls
-            className="h-full w-full rounded-md object-cover object-center"
-          >
-            <source src={project.media} type="video/webm" />
-          </video>
+          videoError ? (
+            <Image
+              src={`/art/${kebabTitle}-still.webp`}
+              width="250"
+              height="250"
+              alt={project.title}
+              className="h-full w-full rounded-md object-cover object-center"
+            />
+          ) : (
+            <video
+              // @ts-ignore
+              src={project.media}
+              loop
+              muted
+              playsInline
+              autoPlay
+              className="h-full w-full rounded-md object-cover object-center"
+              onError={() => setVideoError(true)}
+            />
+          )
         ) : (
           <Image
             src={project.media || `/project_images/${kebabTitle}.png`}
