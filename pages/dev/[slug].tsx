@@ -7,6 +7,8 @@ import devProjects, { DevProject } from "../../data/projects/dev-projects";
 import globeIcon from "../../assets/icons/globe_icon.png";
 import githubIcon from "../../assets/icons/github_icon.png";
 import { toKebabCase } from "../../lib/util";
+import Markdown, { compiler } from "markdown-to-jsx";
+import styles from "./Project.module.css";
 
 export default function DevProjectComponent(project: { project: DevProject }) {
   const router = useRouter();
@@ -41,7 +43,7 @@ export default function DevProjectComponent(project: { project: DevProject }) {
             alt={project.project.title}
             width={400}
             height={400}
-            className="h-full w-full rounded-md object-cover object-center"
+            className="h-full w-full rounded-md object-cover object-center shadow-sm"
           />
         </div>
         <div className="basis-[50%]">
@@ -50,7 +52,7 @@ export default function DevProjectComponent(project: { project: DevProject }) {
             alt={project.project.title}
             width={400}
             height={400}
-            className="h-full w-full rounded-md object-cover object-center"
+            className="h-full w-full rounded-md object-cover object-center shadow-sm"
           />
         </div>
       </div>
@@ -69,36 +71,50 @@ export default function DevProjectComponent(project: { project: DevProject }) {
             ))}
           </div>
         </div>
-        <div className="mb-4">
-          {project.project.description.split("\n").map((paragraph, index) => (
-            <p key={index} className="mb-4">
-              {paragraph}
-            </p>
-          ))}
+        <div className=" mb-4">
+          <Markdown
+            options={{
+              wrapper: ({ children }) => (
+                <div className={styles.markdownContent}>{children}</div>
+              ),
+            }}
+          >
+            {project.project.description}
+          </Markdown>
         </div>
-        <a
-          href={project.project.liveUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm text-blue-500 underline"
-        >
-          <Image alt="globe icon" src={globeIcon.src} width={32} height={32} />{" "}
-          View Live
-        </a>
-        <a
-          href={project.project.repoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm text-blue-500 underline"
-        >
-          <Image
-            alt="github icon"
-            src={githubIcon.src}
-            width={32}
-            height={32}
-          />{" "}
-          View Source
-        </a>
+
+        {project.project.liveUrl ? (
+          <div className="links flex flex-col gap-2">
+            <a
+              href={project.project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-blue-500 underline"
+            >
+              <Image
+                alt="globe icon"
+                src={globeIcon.src}
+                width={32}
+                height={32}
+              />{" "}
+              View Live
+            </a>
+            <a
+              href={project.project.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-blue-500 underline"
+            >
+              <Image
+                alt="github icon"
+                src={githubIcon.src}
+                width={32}
+                height={32}
+              />{" "}
+              View Source
+            </a>
+          </div>
+        ) : null}
       </div>
     </Layout>
   );

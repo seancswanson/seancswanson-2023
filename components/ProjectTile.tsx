@@ -32,13 +32,15 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
         {isVideoThumbnail ? (
           <video
             // @ts-ignore
-            src={project.media}
             loop
             muted
             playsInline
             autoPlay
+            controls
             className="h-full w-full rounded-md object-cover object-center"
-          />
+          >
+            <source src={project.media} type="video/webm" />
+          </video>
         ) : (
           <Image
             src={project.media || `/project_images/${kebabTitle}.png`}
@@ -49,7 +51,7 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
           />
         )}
         <div className="rounded-md opacity-0 shadow-md transition-opacity duration-75 group-hover:opacity-100">
-          <div className="absolute top-0 left-0 h-full w-full cursor-pointer rounded-md border border-slate-800 bg-[rgba(0,0,0,0.85)] text-4xl font-extrabold text-white">
+          <div className="absolute top-0 left-0 h-full w-full cursor-pointer rounded-md border border-slate-800 bg-[rgba(0,0,0,0.85)] text-3xl font-extrabold text-white">
             {project.title}
             <span className="ml-2 inline-block">
               <Image
