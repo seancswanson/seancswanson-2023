@@ -16,11 +16,11 @@ const BlogPage = ({ data }: { data: any }) => {
         </Link>
       </div>
       <h1 className="mb-4 text-3xl">Blog</h1>
-      <div className="flex flex-col gap-6 ">
+      <div className="flex flex-col gap-6">
         {data.map((post: any) => (
           <div
             key={post.id}
-            className="rounded border border-slate-200 bg-off-white p-4 shadow "
+            className="rounded border border-slate-200 bg-[rgba(255,255,255,0.8)] p-4 shadow "
           >
             <Link href={`/blog/${post.id}`}>
               <h2 className="mb-3 text-2xl font-bold hover:underline">

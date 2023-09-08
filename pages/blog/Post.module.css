@@ -22,6 +22,10 @@
   @apply mx-auto rounded shadow;
 }
 
+.markdownContent p > img + em {
+  @apply mx-auto block text-center text-sm;
+}
+
 .markdownContent blockquote {
   @apply my-8 border-l-4 border-gray-300 pl-4 italic;
 }
