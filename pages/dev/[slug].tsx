@@ -5,6 +5,7 @@ import Image from "next/image";
 import Layout from "../../components/layout";
 import devProjects, { DevProject } from "../../data/projects/dev-projects";
 import globeIcon from "../../assets/icons/globe_icon.png";
+import infoIcon from "../../assets/icons/info_icon.svg";
 import githubIcon from "../../assets/icons/github_icon.png";
 import { toKebabCase } from "../../lib/util";
 import Markdown, { compiler } from "markdown-to-jsx";
@@ -43,7 +44,11 @@ export default function DevProjectComponent(project: { project: DevProject }) {
             alt={project.project.title}
             width={400}
             height={400}
-            className="h-full w-full rounded-md object-cover object-center shadow-sm"
+            className={`${
+              project.project.slug === "living-worlds"
+                ? "rendering-pixelated"
+                : ""
+            } h-full w-full rounded-md object-cover object-center shadow-sm`}
           />
         </div>
         <div className="basis-[50%]">
@@ -52,12 +57,16 @@ export default function DevProjectComponent(project: { project: DevProject }) {
             alt={project.project.title}
             width={400}
             height={400}
-            className="h-full w-full rounded-md object-cover object-center shadow-sm"
+            className={`${
+              project.project.slug === "living-worlds"
+                ? "rendering-pixelated"
+                : ""
+            } h-full w-full rounded-md object-cover object-center shadow-sm`}
           />
         </div>
       </div>
 
-      <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 p-6 shadow">
+      <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 shadow">
         <p className="font-bold italic">
           <span>{project.project.title}</span>
         </p>
@@ -82,9 +91,8 @@ export default function DevProjectComponent(project: { project: DevProject }) {
             {project.project.description}
           </Markdown>
         </div>
-
-        {project.project.liveUrl ? (
-          <div className="links flex flex-col gap-2">
+        <div className="links flex flex-col gap-2">
+          {project.project.liveUrl && (
             <a
               href={project.project.liveUrl}
               target="_blank"
@@ -99,6 +107,26 @@ export default function DevProjectComponent(project: { project: DevProject }) {
               />{" "}
               View Live
             </a>
+          )}
+
+          {project.project.infoUrl && (
+            <a
+              href={project.project.infoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-blue-500 underline"
+            >
+              <Image
+                alt="information icon"
+                src={infoIcon.src} // Make sure to define infoIcon
+                width={32}
+                height={32}
+              />{" "}
+              View Info
+            </a>
+          )}
+
+          {project.project.repoUrl && (
             <a
               href={project.project.repoUrl}
               target="_blank"
@@ -113,8 +141,8 @@ export default function DevProjectComponent(project: { project: DevProject }) {
               />{" "}
               View Source
             </a>
-          </div>
-        ) : null}
+          )}
+        </div>
       </div>
     </Layout>
   );

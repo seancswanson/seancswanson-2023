@@ -32,7 +32,7 @@ export const Hero = () => {
   const getRandomDegree = () => Math.floor(Math.random() * 9) - 4;
   return (
     <div className="flex flex-col-reverse justify-between md:flex-row md:gap-2">
-      <div className="flex flex-col items-center justify-between rounded-lg border-slate-200 p-6 text-center shadow md:basis-[50%] md:items-start md:text-left">
+      <div className="flex flex-col items-center justify-between rounded-lg border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 text-center shadow md:basis-[50%] md:items-start md:text-left">
         <div className="flex grow flex-col">
           <h1 className="mb-8 text-2xl font-bold text-gray-800 md:mb-4">
             Hi! I&apos;m Sean Swanson. 👋
