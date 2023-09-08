@@ -108,7 +108,7 @@ export default function ArtProjectComponent(project: { project: ArtProject }) {
         )}{" "}
       </div>
 
-      <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 p-6 shadow">
+      <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 shadow">
         <p>
           <b>
             <em>{project.project.title}</em>

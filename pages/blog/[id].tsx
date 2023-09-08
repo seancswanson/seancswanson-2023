@@ -26,21 +26,23 @@ export default function Post({ markdown, data }: { markdown: any; data: any }) {
         </Link>{" "}
         / {data.title}
       </div>
-      <h1 className="relative mb-2 flex flex-col items-center gap-1 rounded-sm text-2xl md:flex-row md:gap-8">
-        <div className="black-block h-[2px] w-full grow bg-black  md:w-[initial] "></div>
-        <span className="block text-center font-bold md:text-start">
-          {data.title}
-        </span>
-        <div className="black-block h-[2px] w-full grow bg-black md:w-[initial]"></div>
-      </h1>
-      <div className="mb-4 flex gap-2 text-sm">
-        <span>{data.date}</span>
-        <span>• {data.read_time} read time</span>
+      <div className="rounded bg-[rgba(255,255,255,0.8)] p-4">
+        <h1 className="relative mb-2 flex flex-col items-center gap-1 rounded-sm text-2xl md:flex-row md:gap-8">
+          <div className="black-block h-[2px] w-full grow bg-black  md:w-[initial] "></div>
+          <span className="block text-center font-bold md:text-start">
+            {data.title}
+          </span>
+          <div className="black-block h-[2px] w-full grow bg-black md:w-[initial]"></div>
+        </h1>
+        <div className="mb-4 flex gap-2 text-sm">
+          <span>{data.date}</span>
+          <span>• {data.read_time} read time</span>
+        </div>
+        <div
+          className={styles.markdownContent}
+          dangerouslySetInnerHTML={{ __html: markdown }}
+        />
       </div>
-      <div
-        className={styles.markdownContent}
-        dangerouslySetInnerHTML={{ __html: markdown }}
-      />
     </Layout>
   );
 }
