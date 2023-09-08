@@ -6,6 +6,7 @@ export interface DevProject {
   featured: boolean; // This field isn't provided in markdown, will use a placeholder.
   tech: string[];
   featuredTech: string[];
+  infoUrl: string;
   liveUrl: string;
   repoUrl: string;
 }
@@ -39,6 +40,7 @@ const data: DevProject[] = [
     featured: true,
     tech: ["TypeScript", "Angular", "OpenSeadragon"],
     featuredTech: ["TypeScript", "Angular", "OpenSeadragon"],
+    infoUrl: "",
     liveUrl: "https://osd-woodblocks-angular.pages.dev/home",
     repoUrl: "https://github.com/seancswanson/osd-woodblocks-angular",
   },
@@ -70,6 +72,7 @@ const data: DevProject[] = [
     featured: true,
     tech: ["Astro", "Sanity CMS", "SSG", "Tailwind"],
     featuredTech: ["apollo", "sanity", "SSG"],
+    infoUrl: "",
     liveUrl: "https://www.cypherqueenz.com",
     repoUrl: "https://github.com/seancswanson/cypherqueenz-www",
   },
@@ -99,6 +102,7 @@ const data: DevProject[] = [
     tech: ["HTML", "CSS", "JavaScript", "jQuery"],
     featuredTech: ["HTML", "CSS", "JavaScript", "jQuery"],
     liveUrl: "https://seancswanson.github.io/chairman-of-the-board/",
+    infoUrl: "",
     repoUrl: "https://github.com/seancswanson/chairman-of-the-board",
   },
   {
@@ -136,6 +140,7 @@ const data: DevProject[] = [
       "MySQL",
     ],
     liveUrl: "https://op-t3.vercel.app/",
+    infoUrl: "",
     repoUrl: "https://github.com/seancswanson/op-t3",
   },
   {
@@ -171,6 +176,7 @@ const data: DevProject[] = [
     tech: ["Angular", "JavaScript", "TypeScript", "HTML", "SCSS"],
     featuredTech: ["Angular", "JavaScript"],
     liveUrl: "",
+    infoUrl: "",
     repoUrl: "",
   },
   {
@@ -205,6 +211,7 @@ const data: DevProject[] = [
     tech: ["Angular", "JavaScript", "TypeScript", "HTML", "SCSS"],
     featuredTech: ["Angular", "JavaScript"],
     liveUrl: "",
+    infoUrl: "",
     repoUrl: "",
   },
   {
@@ -240,6 +247,7 @@ const data: DevProject[] = [
     tech: ["Angular", "JavaScript", "TypeScript", "HTML", "SCSS"],
     featuredTech: ["Angular", "JavaScript"],
     liveUrl: "",
+    infoUrl: "",
     repoUrl: "",
   },
   {
@@ -283,6 +291,128 @@ In 2023, I spearheaded the development of an internal proof-of-concept ChatGPT S
     ],
     featuredTech: ["Azure OpenAI Studio", "Angular"],
     liveUrl: "",
+    infoUrl: "",
+    repoUrl: "",
+  },
+
+  {
+    title: "Ed Hardy Interactives",
+    description: `
+### Project Overview 🌟
+  - **Client Project**: Collaborated on a client project to develop touchscreen experiences for the first museum retrospective of renowned tattoo artist Ed Hardy at San Francisco's de Young Museum. The exhibition, "Deeper than Skin," showcased Hardy's journey from a young artist fascinated with tattoo artistry to a master tattooist with a rich history of elevating tattooing from a subculture status to a recognized visual art form.
+  - **Role as an Amanuensis**: As a web developer apprentice, I doubled as an amanuensis, actively involved in typing out dictated code and actions, and participating in freelancing activities.
+
+### Technical Details 🛠️
+  - **Tech Stack**: JavaScript, HTML, HTML Canvas.
+  - **Role**: Apprentice in development.
+
+### Skills Developed 🛡️
+  - **Collaborative Learning**: Engaged in a continuous feedback loop of programming and strategy commentary, learning immensely from the experience.
+  - **Freelancing Skills**: Gained insights into freelancing activities, including client communication and project management.
+`,
+    type: "Web App",
+    slug: "ed-hardy-interactives",
+    featured: false,
+    tech: ["JavaScript", "HTML", "HTML Canvas"],
+    featuredTech: ["JavaScript", "HTML Canvas"],
+    liveUrl: "",
+    infoUrl: "https://www.famsf.org/exhibitions/ed-hardy",
+    repoUrl: "",
+  },
+  {
+    title: "Traditions of the Ancestors",
+    description: `
+### Project Overview 🌟
+  - **Client Project**: Contributed to the development of TOTA.world, a platform designed to foster a deeper connection with various cultures through a rich database of articles, videos, interactive maps, and certified content. The platform encourages users to explore, connect, and share cultural insights and personal experiences, promoting a harmonious global community.
+  - **Role as an Amanuensis**: Served as a web developer apprentice and amanuensis, typing dictated code and actions while learning the nuances of freelancing activities.
+
+### Technical Details 🛠️
+  - **Tech**: HTML, CSS, JavaScript.
+  - **Role**: Apprentice in development.
+
+### Skills Developed 🛡️
+  - **JavaScript Development**: Enhanced proficiency in JavaScript through hands-on experience in development.
+  - **Client Engagement**: Learned the art of client engagement in a freelancing environment, understanding the dynamics of working on client projects.
+`,
+    type: "Web App",
+    slug: "traditions-of-the-ancestors",
+    featured: false,
+    tech: ["HTML", "CSS", "JavaScript"],
+    featuredTech: ["JavaScript"],
+    liveUrl: "www.tota.world",
+    infoUrl: "",
+    repoUrl: "",
+  },
+  {
+    title: "Living Worlds",
+    description: `
+### Project Overview 🌟
+  - **Client Project**: Collaborated on the Living Worlds app, a modern recreation of dynamic pixel art scenes created by legendary artist Mark Ferrari. The app, celebrating its 25th anniversary, brings the original scenes to life with real-time transitions, ambient soundscapes, and logbook stories, offering a unique and immersive experience.
+  - **Role as an Amanuensis**: Assumed the role of a web developer apprentice and amanuensis, participating in the development process and freelancing activities.
+
+### Technical Details 🛠️
+  - **Tech Stack**: iOS, Android, JavaScript, HTML.
+  - **Role**: Apprentice in concept, design, and development.
+
+### Skills Developed 🛡️
+  - **Cross-Platform Development**: Gained experience in cross-platform development, working with both iOS and Android mediums.
+  - **Freelancing Experience**: Developed an understanding of freelancing dynamics, including client communication and project delivery.
+`,
+    type: "Mobile",
+    slug: "living-worlds",
+    featured: false,
+    tech: ["iOS", "Android", "JavaScript", "HTML"],
+    featuredTech: ["JavaScript", "HTML"],
+    liveUrl: "",
+    infoUrl: "https://pixfabrik.com/livingworlds/",
+    repoUrl: "",
+  },
+  {
+    title: "Andy Warhol Interactive",
+    description: `
+### Project Overview 🌟
+  - **Client Project**: Collaborated on a client project to develop a touchscreen experience for the "Contact Warhol: Photography Without End" exhibition at the Stanford Cantor Museum. The exhibition unveiled never-before-seen photographs by Andy Warhol, offering a deep dive into Warhol's interactions with the social and celebrity elite of his time.
+  - **Role as an Amanuensis**: Worked as a web developer apprentice and amanuensis, typing out dictated code and actions, and gaining insights into freelancing activities.
+
+### Technical Details 🛠️
+  - **Tech Stack**: JavaScript, HTML, Canvas.
+  - **Role**: Apprentice in development.
+
+### Skills Developed 🛡️
+  - **Interactive Development**: Learned the intricacies of developing interactive experiences through hands-on involvement in the project.
+  - **Client Project Management**: Gained experience in managing client projects, understanding the requirements and expectations in a freelancing setup.
+`,
+    type: "Web App",
+    slug: "andy-warhol-interactive",
+    featured: false,
+    tech: ["JavaScript", "HTML", "Canvas"],
+    featuredTech: ["JavaScript", "Canvas"],
+    liveUrl: "",
+    infoUrl:
+      "https://museum.stanford.edu/exhibitions/contact-warhol-photography-without-end",
+    repoUrl: "",
+  },
+  {
+    title: "Knoll Interactive Archive",
+    description: `
+### Project Overview 🌟
+  - **Client Project**: Contributed to the development of the Knoll Interactive Archive, a digital platform that narrates the rich history of Knoll, a company that has been fostering creativity and innovation since 1938. The archive offers a deep insight into the people, products, and events that shaped the Knoll story, encouraging users to explore the legacy through various interactive views.
+  - **Role as an Amanuensis**: Served as a web developer apprentice and amanuensis, actively involved in the development process and freelancing activities.
+
+### Technical Details 🛠️
+  - **Tech Stack**: Pixi.js, Hammer.js, JavaScript.
+  - **Role**: Apprentice in development.
+
+### Skills Developed 🛡️
+  - **Interactive Development**: Developed skills in creating interactive archives, working with technologies like Pixi.js and Hammer.js.
+  - **Freelancing Skills**: Learned the dynamics of freelancing, including client communication and project management, through active participation in the project.`,
+    type: "Web App",
+    slug: "knoll-interactive-archive",
+    featured: false,
+    tech: ["Web", "Pixi.js", "Hammer.js", "JavaScript"],
+    featuredTech: ["Pixi.js", "Hammer.js"],
+    infoUrl: "",
+    liveUrl: "https://www.knoll.com/the-archive/",
     repoUrl: "",
   },
 ];

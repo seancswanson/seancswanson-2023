@@ -18,7 +18,7 @@ export const FeaturedBlogPost = ({ post }: Props) => {
   return (
     <div
       key={post.id}
-      className="rounded border border-slate-200 bg-off-white p-4 shadow "
+      className="rounded border border-slate-200 bg-[rgba(255,255,255,0.8)] p-4 shadow "
     >
       <Link href={`/blog/${post.id}`}>
         <h2 className="mb-3 text-2xl font-bold hover:underline">
