@@ -61,7 +61,85 @@ Bachelor of Arts in Philosophy 2014-2015
 ADDITIONAL INFORMATION
 
 ● Software:
-o Design and Prototyping tools, including Figma, Sketch, and InVision
-o Multimedia: DaVinci Resolve, Blender 3D, Photoshop
+  o Front-end Development:
+    - HTML
+    - CSS
+    - JavaScript
+    - TypeScript
+    - Angular
+    - React
+
+  o CSS Frameworks and Preprocessors:
+    - Tailwind CSS
+    - SCSS
+    - Bootstrap
+    - Materialize CSS
+
+  o Web Frameworks:
+    - Astro.js
+    - Next.js
+
+  o Design and Prototyping:
+    - Figma
+    - Sketch
+
+  o Multimedia Tools:
+    - DaVinci Resolve
+    - Blender 3D
+    - Photoshop
+
+  o SEO and Performance Monitoring Tools:
+    - Google Analytics
+    - Google Search Console
+    - Google Tag Manager
+    - SEMrush
+    - Lighthouse
+    - New Relic
+    - Kibana
+    - Drone
+
+  o Accessibility Tools:
+    - WAVE
+    - axe Accessibility Checker
+
+  o Back-end Development:
+    - Node.js
+    - Express.js
+
+  o Database Management:
+    - SQL
+    - MySQL
+    - PostgreSQL
+    - MongoDB
+
+  o Version Control:
+    - Git
+    - GitHub
+    - Bitbucket
+
+  o Deployment, Hosting, and CI/CD:
+    - AWS
+    - Heroku
+    - Vercel
+    - Jenkins
+    - CircleCI
+
+  o Testing Tools:
+    - Jasmine
+    - Selenium
+
+  o Content Management Systems:
+    - WordPress
+
+  o Project Management and Collaboration:
+    - Jira
+    - Asana
+    - Trello
+    - Slack
+    - Microsoft Teams
+
+  o Cloud Computing Platforms:
+    - Microsoft Azure
+    - Google Cloud Platform
 ● Certifications: Certified Scrum Master (2021), Certified SAFe Scrum Master (2022)
 ● Awards: DreamBox Learning Step Up (2019)

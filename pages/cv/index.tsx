@@ -12,6 +12,7 @@ const CV = () => {
     title,
     professionalExperience,
     education,
+    certifications,
     additionalInformation,
   } = Resume;
 
@@ -25,6 +26,34 @@ const CV = () => {
     } catch (error) {
       console.error("Error fetching and saving the file:", error);
     }
+  };
+  const SoftwareList = ({
+    software,
+  }: {
+    software: { [key: string]: string[] };
+  }) => {
+    return (
+      <div className="grid grid-cols-3 gap-y-6 gap-x-2">
+        {Object.keys(software).map((subCategory) => (
+          <div
+            key={subCategory}
+            className="flex flex-col items-center rounded-lg bg-gray-100 p-4"
+          >
+            <p className="mb-2 text-center font-bold">{subCategory}</p>
+            <ul className="flex flex-wrap justify-center gap-2 text-center">
+              {software[subCategory].map((tool, index) => (
+                <li
+                  key={index}
+                  className="rounded border bg-[rgba(255,255,255,0.8)] px-2 py-1 text-sm"
+                >
+                  {tool}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    );
   };
 
   return (
@@ -48,7 +77,7 @@ const CV = () => {
       </h1>
       <div>
         <button
-          className=" m-auto flex w-1/2 items-center justify-center gap-2 self-end border border-black p-2 text-sm opacity-75 transition-opacity duration-75 hocus:opacity-100 md:m-0 md:w-auto md:py-2"
+          className=" m-auto flex w-1/2 items-center justify-center gap-2 self-end rounded border border-black bg-white p-2 text-sm opacity-75 transition-opacity duration-75 hocus:opacity-100 md:m-0 md:w-auto md:py-2"
           onClick={downloadCV}
         >
           Download to .txt{" "}
@@ -62,7 +91,7 @@ const CV = () => {
       </div>
 
       {/* Professional Experience */}
-      <div className="mt-4 flex flex-col gap-4 rounded-lg border border-slate-200 bg-gray-50 p-6 shadow transition-colors duration-200 hover:bg-white">
+      <div className="mt-4 flex flex-col gap-4 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 shadow transition-colors duration-200">
         <p className="mb-3 font-bold italic">Professional Experience</p>
         {professionalExperience.map((experience, index) => (
           <div key={index} className="mb-8">
@@ -125,7 +154,7 @@ const CV = () => {
       </div>
 
       {/* Education */}
-      <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 p-6 shadow">
+      <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 shadow">
         <p className="font-bold italic">Education</p>
         {education.map((edu, index) => (
           <div key={index}>
@@ -146,19 +175,26 @@ const CV = () => {
         ))}
       </div>
 
-      {/* Additional Information */}
-      <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 p-6 shadow">
-        <p className="font-bold italic">Software & Tools</p>
-        <ul>
-          {additionalInformation.software.map((tool, index) => (
-            <li key={index}>{tool}</li>
+      {/* Certificatons */}
+      <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 shadow">
+        <p className="font-bold italic">Certifications</p>
+        <ul className="grid grid-cols-1 gap-2 md:grid-cols-2">
+          {certifications.map((cert, index) => (
+            <li
+              key={index}
+              className="rounded-md border bg-white p-2 shadow-sm"
+            >
+              {cert}
+            </li>
           ))}
         </ul>
-        <p className="mt-4 font-bold italic">Certifications</p>
+      </div>
+
+      {/* Software and Tools */}
+      <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 shadow">
+        <p className="font-bold italic">Software & Tools</p>
         <ul>
-          {additionalInformation.certifications.map((cert, index) => (
-            <li key={index}>{cert}</li>
-          ))}
+          <SoftwareList software={additionalInformation.software} />
         </ul>
       </div>
     </Layout>
