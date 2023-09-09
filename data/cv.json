@@ -104,15 +104,97 @@
             "endDate": "2015"
         }
     ],
+    "certifications": [
+        "Certified Scrum Master (2021)",
+        "Certified SAFe Scrum Master (2022)"
+    ],
     "additionalInformation": {
-        "software": [
-            "Design and Prototyping tools, including Figma, Sketch, and InVision",
-            "Multimedia: DaVinci Resolve, Blender 3D, Photoshop"
-        ],
-        "certifications": [
-            "Certified Scrum Master (2021)",
-            "Certified SAFe Scrum Master (2022)"
-        ],
+        "software": {
+            "Front-end Development": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "TypeScript",
+                "Angular",
+                "React"
+            ],
+            "CSS Frameworks and Preprocessors": [
+                "Tailwind CSS",
+                "SCSS",
+                "Bootstrap",
+                "Materialize CSS"
+            ],
+            "Web Frameworks": [
+                "Astro.js",
+                "Next.js"
+            ],
+            "Design and Prototyping": [
+                "Figma",
+                "Sketch",
+                "Pen and Paper",
+                "Excalidraw"
+            ],
+            "Multimedia Tools": [
+                "DaVinci Resolve",
+                "Blender 3D",
+                "Photoshop"
+            ],
+            "SEO and Performance Monitoring Tools": [
+                "Google Analytics",
+                "Google Search Console",
+                "Google Tag Manager",
+                "SEMrush",
+                "Lighthouse",
+                "New Relic",
+                "Kibana"
+            ],
+            "Accessibility Tools": [
+                "WAVE",
+                "axe Accessibility Checker"
+            ],
+            "Back-end Development": [
+                "Node.js",
+                "Express.js"
+            ],
+            "Database Management": [
+                "SQL",
+                "MySQL",
+                "PostgreSQL",
+                "MongoDB"
+            ],
+            "Version Control": [
+                "Git",
+                "GitHub",
+                "Bitbucket"
+            ],
+            "Deployment, Hosting, and CI/CD": [
+                "AWS",
+                "Heroku",
+                "Vercel",
+                "Jenkins",
+                "Drone"
+            ],
+            "Testing Tools": [
+                "Jasmine",
+                "Selenium"
+            ],
+            "Content Management Systems": [
+                "WordPress",
+                "Sanity",
+                "Laravel Nova"
+            ],
+            "Project Management and Collaboration": [
+                "Jira",
+                "Asana",
+                "Trello",
+                "Slack",
+                "Microsoft Teams"
+            ],
+            "Cloud Computing Platforms": [
+                "Microsoft Azure",
+                "Amazon Web Services (AWS)"
+            ]
+        },
         "awards": [
             "DreamBox Learning Step Up (2019)"
         ]

@@ -45,6 +45,35 @@ const data: DevProject[] = [
     repoUrl: "https://github.com/seancswanson/osd-woodblocks-angular",
   },
   {
+    title: "Naka Studio",
+    type: "Web App",
+    description: `
+### Project Overview 🌟
+  - **Client**: Naka Studio, operated by Alisha Nakamura.
+  - **Developer**: My company, Swanson Digital Arts, where I help clients bring their vision to life.
+  - **Role**: Lead Developer and Project Manager.
+
+### Skills Developed 🛡️
+  - **Astro.js**: Leveraged the capabilities of Astro.js, an open-source web framework ideal for creating content-heavy websites with high performance. The framework stands out for its compatibility with various UI frameworks, allowing the integration of components written in different languages into a single Astro file.
+  - **Tailwind CSS**: Utilized Tailwind CSS for styling, creating a visually appealing and responsive design that aligns with the brand's aesthetics.
+  - **Client Communication and Project Management**: As the solo lead developer, you handled all aspects of client communication and project management, ensuring the client's vision was accurately represented on the website.
+
+### Features 🌈
+  - **Optimized for SEO**: The website is optimized for SEO, ensuring the brand's online presence is enhanced through a SEO strategy reinforced by analytics data.
+  - **Responsive Design**: The website is designed to be responsive, offering a seamless user experience across all devices.  
+  - **Modern Aesthetics**: The website embodies modern aesthetics, creating a visually appealing and user-friendly platform that aligns with the brand's aesthetics.
+  - **Personalized Content**: Created sections to introduce Alisha Nakamura and her journey in the beauty industry, fostering a personal connection with the clients.
+  - **Service Menu and Policies**: Detailed the services offered and the policies to be noted before booking, providing all essential information in a structured manner.
+`,
+    slug: "naka-studio",
+    featured: true,
+    tech: ["Astro.js", "SSG", "Tailwind", "HTML", "CSS"],
+    featuredTech: ["TypeScript", "Angular", "OpenSeadragon"],
+    infoUrl: "",
+    liveUrl: "https://naka.studio",
+    repoUrl: "https://github.com/seancswanson/naka-studio-www",
+  },
+  {
     title: "Cypher Queenz",
     type: "Web App",
     description: `
