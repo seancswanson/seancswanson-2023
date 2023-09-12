@@ -368,7 +368,7 @@ In 2023, I spearheaded the development of an internal proof-of-concept ChatGPT S
     featured: false,
     tech: ["HTML", "CSS", "JavaScript"],
     featuredTech: ["JavaScript"],
-    liveUrl: "www.tota.world",
+    liveUrl: "https://www.tota.world",
     infoUrl: "",
     repoUrl: "",
   },
