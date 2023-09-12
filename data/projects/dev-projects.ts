@@ -127,7 +127,7 @@ const data: DevProject[] = [
 
 `,
     slug: "chairman-of-the-board",
-    featured: true,
+    featured: false,
     tech: ["HTML", "CSS", "JavaScript", "jQuery"],
     featuredTech: ["HTML", "CSS", "JavaScript", "jQuery"],
     liveUrl: "https://seancswanson.github.io/chairman-of-the-board/",
