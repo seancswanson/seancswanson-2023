@@ -27,7 +27,7 @@ export const FeaturedBlogPost = ({ post }: Props) => {
         <p className="mb-3 text-gray-600">{post.description}</p>
         <div className="flex justify-between text-sm text-gray-500">
           <span>{post.date}</span>
-          <span>{post.read_time}</span>
+          <span>{post.read_time} →</span>
         </div>
       </Link>
     </div>

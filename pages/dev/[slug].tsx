@@ -10,6 +10,7 @@ import githubIcon from "../../assets/icons/github_icon.png";
 import { toKebabCase } from "../../lib/util";
 import Markdown, { compiler } from "markdown-to-jsx";
 import styles from "./Project.module.css";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 export default function DevProjectComponent(project: { project: DevProject }) {
   const router = useRouter();
@@ -21,16 +22,16 @@ export default function DevProjectComponent(project: { project: DevProject }) {
 
   return (
     <Layout>
-      <div className="breadcrumbs mb-4 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity duration-150 hover:opacity-100">
-        /{" "}
-        <Link
-          href="/dev"
-          className="border-b-2 border-transparent transition-all hover:border-blue-500"
-        >
-          Dev
-        </Link>{" "}
-        / {project.project.title}
-      </div>
+      <Breadcrumbs
+        items={[
+          { title: "Home", href: "/" },
+          { title: "Dev", href: "/dev" },
+          {
+            title: project.project.title,
+            href: `/dev/${project.project.title}`,
+          },
+        ]}
+      />
       <h1 className="relative mb-4 flex flex-col items-center gap-1 rounded-sm text-2xl md:flex-row md:gap-8">
         <div className="black-block h-[2px] w-full grow bg-black md:w-[initial]"></div>
         <span className="block font-bold">{project.project.title}</span>
@@ -40,7 +41,7 @@ export default function DevProjectComponent(project: { project: DevProject }) {
       <div className="flex flex-col justify-between gap-2 font-bold sm:flex-row">
         <div className="basis-[50%]">
           <Image
-            src={`/project_images/${kebabTitle}.png`}
+            src={`/project-images/${kebabTitle}.png`}
             alt={project.project.title}
             width={400}
             height={400}
@@ -53,7 +54,7 @@ export default function DevProjectComponent(project: { project: DevProject }) {
         </div>
         <div className="basis-[50%]">
           <Image
-            src={`/project_images/${kebabTitle}-screenshot.png`}
+            src={`/project-images/${kebabTitle}-screenshot.png`}
             alt={project.project.title}
             width={400}
             height={400}

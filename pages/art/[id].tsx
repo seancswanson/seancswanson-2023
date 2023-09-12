@@ -6,6 +6,7 @@ import YouTube from "react-youtube";
 import { toKebabCase } from "../../lib/util";
 import artProjects, { ArtProject } from "../../data/projects/art-projects";
 import Layout from "../../components/layout";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 export default function ArtProjectComponent(project: { project: ArtProject }) {
   const router = useRouter();
@@ -22,34 +23,19 @@ export default function ArtProjectComponent(project: { project: ArtProject }) {
     },
   };
 
-  const month = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-
   const parsedCreationDate = new Date(project.project.created_at);
   return (
     <Layout>
-      <div className="breadcrumbs mb-4 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity duration-150 hover:opacity-100">
-        /{" "}
-        <Link
-          href="/art"
-          className="border-b-2 border-transparent transition-all hover:border-blue-500"
-        >
-          Art
-        </Link>{" "}
-        / {project.project.title}
-      </div>
+      <Breadcrumbs
+        items={[
+          { title: "Home", href: "/" },
+          { title: "Art", href: "/art" },
+          {
+            title: project.project.title,
+            href: `/art/${project.project.title}`,
+          },
+        ]}
+      />
       <h1 className="relative mb-4 flex flex-col items-center gap-1 rounded-sm text-2xl md:flex-row md:gap-8">
         <div className="black-block h-[2px] w-full grow bg-black md:w-[initial]"></div>
         <span className="block font-bold">{project.project.title}</span>

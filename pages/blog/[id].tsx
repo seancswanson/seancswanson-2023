@@ -7,6 +7,7 @@ import html from "remark-html";
 import path from "path";
 import Layout from "../../components/layout";
 import styles from "./Post.module.css";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 export default function Post({ markdown, data }: { markdown: any; data: any }) {
   const router = useRouter();
@@ -16,24 +17,24 @@ export default function Post({ markdown, data }: { markdown: any; data: any }) {
   }
   return (
     <Layout>
-      <div className="breadcrumbs mb-4 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity duration-150 hover:opacity-100">
-        /{" "}
-        <Link
-          href="/blog"
-          className="border-b-2 border-transparent transition-all hover:border-blue-500"
-        >
-          Dev
-        </Link>{" "}
-        / {data.title}
-      </div>
-      <div className="rounded bg-[rgba(255,255,255,0.8)] p-4">
-        <h1 className="relative mb-2 flex flex-col items-center gap-1 rounded-sm text-2xl md:flex-row md:gap-8">
-          <div className="black-block h-[2px] w-full grow bg-black  md:w-[initial] "></div>
-          <span className="block text-center font-bold md:text-start">
-            {data.title}
-          </span>
-          <div className="black-block h-[2px] w-full grow bg-black md:w-[initial]"></div>
-        </h1>
+      <Breadcrumbs
+        items={[
+          { title: "Home", href: "/" },
+          { title: "Blog", href: "/blog" },
+          {
+            title: data.title,
+            href: `/blog/${data.title}`,
+          },
+        ]}
+      />
+      <h1 className="relative mb-2 flex flex-col items-center gap-1 rounded-sm text-2xl md:flex-row md:gap-8">
+        <div className="black-block h-[2px] w-full grow bg-black  md:w-[initial] "></div>
+        <span className="block text-center font-bold md:text-start">
+          {data.title}
+        </span>
+        <div className="black-block h-[2px] w-full grow bg-black md:w-[initial]"></div>
+      </h1>
+      <div className="rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-4">
         <div className="mb-4 flex gap-2 text-sm">
           <span>{data.date}</span>
           <span>• {data.read_time} read time</span>

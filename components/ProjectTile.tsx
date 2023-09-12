@@ -55,7 +55,7 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
           )
         ) : (
           <Image
-            src={project.media || `/project_images/${kebabTitle}.png`}
+            src={project.media || `/project-images/${kebabTitle}.png`}
             width="250"
             height="250"
             alt={project.title}
