@@ -49,7 +49,7 @@ const data: DevProject[] = [
     type: "Web App",
     description: `
 ### Project Overview 🌟
-  - **Client**: Naka Studio, operated by Alisha Nakamura.
+  - **Client**: Naka Studio, an upscale beauty studio in Seattle, WA.
   - **Developer**: My company, Swanson Digital Arts, where I help clients bring their vision to life.
   - **Role**: Lead Developer and Project Manager.
 
