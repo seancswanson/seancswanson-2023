@@ -179,7 +179,7 @@ const data: DevProject[] = [
 ## Responsibilities and Achievements
 
 ### Collaboration with Cross-Functional Team
-  - Played a pivotal role in the front-end development of the Growth Report feature, working closely with a cross-functional team over a period spanning from May 2021 to February 2023.
+  - Played a pivotal role in the front-end development of the Growth Report feature, working closely with a cross-functional team.
   - Engaged in collaborative efforts to build and refine UI components, ensuring the project aligned with both user requirements and technical specifications.
 
 ### UI Components Development
@@ -215,11 +215,11 @@ const data: DevProject[] = [
 ## Responsibilities and Achievements
 
 ### Collaboration with Various Teams
-  - Actively involved in the development of the Educator Usage Report section from May 2021 to February 2023.
-  - Collaborated closely with different teams to create user-centric UI solutions, enhancing the feature's functionality through a continuous feedback loop.
+  - Actively involved in the development of the Educator Usage Report.
+  - Collaborated closely with different teams to create user-centric UI solutions.
 
 ### UI Solutions Development
-  - Played a significant role in developing UI solutions that are centered around the user's needs and preferences.
+  - Played a contributing role in developing UI solutions that are centered around the user's needs and preferences.
   - Engaged in a continuous feedback loop, utilizing it to refine and enhance the functionality of the feature progressively.
 
 ### Technology Stack
@@ -254,7 +254,7 @@ const data: DevProject[] = [
   - Facilitated meetings to gather requirements and feedback, ensuring the project aligned with stakeholder expectations.
 
 ### UI Components Development
-  - Led the development and refinement of UI components, enhancing the user experience and meeting project goals.
+  - Contributed to the development and refinement of UI components, enhancing the user experience and meeting project goals.
   - Utilized a range of technologies including Angular and JavaScript to implement dynamic and responsive UI components.
 
 ### Technology Stack
