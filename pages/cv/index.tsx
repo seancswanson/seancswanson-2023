@@ -61,7 +61,7 @@ const CV = () => {
       <div className="breadcrumbs mb-4 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity duration-75 hover:opacity-100">
         /{" "}
         <Link
-          href="/CV"
+          href="/cv"
           className="border-b-2 border-transparent transition-all hover:border-blue-500"
         >
           CV
