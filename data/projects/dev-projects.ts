@@ -13,6 +13,40 @@ export interface DevProject {
 
 const data: DevProject[] = [
   {
+    title: "Poliscope",
+    type: "Web App",
+    description: `
+## Project Overview
+  - **Poliscope**: A web application designed to make understanding the 2024 U.S. Presidential Election simpler and more direct.
+  - **Balanced Candidate Information**: Uses OpenAI's ChatGPT, Ballotpedia, and open-sourced data to provide factual profiles of each candidate.
+
+## Core Features and Technology 🔧
+  - **Built with SvelteKit**: Offers a responsive and efficient user experience using the SvelteKit framework.
+  - **Data Transparency**: All data and code are open-sourced for public access and transparency.
+
+## User Experience with Poliscope 🗳️
+  - **Candidate Analysis**: Viewpoints from across the political spectrum to understand each candidate better.
+  - **In-Depth on Key Issues**: Information about major topics and issues in the 2024 election.
+  - **Interactive Candidate Profiles**: Easy-to-navigate profiles with essential information about each candidate.
+
+## Impact and Goals 🎯
+  - **Informed Voting**: Aims to help voters make well-informed decisions in the upcoming election.
+  - **Encouraging Engagement**: Increases awareness and engagement in political discussions.
+
+## Development Insights 🛠️
+  - **Technical Skills**: Developed using modern web technologies, showcasing proficiency in SvelteKit.
+  - **Ethical AI Integration**: Careful use of AI to minimize bias in presenting political information.
+  - **Open Source Approach**: Committed to community involvement and open-source principles for ongoing improvements.
+`,
+    slug: "the-majesty-of-the-36-views-of-mt-fuji",
+    featured: true,
+    tech: ["Svelte", "SvelteKit", "TypeScript", "Tailwind", "ChatGPT"],
+    featuredTech: ["Svelte", "SvelteKit", "TypeScript", "Tailwind", "ChatGPT"],
+    infoUrl: "",
+    liveUrl: "https://poliscope.vercel.app/",
+    repoUrl: "https://github.com/seancswanson/poliscope",
+  },
+  {
     title: "The Majesty of the 36 Views of Mt. Fuji",
     type: "Web App",
     description: `
@@ -66,7 +100,7 @@ const data: DevProject[] = [
   - **Service Menu and Policies**: Detailed the services offered and the policies to be noted before booking, providing all essential information in a structured manner.
 `,
     slug: "naka-studio",
-    featured: true,
+    featured: false,
     tech: ["Astro.js", "SSG", "Tailwind", "HTML", "CSS"],
     featuredTech: ["TypeScript", "Angular", "OpenSeadragon"],
     infoUrl: "",
