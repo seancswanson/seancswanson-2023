@@ -38,7 +38,7 @@ const data: DevProject[] = [
   - **Ethical AI Integration**: Careful use of AI to minimize bias in presenting political information.
   - **Open Source Approach**: Committed to community involvement and open-source principles for ongoing improvements.
 `,
-    slug: "the-majesty-of-the-36-views-of-mt-fuji",
+    slug: "poliscope",
     featured: true,
     tech: ["Svelte", "SvelteKit", "TypeScript", "Tailwind", "ChatGPT"],
     featuredTech: ["Svelte", "SvelteKit", "TypeScript", "Tailwind", "ChatGPT"],
