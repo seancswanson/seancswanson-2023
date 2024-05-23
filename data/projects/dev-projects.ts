@@ -243,7 +243,7 @@ Successfully built a space for "JoJo's Bizarre Adventure" fans to rank and discu
 
     `,
     slug: "op-t3",
-    featured: true,
+    featured: false,
     tech: ["Next.js", "TypeScript", "Tailwind", "tRPC", "Prisma", "MySQL"],
     featuredTech: [
       "Next.js",
@@ -423,7 +423,6 @@ The project was well-received, showcasing its potential to enhance operational e
     infoUrl: "#",
     repoUrl: "",
   },
-
   {
     title: "Ed Hardy Interactives",
     description: `
@@ -619,6 +618,36 @@ Successfully contributed to an interactive archive that allows users to explore 
     infoUrl: "",
     liveUrl: "https://www.knoll.com/the-archive/",
     repoUrl: "",
+  },
+  {
+    title: "The Way and Its Virtue",
+    description: `
+### Project Overview
+Developed "The Way and Its Virtue," an open-source, web-based comparative reader for the Tao Te Ching. This project was inspired by Igor Bedesqui's "The Manual" and merges my decade-long interest in philosophy with my passion for web development.
+
+### Purpose
+To provide an enriching experience for those exploring the Tao Te Ching, offering fresh insights and a meaningful exploration of this ancient text.
+
+### Core Features and Technology
+- **Astro**: Built with Astro for a modern, performant web experience.
+- **TypeScript**: Utilized TypeScript for robust, type-safe code.
+- **Tailwind**: Styled with Tailwind for a responsive and visually appealing design.
+- **Additional Features**: Includes dark mode, view transitions, intuitive sharing options, and more.
+
+### User Experience
+Offers a comparative reading experience of the Tao Te Ching, designed to be accessible and engaging for both long-time enthusiasts and those newly curious about Taoist philosophy.
+
+### Outcome
+Created a platform that allows users to delve deeper into the Tao Te Ching, providing a space for exploration and reflection on its profound wisdom.
+    `,
+    type: "Web App",
+    slug: "the-way-and-its-virtue",
+    featured: true,
+    tech: ["Web", "Astro.js", "JavaScript"],
+    featuredTech: ["Astro.js", "JavaScript"],
+    infoUrl: "",
+    liveUrl: "https://www.thewayanditsvirtue.com/",
+    repoUrl: "https://github.com/seancswanson/the-way-and-its-virtue/",
   },
 ];
 
