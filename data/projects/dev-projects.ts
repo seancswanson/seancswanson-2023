@@ -441,7 +441,7 @@ To create an interactive and engaging experience for museum visitors, showcasing
 
 ## User Experience
 
-The interactive touchscreens provided an immersive way for visitors to explore Ed Hardy's journey and his contributions to tattoo art.
+The interactive touchscreens provided an immersive way for visitors to explore Ed Hardy's journey and his contributions to tattoo art. Users could view his sketches, designs, and tattoos up close. Vintage photographs of tattoo models were interactive and their tattoos, separated by precise SVG boundaries, were hotspots to click to explore that particular design.
 
 ## Development Insights
 
