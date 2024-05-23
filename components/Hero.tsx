@@ -31,12 +31,12 @@ export const Hero = () => {
   const getRandomDegree = () => Math.floor(Math.random() * 9) - 4;
   return (
     <div className="flex flex-col-reverse justify-between md:flex-row md:gap-2">
-      <div className="flex flex-col items-center justify-between rounded-lg border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 text-center shadow md:basis-[50%] md:items-start md:text-left">
+      <div className="flex flex-col items-center justify-between rounded-lg p-6 text-center md:basis-[50%] md:items-start md:text-left">
         <div className="flex flex-col grow">
           <h1 className="mb-8 text-2xl font-bold text-gray-800 md:mb-4">
             Hi! I&apos;m Sean Swanson. 👋
           </h1>
-          <div className="flex flex-col text-md basis-1/2 justify-evenly">
+          <div className="flex flex-col text-lg basis-1/2 justify-evenly">
             <p className="relative mb-8 text-gray-900 md:mb-4">
               I&apos;m a{" "}
               <HighlightedText key={0} rotation={rotations[0]}>
@@ -48,16 +48,14 @@ export const Hero = () => {
               </HighlightedText>
               , and{" "}
               <HighlightedText key={2} rotation={rotations[2]}>
-                bboy
+                dancer
               </HighlightedText>
-              based in Seattle, WA. I have a passion for all facets of software
-              development, from ideation to execution, and I truly enjoy delving
-              into both project management and the entire software development .
+              based in Seattle, WA. 
             </p>
             <p className="mb-8 text-gray-900 md:mb-4">
-              My diverse range of passions allow me to tackle most challenges in
-              the software development life cycle, from design to DevOps, with a
-              well-rounded and empathetic perspective.
+            Passionate about every aspect of software development, from ideation to execution 
+            and project management to DevOps, I tackle challenges throughout the development 
+            life cycle with a well-rounded and empathetic perspective.
             </p>
             <p className="relative mb-8 text-gray-900 md:mb-4">
               Currently, I&apos;m the{" "}
