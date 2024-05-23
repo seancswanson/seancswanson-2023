@@ -17,27 +17,31 @@ const data: DevProject[] = [
     type: "Web App",
     description: `
 ## Project Overview
-  - **Poliscope**: A web application designed to make understanding the 2024 U.S. Presidential Election simpler and more direct.
-  - **Balanced Candidate Information**: Uses OpenAI's ChatGPT, Ballotpedia, and open-sourced data to provide factual profiles of each candidate.
+Developed Poliscope, a web application designed to simplify and enhance understanding of the 2024 U.S. Presidential Election.
 
-## Core Features and Technology 🔧
-  - **Built with SvelteKit**: Offers a responsive and efficient user experience using the SvelteKit framework.
-  - **Data Transparency**: All data and code are open-sourced for public access and transparency.
+## Purpose
 
-## User Experience with Poliscope 🗳️
-  - **Candidate Analysis**: Viewpoints from across the political spectrum to understand each candidate better.
-  - **In-Depth on Key Issues**: Information about major topics and issues in the 2024 election.
-  - **Interactive Candidate Profiles**: Easy-to-navigate profiles with essential information about each candidate.
+To provide voters with balanced and factual information about each candidate, empowering them to make informed decisions.
 
-## Impact and Goals 🎯
-  - **Informed Voting**: Aims to help voters make well-informed decisions in the upcoming election.
-  - **Encouraging Engagement**: Increases awareness and engagement in political discussions.
+## Core Features and Technology
 
-## Development Insights 🛠️
-  - **Technical Skills**: Developed using modern web technologies, showcasing proficiency in SvelteKit.
-  - **Ethical AI Integration**: Careful use of AI to minimize bias in presenting political information.
-  - **Open Source Approach**: Committed to community involvement and open-source principles for ongoing improvements.
-`,
+- **SvelteKit**: Built with SvelteKit for a responsive and efficient user experience.
+- **Data Transparency**: Uses OpenAI's ChatGPT, Ballotpedia, and open-sourced data to ensure transparency and accuracy.
+
+## User Experience
+
+Poliscope offers interactive candidate profiles, comprehensive issue breakdowns, and viewpoints from across the political spectrum to help voters understand each candidate better.
+
+## Development Insights
+
+- **Technical Skills**: Showcased proficiency in SvelteKit and modern web technologies.
+- **Ethical AI Integration**: Carefully integrated AI to minimize bias in presenting political information.
+- **Open Source Approach**: Committed to community involvement and open-source principles for ongoing improvements.
+
+## Outcome
+
+Successfully created a platform that aims to inform and engage voters, encouraging informed voting and political discussion.
+    `,
     slug: "poliscope",
     featured: true,
     tech: ["Svelte", "SvelteKit", "TypeScript", "Tailwind", "ChatGPT"],
@@ -50,26 +54,33 @@ const data: DevProject[] = [
     title: "The Majesty of the 36 Views of Mt. Fuji",
     type: "Web App",
     description: `
-### Project Overview 🌟
-  - **Tribute to Katsushika Hokusai**: Crafted an interactive tribute to the iconic artist Katsushika Hokusai, bringing a modern touch to the appreciation of his renowned series, "36 Views of Fuji".
-  - **Modern Web Design Techniques**: Utilized modern web design techniques to create an immersive and visually striking platform that pays homage to Hokusai's artistry.
+## Project Overview
 
-### Technical Backbone 🛠️
-  - **Angular**: Leveraged the Angular framework to build a robust and dynamic platform, enhancing the user experience through smooth navigation and interactive features.
-  - **OpenSeadragon**: Integrated OpenSeadragon to facilitate ultra-smooth high-resolution gallery viewing, allowing users to explore the intricate details of each artwork in the series.
+Created an interactive tribute to Katsushika Hokusai's iconic series, "36 Views of Mt. Fuji."
 
-### Gallery Experience 🎨
-  - **High-Resolution Viewing**: Offered users an unparalleled gallery viewing experience with high-resolution images that capture the nuances of Hokusai's masterpieces.
-  - **Interactive Engagement**: Created an interactive space where users can engage deeply with the artworks, fostering a rich and immersive art appreciation experience.
+## Purpose
 
-## Outcome 🚀
-- **Modern Tribute**: Successfully built a modern tribute to Katsushika Hokusai, offering art enthusiasts a fresh and interactive way to explore the "36 Views of Fuji" series.
-- **Positive Reception**: The project has been well-received, with users appreciating the ultra-smooth high-resolution gallery viewing experience and the modern interactive features.
+To modernize the appreciation of Hokusai's artistry and make his work more accessible through a visually striking and interactive platform.
 
-## Skills Honed 🛡️
-- **Technical Skills**: Enhanced technical proficiency by working with Angular and OpenSeadragon, gaining hands-on experience in modern web development practices.
-- **Artistic Appreciation**: Developed a deeper understanding and appreciation for art, translating the beauty of Hokusai's works into a digital platform.
-- **User Experience Design**: Honed skills in user experience design, focusing on creating an interactive and immersive gallery experience for users.`,
+## Core Features and Technology
+
+- **Angular**: Built with Angular to create a robust and dynamic platform.
+- **OpenSeadragon**: Integrated for ultra-smooth, high-resolution gallery viewing.
+
+## User Experience
+
+Offers an immersive gallery experience with high-resolution images and interactive features, allowing users to explore the intricate details of each artwork.
+
+## Development Insights
+
+- **Technical Skills**: Enhanced skills in Angular and OpenSeadragon.
+- **Artistic Appreciation**: Developed a deeper understanding and appreciation for art, translating Hokusai's works into a digital format.
+- **User Experience Design**: Focused on creating an interactive and immersive gallery experience.
+
+## Outcome
+
+Successfully built a modern tribute to Katsushika Hokusai, providing art enthusiasts with a fresh and interactive way to explore the "36 Views of Mt. Fuji" series.
+    `,
     slug: "the-majesty-of-the-36-views-of-mt-fuji",
     featured: true,
     tech: ["TypeScript", "Angular", "OpenSeadragon"],
@@ -82,23 +93,34 @@ const data: DevProject[] = [
     title: "Naka Studio",
     type: "Web App",
     description: `
-### Project Overview 🌟
-  - **Client**: Naka Studio, an upscale beauty studio in Seattle, WA.
-  - **Developer**: My company, Swanson Digital Arts, where I help clients bring their vision to life.
-  - **Role**: Lead Developer and Project Manager.
+## Project Overview
 
-### Skills Developed 🛡️
-  - **Astro.js**: Leveraged the capabilities of Astro.js, an open-source web framework ideal for creating content-heavy websites with high performance. The framework stands out for its compatibility with various UI frameworks, allowing the integration of components written in different languages into a single Astro file.
-  - **Tailwind CSS**: Utilized Tailwind CSS for styling, creating a visually appealing and responsive design that aligns with the brand's aesthetics.
-  - **Client Communication and Project Management**: As the solo lead developer, you handled all aspects of client communication and project management, ensuring the client's vision was accurately represented on the website.
+Developed a website for Naka Studio, an upscale beauty studio in Seattle, WA.
 
-### Features 🌈
-  - **Optimized for SEO**: The website is optimized for SEO, ensuring the brand's online presence is enhanced through a SEO strategy reinforced by analytics data.
-  - **Responsive Design**: The website is designed to be responsive, offering a seamless user experience across all devices.  
-  - **Modern Aesthetics**: The website embodies modern aesthetics, creating a visually appealing and user-friendly platform that aligns with the brand's aesthetics.
-  - **Personalized Content**: Created sections to introduce Alisha Nakamura and her journey in the beauty industry, fostering a personal connection with the clients.
-  - **Service Menu and Policies**: Detailed the services offered and the policies to be noted before booking, providing all essential information in a structured manner.
-`,
+## Purpose
+
+To create a visually appealing and informative online presence for Naka Studio, making it easier for clients to discover and engage with their services.
+
+## Core Features and Technology
+
+- **Astro.js**: Built with Astro.js for high performance and seamless content integration.
+- **Tailwind CSS**: Used for styling to ensure a modern and responsive design.
+- **SEO Optimization**: Implemented SEO strategies to enhance online visibility.
+
+## User Experience
+
+The website provides a responsive design, detailed service information, and personalized content about the founder, Alisha Nakamura.
+
+## Development Insights
+
+- **Technical Skills**: Improved proficiency in Astro.js and Tailwind CSS.
+- **Client Communication**: Effectively managed client interactions and project requirements.
+- **Project Management**: Oversaw the project from conception to completion, ensuring alignment with the client's vision.
+
+## Outcome
+
+Delivered a modern, SEO-optimized website that effectively represents Naka Studio's brand and services, making it easier for clients to find and book appointments.
+    `,
     slug: "naka-studio",
     featured: false,
     tech: ["Astro.js", "SSG", "Tailwind", "HTML", "CSS"],
@@ -111,26 +133,35 @@ const data: DevProject[] = [
     title: "Cypher Queenz",
     type: "Web App",
     description: `
-### Project Overview 🌟
-  - **Promoting CypherQueenz**: Developed a dynamic platform to promote CypherQueenz, a vibrant Bgirl collective, highlighting the pivotal role of females in the Hip Hop scene.
-  - **Astro.js-Powered**: Leveraged the capabilities of Astro.js to create a modern and dynamic platform that embodies the latest web development aesthetics and best practices.
+## Project Overview
 
-### Features and Functionalities 🛠️
-  - **Sanity.io CMS Integration**: Integrated with Sanity.io's CMS to facilitate seamless content management, allowing for the easy update and maintenance of the site's content.
-  - **Diverse Content Showcase**: Designed the platform to showcase a rich array of content including events, blogs, and galleries, offering a comprehensive view of the collective's activities and contributions to the Hip Hop community.
+Developed a platform to promote CypherQueenz, a vibrant Bgirl collective, highlighting the pivotal role of women in Hip Hop.
 
-### Design and Performance 🖥️
-  - **Optimal Performance**: Ensured the platform operates at peak performance, offering fast load times and a smooth user experience.
-  - **User Engagement**: Focused on fostering user engagement by adopting modern web development aesthetics and adhering to best practices, creating a site that is both visually appealing and user-friendly.
+## Purpose
 
-## Outcome 🚀
-- **Positive Reception**: The platform has been well-received, effectively promoting the vibrant Bgirl collective and highlighting the significant role of females in the Hip Hop industry.
-- **Showcasing CypherQueenz**: Successfully created a space where the collective's events, blogs, and galleries are showcased, offering a vibrant and interactive platform for fans and newcomers alike.
+To showcase the activities and contributions of CypherQueenz in the Hip Hop community, making it easier for people to find events and connect with the collective online.
 
-## Skills Honed 🛡️
-- **Technical Skills**: Enhanced technical proficiency by working with Astro.js and Sanity.io, gaining hands-on experience in modern web development practices.
-- **Design Skills**: Developed a keen eye for design, creating a platform that embodies modern aesthetics while promoting user engagement.
-- **Content Management**: Gained experience in content management through the integration with Sanity.io's CMS, learning to create a seamless content update and maintenance process.`,
+## Core Features and Technology
+
+- **Astro.js**: Utilized to create a modern and dynamic platform.
+- **Sanity.io**: Integrated for seamless content management.
+- **Diverse Content**: Showcased events, blogs, and galleries to highlight the collective's work.
+
+## User Experience
+
+Optimized for performance with fast load times and a smooth user experience. The platform encourages user engagement with visually appealing design and intuitive navigation.
+
+## Development Insights
+
+- **Technical Skills**: Enhanced skills in Astro.js and Sanity.io.
+- **Design Skills**: Focused on creating a visually engaging platform.
+- **Content Management**: Improved content management processes with Sanity.io.
+
+## Outcome
+
+Successfully created an engaging platform that promotes CypherQueenz, making it easier for people to find events and connect with the collective online.
+
+    `,
     slug: "cypher-queenz",
     featured: true,
     tech: ["Astro", "Sanity CMS", "SSG", "Tailwind"],
@@ -143,21 +174,31 @@ const data: DevProject[] = [
     title: "Chairman of the Board",
     type: "Web App",
     description: `
-### The Game Idea 🤩
-  - **Climb the Corporate Ladder**: Step into the shoes of a Mailroom Clerk and navigate through a series of quirky and humorous scenarios with the ultimate goal of becoming the Chairman of the Board.
-  - **Tongue-in-Cheek Humor**: Enjoy a light-hearted and funny take on the corporate world, bringing smiles and laughter to players.
+## Project Overview
 
-### Gameplay Experience 🕹️
-  - **Scenario-Based**: Engage in a variety of scenarios that test your wit and decision-making skills as you climb the corporate ladder, one rung at a time.
-  - **Humorous Take**: Dive into a game that doesn't take itself too seriously, offering a humorous perspective on corporate life.
+A humorous web game about climbing the corporate ladder from a Mailroom Clerk to Chairman of the Board.
 
-### Why Play? 🎉
-  - **Fun and Relaxation**: Take a break from the daily grind and have a good laugh as you navigate the whimsical corporate world depicted in the game.
-  - **Play Now**: Ready for a dose of fun? [Play now](#) for a delightful and humorous take on the corporate world!
+## Purpose
 
-## Skills Showcased 🌟
-- **Creative Storytelling**: Showcased my knack for crafting engaging and funny narratives, bringing a fresh and entertaining perspective to the corporate world.
-- **Game Development**: Stepped into the exciting world of game development, learning and applying skills to create a fun web game experience.
+To offer a fun and light-hearted take on corporate life through an engaging web game, and to recreate a game from the 1980s that my father coded in GW Basic, providing a unique way to unwind and enjoy humorous scenarios.
+
+## Core Features and Technology
+
+- **Scenario-Based Gameplay**: Engages players with various humorous scenarios.
+- **Tongue-in-Cheek Humor**: Provides a playful perspective on corporate culture.
+
+## User Experience
+
+The game is designed for fun and relaxation, with engaging scenarios that test wit and decision-making skills.
+
+## Development Insights
+
+- **Creative Storytelling**: Showcased ability to craft engaging and funny narratives.
+- **Game Development**: Gained experience in web game development.
+
+## Outcome
+
+Delivered an entertaining web game that offers a humorous take on the corporate world, providing players with a unique way to unwind and enjoy light-hearted gameplay.
 
 `,
     slug: "chairman-of-the-board",
@@ -172,25 +213,35 @@ const data: DevProject[] = [
     title: "OP-T3",
     type: "Web App",
     description: `
-### The Concept 🧠
-  - **JoJo's Bizarre Adventure**: Created a fun web app dedicated to ranking Stands from the iconic anime series, leveraging my passion for the show to build something unique and engaging.
-  - **User Engagement**: Designed with fans in mind, future iterations will include a platform where fans can interact and share their opinions on different Stands.
+## Project Overview
 
-### The Build 🛠️
-  - **T3 Stack**: Took full advantage of the T3 Stack (TypeScript, tRPC, and Tailwind) to build a responsive and dynamic web app.
-  - **Next.js**: Utilized the power of Next.js to bring the concept to life, ensuring a smooth user experience with fast load times.
+A web app dedicated to ranking Stands from the anime series "JoJo's Bizarre Adventure."
 
-### Backend Magic 🎩
-  - **MySQL and Prisma**: Set up a robust backend using MySQL for data persistence, with Prisma serving as the ORM, ensuring seamless database interactions and secure data storage.
+## Purpose
 
-## The Outcome 🚀
-- **Learning Experience**: Gained a deeper understanding of the T3 Stack and Next.js, enhancing my skill set and opening up new possibilities for future projects.
-- **Community Engagement**: Built a space for the JoJo's Bizarre Adventure community to engage and share their perspectives, fostering a vibrant and interactive platform.
+To provide fans with an engaging platform to rank and discuss their favorite Stands, fostering a vibrant community around the series.
 
-## Skills Honed 🛡️
-- **Technical Skills**: Enhanced my technical toolkit, getting hands-on experience with the T3 Stack and Next.js.
-- **Community Building**: Learned the ropes of building a community-centric app, focusing on user engagement and interaction.
-- **Backend Development**: Developed a strong understanding of backend development, working with MySQL and Prisma to set up a reliable and efficient database system.`,
+## Core Features and Technology
+
+- **T3 Stack**: Built using TypeScript, tRPC, and Tailwind for a responsive and dynamic experience.
+- **Next.js**: Utilized for seamless performance and fast load times.
+- **MySQL and Prisma**: Implemented for robust backend data management.
+
+## User Experience
+
+The platform is designed to engage users with dynamic features and interactive rankings, encouraging community participation.
+
+## Development Insights
+
+- **Technical Skills**: Gained deeper understanding of the T3 Stack and Next.js.
+- **Community Building**: Focused on creating a user-centric platform for fans to interact.
+- **Backend Development**: Enhanced skills in backend development with MySQL and Prisma.
+
+## Outcome
+
+Successfully built a space for "JoJo's Bizarre Adventure" fans to rank and discuss Stands, fostering a vibrant and interactive community.
+
+    `,
     slug: "op-t3",
     featured: true,
     tech: ["Next.js", "TypeScript", "Tailwind", "tRPC", "Prisma", "MySQL"],
@@ -210,30 +261,34 @@ const data: DevProject[] = [
     title: "DreamBox Learning Insights Dashboard - Growth Report",
     type: "Web App",
     description: `
-## Responsibilities and Achievements
+## Project Overview
 
-### Collaboration with Cross-Functional Team
-  - Played a pivotal role in the front-end development of the Growth Report feature, working closely with a cross-functional team.
-  - Engaged in collaborative efforts to build and refine UI components, ensuring the project aligned with both user requirements and technical specifications.
+Contributed to the front-end development of the Growth Report feature for the DreamBox Learning Insights Dashboard.
 
-### UI Components Development
-  - Leveraged expertise in Angular, JavaScript, and TypeScript to develop dynamic and responsive UI components.
-  - Utilized HTML and SCSS to enhance the user interface, focusing on creating a user-friendly and aesthetically pleasing experience.
+## Purpose
 
-### Technology Stack
-  - **Angular**: Employed Angular frameworks to build robust front-end solutions.
-  - **JavaScript and TypeScript**: Utilized these programming languages to implement interactive and dynamic functionalities in the Growth Report feature.
-  - **HTML**: Used HTML to structure the web content effectively, laying a solid foundation for the user interface.
-  - **SCSS**: Leveraged SCSS to style the web content, ensuring a modern and cohesive design.
+To enable detailed tracking and analysis of growth metrics, helping educators and administrators make informed decisions.
+
+## Core Features and Technology
+
+- **Angular**: Developed using Angular for a robust front-end solution.
+- **JavaScript and TypeScript**: Utilized for dynamic and interactive UI components.
+- **HTML and SCSS**: Applied for structured and stylish web content.
+
+## User Experience
+
+The feature provides an intuitive interface for users to track and analyze growth metrics effectively.
+
+## Development Insights
+
+- **Technical Skills**: Enhanced proficiency in Angular, JavaScript, and TypeScript.
+- **Collaboration Skills**: Worked closely with a cross-functional team to meet user requirements.
+- **Problem-Solving Skills**: Ensured meticulous attention to detail throughout the development process.
 
 ## Outcome
-- Successfully met user requirements and technical specifications through meticulous attention to detail at various stages of the software development lifecycle.
-- Contributed to a feature that facilitated growth reporting, enhancing the company's ability to track and analyze growth metrics effectively.
 
-## Skills Developed
-- **Technical Skills**: Enhanced proficiency in a range of technologies including Angular, JavaScript, TypeScript, HTML, and SCSS, gaining hands-on experience in front-end development.
-- **Collaboration Skills**: Developed strong collaboration skills through continuous engagement with a cross-functional team, fostering a harmonious working relationship.
-- **Problem-Solving Skills**: Honed problem-solving skills by ensuring the project met the necessary requirements and specifications through various stages of development.`,
+Delivered a feature that facilitates effective growth reporting, enhancing the ability to track and analyze growth metrics for better decision-making.
+    `,
     slug: "dreambox-growth-report",
     featured: false,
     tech: ["Angular", "JavaScript", "TypeScript", "HTML", "SCSS"],
@@ -246,28 +301,33 @@ const data: DevProject[] = [
     title: "DreamBox Learning Insights Dashboard - Educator Usage Report",
     type: "Web App",
     description: `
-## Responsibilities and Achievements
+## Project Overview
 
-### Collaboration with Various Teams
-  - Actively involved in the development of the Educator Usage Report.
-  - Collaborated closely with different teams to create user-centric UI solutions.
+Developed the Educator Usage Report feature for the DreamBox Learning Insights Dashboard.
 
-### UI Solutions Development
-  - Played a contributing role in developing UI solutions that are centered around the user's needs and preferences.
-  - Engaged in a continuous feedback loop, utilizing it to refine and enhance the functionality of the feature progressively.
+## Purpose
 
-### Technology Stack
-  - **Angular**: Utilized Angular to build a robust and scalable front-end for the Educator Usage Report section.
-  - **JavaScript**: Leveraged JavaScript to implement dynamic functionalities, enhancing the user experience and meeting project goals.
+To provide educators with detailed usage data, helping them understand and improve their teaching practices.
+
+## Core Features and Technology
+
+- **Angular**: Utilized Angular for building a scalable front-end.
+- **JavaScript**: Implemented dynamic functionalities to enhance user experience.
+
+## User Experience
+
+The feature offers a user-friendly interface for educators to access and interpret usage data effectively.
+
+## Development Insights
+
+- **Technical Skills**: Improved proficiency in Angular and JavaScript.
+- **Collaboration Skills**: Collaborated with various teams to create user-centric UI solutions.
+- **Feedback Integration**: Integrated feedback continuously to refine the feature.
 
 ## Outcome
-- Successfully collaborated with various teams to create a feature that is both user-centric and functional, meeting the project's objectives and enhancing the overall user experience.
-- Actively participated in the feedback loop, ensuring the continuous improvement and refinement of the feature, leading to a product that meets the users' needs effectively.
 
-## Skills Developed
-- **Technical Skills**: Enhanced proficiency in Angular and JavaScript, gaining valuable experience in developing user-centric UI solutions.
-- **Collaboration Skills**: Fostered a collaborative working environment through active engagement with various teams, developing a harmonious working relationship.
-- **Feedback Integration**: Developed the skill of effectively integrating feedback into the development process, ensuring the creation of a feature that is both functional and user-friendly.
+Successfully created a feature that enhances the user experience by providing detailed and actionable usage data for educators.
+    
 `,
     slug: "dreambox-educator-usage-report",
     featured: false,
@@ -281,29 +341,33 @@ const data: DevProject[] = [
     title: "DreamBox Learning Insights Dashboard - Predictive Insights Report",
     type: "Web App",
     description: `
-## Responsibilities and Achievements
+## Project Overview
 
-### Collaboration with Stakeholders
-  - Engaged closely with stakeholders throughout all phases of the development cycle.
-  - Facilitated meetings to gather requirements and feedback, ensuring the project aligned with stakeholder expectations.
+Developed the Predictive Insights Report feature for the DreamBox Learning Insights Dashboard.
 
-### UI Components Development
-  - Contributed to the development and refinement of UI components, enhancing the user experience and meeting project goals.
-  - Utilized a range of technologies including Angular and JavaScript to implement dynamic and responsive UI components.
+## Purpose
 
-### Technology Stack
-  - **Angular**: Leveraged Angular frameworks to build robust and scalable front-end solutions.
-  - **JavaScript**: Utilized JavaScript to create interactive and dynamic content, enhancing the functionality and user experience of the Predictive Insights feature.
-  - **Other Technologies**: Integrated various other technologies to optimize the performance and functionality of the feature.
+To leverage predictive analytics for providing valuable insights, helping educators make informed decisions for end-of-year performance.
+
+## Core Features and Technology
+
+- **Angular**: Built using Angular for robust front-end development.
+- **JavaScript**: Used to create interactive and dynamic content.
+
+## User Experience
+
+The feature provides predictive insights through an intuitive interface, enabling educators to make data-driven decisions.
+
+## Development Insights
+
+- **Technical Skills**: Enhanced proficiency in Angular and JavaScript.
+- **Collaboration Skills**: Worked closely with stakeholders to align with their expectations.
+- **Problem-Solving Skills**: Addressed and resolved issues during the development cycle.
 
 ## Outcome
-- We successfully launched the Predictive Insights feature, receiving positive feedback from stakeholders and end-users.
-- Contributed to a feature that leveraged predictive analytics to provide valuable insights for end of the year performance on state testing, helping educators make informed decisions.
 
-## Skills Developed
-- **Technical Skills**: Enhanced proficiency in Angular and JavaScript, gaining hands-on experience in front-end development.
-- **Collaboration Skills**: Developed strong collaboration skills through continuous engagement with stakeholders, fostering a harmonious working relationship.
-- **Problem-Solving Skills**: Honed problem-solving skills by addressing and resolving issues during the development cycle, ensuring the successful implementation of the feature.
+Successfully launched the Predictive Insights feature, receiving positive feedback for its ability to provide valuable insights and aid in decision-making.
+
 `,
     slug: "dreambox-predictive-insights",
     featured: false,
@@ -317,31 +381,33 @@ const data: DevProject[] = [
     title: "Internal ChatGPT Support App",
     type: "Web App",
     description: `
-In 2023, I spearheaded the development of an internal proof-of-concept ChatGPT Support App during the Summer Fix.Build.Learn hackathon week, assuming the roles of lead developer and project manager. 
-    
-## Responsibilities and Achievements
+## Project Overview
 
-### Collaboration with Stakeholders
-  - Formulated and pitched the initial concept, successfully gathering a cross-functional team from various departments including Customer Support, Professional Development, and IT.
-  - Maintained a collaborative approach by integrating stakeholder feedback throughout the development cycle, aiming to develop a tool beneficial to both new and tenured employees.
+Developed an internal proof-of-concept ChatGPT Support App during the Summer Fix.Build.Learn hackathon.
 
-### App Development and Management
-  - Led the development of the ChatGPT Support App, overseeing every stage from conceptualization to presentation.
-  - Ensured the creation of comprehensive documentation that outlined the project's goals, technical requirements, and the roles of each team member.
+## Purpose
 
-### Technology Stack
-  - **Azure OpenAI Studio**: Leveraged this platform to build the core of the web app, focusing on secure and efficient GPT-powered chatbot functionalities.
-  - **Other Technologies**: Utilized a range of technologies to facilitate the development process, ensuring a successful build within the hackathon timeframe.
+To streamline onboarding and provide self-serve information to employees, enhancing operational efficiency.
+
+## Core Features and Technology
+
+- **Azure OpenAI Studio**: Leveraged for building secure and efficient GPT-powered chatbot functionalities.
+- **React**: Utilized for creating a dynamic and interactive user interface.
+
+## User Experience
+
+The app offers a user-friendly interface for employees to access self-serve information, improving onboarding processes.
+
+## Development Insights
+
+- **Technical Skills**: Gained hands-on experience with Azure OpenAI Studio and React.
+- **Collaboration Skills**: Worked with stakeholders and cross-functional teams throughout the development.
+- **Problem-Solving Skills**: Oversaw QA testing to ensure the app met technical and user requirements.
 
 ## Outcome
-- The project was well-received, showcasing its potential to streamline onboarding and provide self-serve information to employees, which led to the initiation of a successful pilot phase currently being undertaken by the company.
-- Presented the finished product to company stakeholders, highlighting the app's potential in enhancing operational efficiency.
 
-## Skills Developed
-- **Technical Skills**: Gained hands-on experience in utilizing Azure OpenAI Studio for web app development, enhancing technical proficiency.
-- **Collaboration Skills**: Fostered strong relationships through continuous engagement with stakeholders and cross-functional teams.
-- **Problem-Solving Skills**: Demonstrated adept problem-solving skills by overseeing the QA testing phase to identify and rectify bugs, ensuring the app met all technical and user requirements.
-`,
+The project was well-received, showcasing its potential to enhance operational efficiency, and led to a successful pilot phase.
+    `,
     slug: "internal-chatgpt-support-app",
     featured: false,
     tech: [
@@ -354,25 +420,40 @@ In 2023, I spearheaded the development of an internal proof-of-concept ChatGPT S
     ],
     featuredTech: ["Azure OpenAI Studio", "Angular"],
     liveUrl: "",
-    infoUrl: "",
+    infoUrl: "#",
     repoUrl: "",
   },
 
   {
     title: "Ed Hardy Interactives",
     description: `
-### Project Overview 🌟
-  - **Client Project**: Collaborated on a client project to develop touchscreen experiences for the first museum retrospective of renowned tattoo artist Ed Hardy at San Francisco's de Young Museum. The exhibition, "Deeper than Skin," showcased Hardy's journey from a young artist fascinated with tattoo artistry to a master tattooist with a rich history of elevating tattooing from a subculture status to a recognized visual art form.
-  - **Role as an Amanuensis**: As a web developer apprentice, I doubled as an amanuensis, actively involved in typing out dictated code and actions, and participating in freelancing activities.
+## Project Overview
 
-### Technical Details 🛠️
-  - **Tech Stack**: JavaScript, HTML, HTML Canvas.
-  - **Role**: Apprentice in development.
+Collaborated on developing touchscreen experiences for the Ed Hardy retrospective at the de Young Museum in San Francisco during my apprenticeship as an amanuensis to senior developer Ian Gilman.
 
-### Skills Developed 🛡️
-  - **Collaborative Learning**: Engaged in a continuous feedback loop of programming and strategy commentary, learning immensely from the experience.
-  - **Freelancing Skills**: Gained insights into freelancing activities, including client communication and project management.
-`,
+## Purpose
+
+To create an interactive and engaging experience for museum visitors, showcasing the work of renowned tattoo artist Ed Hardy.
+
+## Core Features and Technology
+
+- **JavaScript and HTML**: Developed interactive elements using JavaScript and HTML.
+- **HTML Canvas**: Utilized for rendering dynamic and detailed visual content.
+
+## User Experience
+
+The interactive touchscreens provided an immersive way for visitors to explore Ed Hardy's journey and his contributions to tattoo art.
+
+## Development Insights
+
+- **Technical Skills**: Enhanced skills in JavaScript and HTML Canvas.
+- **Collaborative Learning**: Gained insights from working closely with experienced developers and museum curators.
+- **User Engagement**: Focused on creating an engaging and informative user experience.
+
+## Outcome
+
+Successfully delivered interactive experiences that enhanced the exhibition, providing visitors with a deeper understanding of Ed Hardy's artistry.
+    `,
     type: "Web App",
     slug: "ed-hardy-interactives",
     featured: false,
@@ -385,18 +466,33 @@ In 2023, I spearheaded the development of an internal proof-of-concept ChatGPT S
   {
     title: "Traditions of the Ancestors",
     description: `
-### Project Overview 🌟
-  - **Client Project**: Contributed to the development of TOTA.world, a platform designed to foster a deeper connection with various cultures through a rich database of articles, videos, interactive maps, and certified content. The platform encourages users to explore, connect, and share cultural insights and personal experiences, promoting a harmonious global community.
-  - **Role as an Amanuensis**: Served as a web developer apprentice and amanuensis, typing dictated code and actions while learning the nuances of freelancing activities.
+## Project Overview
 
-### Technical Details 🛠️
-  - **Tech**: HTML, CSS, JavaScript.
-  - **Role**: Apprentice in development.
+Contributed to the development of TOTA.world, a platform designed to foster connections with various cultures through rich multimedia content during my apprenticeship as an amanuensis to senior developer Ian Gilman.
 
-### Skills Developed 🛡️
-  - **JavaScript Development**: Enhanced proficiency in JavaScript through hands-on experience in development.
-  - **Client Engagement**: Learned the art of client engagement in a freelancing environment, understanding the dynamics of working on client projects.
-`,
+## Purpose
+
+To provide a comprehensive resource for exploring and sharing cultural insights, promoting a harmonious global community.
+
+## Core Features and Technology
+
+- **HTML, CSS, and JavaScript**: Developed the platform using these core web technologies.
+- **Rich Multimedia Content**: Integrated articles, videos, and interactive maps to provide a diverse range of cultural information.
+
+## User Experience
+
+The platform offers an engaging and educational experience, encouraging users to explore and connect with different cultures.
+
+## Development Insights
+
+- **Technical Skills**: Improved proficiency in HTML, CSS, and JavaScript.
+- **Client Engagement**: Learned to effectively communicate and meet client requirements.
+- **Content Integration**: Gained experience in integrating and managing diverse multimedia content.
+
+## Outcome
+
+Successfully contributed to a platform that fosters cultural understanding and connection, enhancing users' appreciation of global diversity.
+    `,
     type: "Web App",
     slug: "traditions-of-the-ancestors",
     featured: false,
@@ -409,19 +505,34 @@ In 2023, I spearheaded the development of an internal proof-of-concept ChatGPT S
   {
     title: "Living Worlds",
     description: `
-### Project Overview 🌟
-  - **Client Project**: Collaborated on the Living Worlds app, a modern recreation of dynamic pixel art scenes created by legendary artist Mark Ferrari. The app, celebrating its 25th anniversary, brings the original scenes to life with real-time transitions, ambient soundscapes, and logbook stories, offering a unique and immersive experience.
-  - **Role as an Amanuensis**: Assumed the role of a web developer apprentice and amanuensis, participating in the development process and freelancing activities.
+## Project Overview
 
-### Technical Details 🛠️
-  - **Tech Stack**: iOS, Android, JavaScript, HTML.
-  - **Role**: Apprentice in concept, design, and development.
+Collaborated on the Living Worlds app, a modern recreation of dynamic pixel art scenes by Mark Ferrari during my apprenticeship as an amanuensis to senior developer Ian Gilman.
 
-### Skills Developed 🛡️
-  - **Cross-Platform Development**: Gained experience in cross-platform development, working with both iOS and Android mediums.
-  - **Freelancing Experience**: Developed an understanding of freelancing dynamics, including client communication and project delivery.
-`,
-    type: "Mobile",
+## Purpose
+
+To bring Mark Ferrari's pixel art scenes to life with real-time transitions and ambient soundscapes, celebrating the 25th anniversary of his original works.
+
+## Core Features and Technology
+
+- **iOS and Android**: Developed for cross-platform functionality on mobile devices.
+- **JavaScript and HTML**: Used to create interactive and dynamic scenes.
+
+## User Experience
+
+The app offers a unique and immersive experience, allowing users to explore dynamic pixel art scenes with real-time transitions and soundscapes.
+
+## Development Insights
+
+- **Cross-Platform Development**: Gained experience in developing for both iOS and Android platforms.
+- **Artistic Presentation**: Enhanced skills in presenting pixel art in a dynamic and interactive format.
+- **Freelancing Skills**: Learned the nuances of managing client projects and delivering high-quality work.
+
+## Outcome
+
+Delivered a well-received app that brings Mark Ferrari's pixel art scenes to life, offering users an engaging and nostalgic experience.
+    `,
+    type: "Mobile App - iOS & Android",
     slug: "living-worlds",
     featured: false,
     tech: ["iOS", "Android", "JavaScript", "HTML"],
@@ -433,18 +544,33 @@ In 2023, I spearheaded the development of an internal proof-of-concept ChatGPT S
   {
     title: "Andy Warhol Interactive",
     description: `
-### Project Overview 🌟
-  - **Client Project**: Collaborated on a client project to develop a touchscreen experience for the "Contact Warhol: Photography Without End" exhibition at the Stanford Cantor Museum. The exhibition unveiled never-before-seen photographs by Andy Warhol, offering a deep dive into Warhol's interactions with the social and celebrity elite of his time.
-  - **Role as an Amanuensis**: Worked as a web developer apprentice and amanuensis, typing out dictated code and actions, and gaining insights into freelancing activities.
+## Project Overview
 
-### Technical Details 🛠️
-  - **Tech Stack**: JavaScript, HTML, Canvas.
-  - **Role**: Apprentice in development.
+Collaborated on developing a touchscreen experience for the "Contact Warhol: Photography Without End" exhibition at the Stanford Cantor Museum during my apprenticeship as an amanuensis to senior developer Ian Gilman.
 
-### Skills Developed 🛡️
-  - **Interactive Development**: Learned the intricacies of developing interactive experiences through hands-on involvement in the project.
-  - **Client Project Management**: Gained experience in managing client projects, understanding the requirements and expectations in a freelancing setup.
-`,
+## Purpose
+
+To create an interactive experience that unveils never-before-seen photographs by Andy Warhol, offering insights into his social interactions and celebrity encounters.
+
+## Core Features and Technology
+
+- **JavaScript and HTML**: Developed interactive elements using these core web technologies.
+- **HTML Canvas**: Utilized for rendering dynamic visual content.
+
+## User Experience
+
+The interactive touchscreen provided an engaging way for visitors to explore Warhol's photographs, enhancing their understanding of his work and social life.
+
+## Development Insights
+
+- **Technical Skills**: Improved proficiency in JavaScript and HTML Canvas.
+- **Client Project Management**: Gained experience in managing and delivering client projects.
+- **User Engagement**: Focused on creating an interactive and informative user experience.
+
+## Outcome
+
+Successfully delivered an interactive experience that enriched the exhibition, providing visitors with a deeper connection to Andy Warhol's photography.
+    `,
     type: "Web App",
     slug: "andy-warhol-interactive",
     featured: false,
@@ -458,18 +584,34 @@ In 2023, I spearheaded the development of an internal proof-of-concept ChatGPT S
   {
     title: "Knoll Interactive Archive",
     description: `
-### Project Overview 🌟
-  - **Client Project**: Contributed to the development of the Knoll Interactive Archive, a digital platform that narrates the rich history of Knoll, a company that has been fostering creativity and innovation since 1938. The archive offers a deep insight into the people, products, and events that shaped the Knoll story, encouraging users to explore the legacy through various interactive views.
-  - **Role as an Amanuensis**: Served as a web developer apprentice and amanuensis, actively involved in the development process and freelancing activities.
+## Project Overview
 
-### Technical Details 🛠️
-  - **Tech Stack**: Pixi.js, Hammer.js, JavaScript.
-  - **Role**: Apprentice in development.
+Contributed to the development of the Knoll Interactive Archive, a digital platform that narrates the rich history of Knoll during my apprenticeship as an amanuensis to senior developer Ian Gilman.
 
-### Skills Developed 🛡️
-  - **Interactive Development**: Developed skills in creating interactive archives, working with technologies like Pixi.js and Hammer.js.
-  - **Freelancing Skills**: Learned the dynamics of freelancing, including client communication and project management, through active participation in the project.`,
-    type: "Web App",
+## Purpose
+
+To create an engaging and interactive digital archive that showcases the legacy of Knoll's creativity and innovation since 1938.
+
+## Core Features and Technology
+
+- **Pixi.js and Hammer.js**: Utilized these libraries for creating interactive archives.
+- **JavaScript**: Developed dynamic and interactive content using JavaScript.
+
+## User Experience
+
+The platform offers users an interactive way to explore the history of Knoll, including the people, products, and events that shaped the company's legacy.
+
+## Development Insights
+
+- **Technical Skills**: Enhanced proficiency in Pixi.js, Hammer.js, and JavaScript.
+- **Freelancing Skills**: Gained experience in client communication and project management.
+- **Interactive Development**: Focused on creating engaging and interactive user experiences.
+
+## Outcome
+
+Successfully contributed to an interactive archive that allows users to explore Knoll's history in an engaging and informative way.
+
+`, type: "Web App",
     slug: "knoll-interactive-archive",
     featured: false,
     tech: ["Web", "Pixi.js", "Hammer.js", "JavaScript"],

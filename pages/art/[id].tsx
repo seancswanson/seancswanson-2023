@@ -1,15 +1,30 @@
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import Link from "next/link";
+import Toggle from 'react-toggle';
+import 'react-toggle/style.css';
 import YouTube from "react-youtube";
 import { toKebabCase } from "../../lib/util";
 import artProjects, { ArtProject } from "../../data/projects/art-projects";
 import Layout from "../../components/layout";
 import Breadcrumbs from "../../components/Breadcrumbs";
+import { useState } from "react";
+
+const PlayButton = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke="white" style={{ transform: 'translate(2px, -1px)' }}>
+    <path strokeLinecap="round" strokeLinejoin="round" fill="white" d="M6 4v16l12-8-12-8z" />
+  </svg>
+);
+
+const PauseButton = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white">
+    <path strokeLinecap="round" strokeLinejoin="round" fill="white" strokeWidth={4} d="M14 5v14M6 5v14" />
+  </svg>
+);
 
 export default function ArtProjectComponent(project: { project: ArtProject }) {
   const router = useRouter();
+  const [showAnimation, setShowAnimation] = useState(true);
 
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -24,6 +39,11 @@ export default function ArtProjectComponent(project: { project: ArtProject }) {
   };
 
   const parsedCreationDate = new Date(project.project.created_at);
+
+  const toggleMedia = () => {
+    setShowAnimation(!showAnimation);
+  };
+
   return (
     <Layout>
       <Breadcrumbs
@@ -36,84 +56,106 @@ export default function ArtProjectComponent(project: { project: ArtProject }) {
           },
         ]}
       />
-      <h1 className="relative mb-4 flex flex-col items-center gap-1 rounded-sm text-2xl md:flex-row md:gap-8">
-        <div className="black-block h-[2px] w-full grow bg-black md:w-[initial]"></div>
-        <span className="block font-bold">{project.project.title}</span>
-        <div className="black-block h-[2px] w-full grow bg-black md:w-[initial]"></div>
+      <h1 className="mb-8 text-3xl font-bold text-center rounded-sm">
+        {project.project.title}
       </h1>
 
-      <div className="flex flex-col justify-between gap-2 font-bold sm:flex-row">
-        {project.project.type === "youtube" ? (
-          <div className="mx-auto">
+      <div className="flex flex-col items-center gap-2 font-bold">
+        {project.project.type === "youtube" && (
+          <div className="mx-auto overflow-hidden rounded-lg">
             <YouTube
               videoId={project.project.media.youtube_id}
               opts={youtubeOpts}
             />
           </div>
-        ) : project.project.type === "animation" ? (
+        )}
+
+        {project.project.type === "animation" && (
           <>
-            {/* Render still and animation */}
-            <div className="flex basis-[50%] flex-col">
-              <video
-                className="rounded shadow-lg"
-                autoPlay
-                loop
-                muted
-                playsInline
-                controls
-                src={project.project.media.animation_full}
+            <div className="flex items-center gap-2 mb-4">
+              <span>Still</span>
+              <Toggle
+                defaultChecked={showAnimation}
+                icons={{
+                  checked: <PlayButton />,
+                  unchecked: <PauseButton />,
+                }} aria-label="Toggle Preview Animation"
+                onChange={toggleMedia}
               />
-              <span className="mt-2 text-center text-xs uppercase opacity-75">
-                Animation
-              </span>
+              <span>Animation</span>
             </div>
-            <div className="flex basis-[50%] flex-col">
-              <Image
-                src={`/art/${toKebabCase(project.project.title)}-still.webp`}
-                width="500"
-                height="500"
-                alt={project.project.title}
-                className="h-full w-full rounded-md object-cover object-center"
-              />
-              <span className="mt-2 text-center text-xs uppercase opacity-75">
-                Still
-              </span>
+            <div className="relative flex flex-col max-w-md min-h-[450px]">
+              <div
+                className={`absolute transition-opacity duration-500 ease-in-out translate-x-[-50%] min-w-[400px] ${showAnimation ? "opacity-100" : "opacity-0"
+                  }`}
+              >
+                <video
+                  className="rounded shadow-lg min-h-[400px] bg-black"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls
+                  src={project.project.media.animation_full}
+                />
+                <span className="mt-2 text-xs text-center uppercase opacity-75">
+                  Animation
+                </span>
+              </div>
+              <div
+                className={`absolute transition-opacity duration-500 ease-in-out translate-x-[-50%] min-w-[400px]  ${showAnimation ? "opacity-0" : "opacity-100"
+                  }`}
+              >
+                <Image
+                  src={`/art/${toKebabCase(project.project.title)}-still.webp`}
+                  width="500"
+                  height="500"
+                  alt={project.project.title}
+                  className="object-cover object-center w-full h-full rounded"
+                />
+                <span className="mt-2 text-xs text-center uppercase opacity-75">
+                  Still
+                </span>
+              </div>
             </div>
           </>
-        ) : (
-          // Render only still image
-          <div className="mx-auto basis-[50%]">
+        )}
+
+        {project.project.type !== "youtube" && project.project.type !== "animation" && (
+          <div className="mx-auto">
             <Image
               src={`/art/${toKebabCase(project.project.title)}-still.webp`}
               width="500"
               height="500"
               alt={project.project.title}
-              className="h-full w-full rounded-md object-cover object-center"
+              className="object-cover object-center w-full h-full rounded-md"
             />
           </div>
-        )}{" "}
+        )}
       </div>
 
-      <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 shadow">
-        <p>
-          <b>
-            <em>{project.project.title}</em>
-          </b>
-          , {parsedCreationDate.getFullYear()}
-        </p>
-        <p className="text-sm">{project.project.mediaCategory}</p>
-        <div className="description mb-4">
+      <div className="mt-4 flex flex-col text-xl gap-4 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 shadow">
+        <div>
+          <p>
+            <b>
+              <em>{project.project.title}</em>
+            </b>
+            , {parsedCreationDate.getFullYear()}
+          </p>
+          <p className="text-slate-800 text-[17px]">{project.project.mediaCategory}</p>
+        </div>
+        <div className="description">
           {project.project.description.split("\n").map((paragraph, index) => (
             <p key={index} className="mb-4">
               {paragraph}
             </p>
           ))}
         </div>
-        <div className="tools mb-4">
+        <div className="tools">
           Tools used:
           <div className="flex flex-wrap gap-2">
             {project.project.tech.map((technology, index) => (
-              <span key={index} className="rounded-sm border border-black px-3">
+              <span key={index} className="px-3 border border-black rounded-sm">
                 {technology}
               </span>
             ))}
@@ -124,7 +166,7 @@ export default function ArtProjectComponent(project: { project: ArtProject }) {
             href={project.project.permalink}
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-xs text-blue-500 underline"
+            className="block text-xs text-blue-600 underline"
           >
             View on{" "}
             {project.project.type === "youtube" ? "YouTube" : "Artstation"}

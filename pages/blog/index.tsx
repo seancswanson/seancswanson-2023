@@ -13,7 +13,7 @@ const BlogPage = ({ data }: { data: any }) => {
           { title: "Blog", href: "/blog" },
         ]}
       />
-      <h1 className="mb-4 text-3xl">Blog</h1>
+      <h1 className="mb-8 text-3xl font-bold">Blog</h1>
       <div className="flex flex-col gap-6">
         {data.map((post: any) => (
           <FeaturedBlogPost key={post.id} post={post} />

@@ -5,8 +5,10 @@ export default function Document() {
     <Html lang="en" className="h-screen">
       <Head />
       <body
-        className={`h-full bg-[url('https://www.transparenttextures.com/patterns/brilliant.png')] bg-[length:8px] bg-fixed font-skin`}
+        className={`h-full font-skin`}
       >
+        <div className="overlay grain-overlay"></div>
+        <div className="overlay marble-overlay"></div>
         <Main />
         <NextScript />
       </body>
