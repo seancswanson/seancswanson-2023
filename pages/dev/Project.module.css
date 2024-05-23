@@ -1,9 +1,9 @@
 .markdownContent h1 {
-  @apply mb-2 text-xl font-extrabold;
+  @apply mb-2 font-extrabold;
 }
 
 .markdownContent h2 {
-  @apply mb-2 font-bold;
+  @apply mb-4 text-2xl font-bold;
 }
 
 .markdownContent h3 {
@@ -11,7 +11,11 @@
 }
 
 .markdownContent p {
-  @apply mb-8;
+  @apply mb-10 text-lg;
+}
+
+.markdownContent p:last-of-type {
+  @apply mb-4;
 }
 
 .markdownContent a {
@@ -23,15 +27,15 @@
 }
 
 .markdownContent blockquote {
-  @apply my-8 border-l-4 border-gray-300 pl-4 italic;
+  @apply pl-4 my-8 italic border-l-4 border-gray-300;
 }
 
 .markdownContent ul {
-  @apply mb-8 list-inside list-disc pl-6;
+  @apply pl-6 mb-10 text-lg list-disc list-inside;
 }
 
 .markdownContent ol {
-  @apply mb-8 list-inside list-decimal pl-6;
+  @apply pl-6 mb-8 list-decimal list-inside;
 }
 
 .markdownContent li {
@@ -47,13 +51,13 @@
 }
 
 .markdownContent table {
-  @apply my-8 w-full border-collapse border border-gray-300;
+  @apply w-full my-8 border border-collapse border-gray-300;
 }
 
 .markdownContent th {
-  @apply border border-gray-300 bg-gray-100 px-4 py-2;
+  @apply px-4 py-2 bg-gray-100 border border-gray-300;
 }
 
 .markdownContent td {
-  @apply border border-gray-300 px-4 py-2;
+  @apply px-4 py-2 border border-gray-300;
 }

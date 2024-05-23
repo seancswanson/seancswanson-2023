@@ -24,8 +24,7 @@ export const Hero = () => {
   const profilePictureRef = useRef<HTMLImageElement>(null);
   const [rotations, setRotations] = useState<number[]>([]);
   useEffect(() => {
-    // Generate an array of 4 random numbers between -4 and 4
-    const newRotations = Array.from({ length: 4 }, () => getRandomDegree());
+    const newRotations = Array.from({ length: 5 }, () => getRandomDegree());
     setRotations(newRotations);
   }, []);
 
@@ -33,12 +32,12 @@ export const Hero = () => {
   return (
     <div className="flex flex-col-reverse justify-between md:flex-row md:gap-2">
       <div className="flex flex-col items-center justify-between rounded-lg border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 text-center shadow md:basis-[50%] md:items-start md:text-left">
-        <div className="flex grow flex-col">
+        <div className="flex flex-col grow">
           <h1 className="mb-8 text-2xl font-bold text-gray-800 md:mb-4">
             Hi! I&apos;m Sean Swanson. 👋
           </h1>
-          <div className="text-md flex basis-1/2 flex-col justify-evenly">
-            <p className="relative mb-8  text-gray-700 md:mb-4">
+          <div className="flex flex-col text-md basis-1/2 justify-evenly">
+            <p className="relative mb-8 text-gray-900 md:mb-4">
               I&apos;m a{" "}
               <HighlightedText key={0} rotation={rotations[0]}>
                 web developer
@@ -55,21 +54,19 @@ export const Hero = () => {
               development, from ideation to execution, and I truly enjoy delving
               into both project management and the entire software development .
             </p>
-            <p className="mb-8 text-gray-700 md:mb-4">
+            <p className="mb-8 text-gray-900 md:mb-4">
               My diverse range of passions allow me to tackle most challenges in
               the software development life cycle, from design to DevOps, with a
               well-rounded and empathetic perspective.
             </p>
-            <p className="relative mb-8  text-gray-700 md:mb-4">
+            <p className="relative mb-8 text-gray-900 md:mb-4">
               Currently, I&apos;m the{" "}
               <HighlightedText key={3} rotation={rotations[3]}>
                 Website/Digital Marketing Manager
               </HighlightedText>
-              at <span className="whitespace-nowrap">DreamBox Learning</span>,
-              using a blend of modern web development and project management
-              skills to increase brand visibility, optimize customer engagement,
-              and ensure smooth execution of data-compliant,
-              conversion-optimized web solutions.
+              at <span className="whitespace-nowrap">Discovery Education</span>,
+              where I enhance brand visibility, boost customer engagement, and ensure efficient, 
+              compliant web solutions through modern web development and project management.
             </p>
           </div>
         </div>

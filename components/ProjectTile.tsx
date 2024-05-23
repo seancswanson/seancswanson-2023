@@ -29,7 +29,7 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
     <Link
       role="button"
       href={project.infoUrl}
-      className="group relative grid h-auto max-w-[250px] grid-cols-1 grid-rows-[1fr] rounded-md shadow-md transition-shadow hocus:shadow-xl"
+      className="group relative grid h-auto grid-cols-1 grid-rows-[1fr] rounded shadow-md transition-shadow hocus:shadow-xl"
     >
       <div className="relative w-full rounded-md">
         {isVideoThumbnail ? (
@@ -39,7 +39,7 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
               width="250"
               height="250"
               alt={project.title}
-              className="h-full w-full rounded-md object-cover object-center"
+              className="object-cover object-center w-full h-full rounded-md"
             />
           ) : (
             <video
@@ -49,7 +49,7 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
               muted
               playsInline
               autoPlay
-              className="h-full w-full rounded-md object-cover object-center"
+              className="object-cover object-center w-full h-full rounded-md"
               onError={() => setVideoError(true)}
             />
           )
@@ -59,13 +59,13 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
             width="250"
             height="250"
             alt={project.title}
-            className="h-full w-full rounded-md object-cover object-center"
+            className="object-cover object-center w-full h-full rounded-md"
           />
         )}
-        <div className="rounded-md opacity-0 shadow-md transition-opacity duration-75 group-hover:opacity-100">
+        <div className="transition-opacity duration-75 rounded-md shadow-md opacity-0 group-hover:opacity-100">
           <div className="absolute top-0 left-0 h-full w-full cursor-pointer rounded-md border border-slate-800 bg-[rgba(0,0,0,0.85)] text-3xl font-extrabold text-white">
             {project.title}
-            <span className="ml-2 inline-block">
+            <span className="inline-block ml-2">
               <Image
                 src={upRightArrowWhite}
                 width="20"

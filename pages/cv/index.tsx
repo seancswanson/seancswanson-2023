@@ -5,6 +5,7 @@ import Layout from "../../components/layout";
 import download from "../../assets/icons/download.png";
 import { saveAs } from "file-saver";
 import { toKebabCase } from "../../lib/util";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 const CV = () => {
   const {
@@ -37,9 +38,9 @@ const CV = () => {
         {Object.keys(software).map((subCategory) => (
           <div
             key={subCategory}
-            className="flex flex-col items-center rounded-lg bg-gray-100 p-4"
+            className="flex flex-col items-center p-4 bg-gray-100 rounded-lg"
           >
-            <p className="mb-2 text-center font-bold">{subCategory}</p>
+            <p className="mb-2 font-bold text-center">{subCategory}</p>
             <ul className="flex flex-wrap justify-center gap-2 text-center">
               {software[subCategory].map((tool, index) => (
                 <li
@@ -58,17 +59,13 @@ const CV = () => {
 
   return (
     <Layout>
-      <div className="breadcrumbs mb-4 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity duration-75 hover:opacity-100">
-        /{" "}
-        <Link
-          href="/cv"
-          className="border-b-2 border-transparent transition-all hover:border-blue-500"
-        >
-          CV
-        </Link>
-      </div>
-
-      <h1 className="relative mb-4 flex flex-col items-center gap-1 rounded-sm text-2xl md:flex-row md:gap-8">
+      <Breadcrumbs
+        items={[
+          { title: "Home", href: "/" },
+          { title: "CV", href: "/cv" },
+        ]}
+      />
+      <h1 className="relative flex flex-col items-center gap-1 mb-4 text-2xl rounded-sm md:flex-row md:gap-8">
         <div className="black-block h-[2px] w-full grow bg-black md:w-[initial]"></div>
         <span className="block font-bold">
           {name} - {title}
@@ -77,7 +74,7 @@ const CV = () => {
       </h1>
       <div>
         <button
-          className=" m-auto flex w-1/2 items-center justify-center gap-2 self-end rounded border border-black bg-white p-2 text-sm opacity-75 transition-opacity duration-75 hocus:opacity-100 md:m-0 md:w-auto md:py-2"
+          className="flex items-center self-end justify-center w-1/2 gap-2 p-2 m-auto text-sm transition-opacity duration-75 bg-white border border-black rounded opacity-75 hocus:opacity-100 md:m-0 md:w-auto md:py-2"
           onClick={downloadCV}
         >
           Download to .txt{" "}
@@ -92,10 +89,10 @@ const CV = () => {
 
       {/* Professional Experience */}
       <div className="mt-4 flex flex-col gap-4 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 shadow transition-colors duration-200">
-        <p className="mb-3 font-bold italic">Professional Experience</p>
+        <p className="mb-3 italic font-bold">Professional Experience</p>
         {professionalExperience.map((experience, index) => (
           <div key={index} className="mb-8">
-            <h2 className="mb-2 flex items-end gap-2 font-bold">
+            <h2 className="flex items-end gap-2 mb-2 font-bold">
               <Image
                 src={`/cv-images/${toKebabCase(experience.company)}.png`}
                 alt={`Logo for ${experience.company}`}
@@ -115,7 +112,7 @@ const CV = () => {
                     {position.title} ({position.startDate} -{" "}
                     {position.endDate || "Present"})
                   </h3>
-                  <ul className="list-disc pl-5">
+                  <ul className="pl-5 list-disc">
                     {position.responsibilities.map(
                       (responsibility, respIndex) => (
                         <li
@@ -131,11 +128,11 @@ const CV = () => {
               ))
             ) : (
               <>
-                <h3 className="mb-2  underline">
+                <h3 className="mb-2 underline">
                   {experience.title} ({experience.startDate} -{" "}
                   {experience.endDate || "Present"})
                 </h3>
-                <ul className="list-disc pl-5">
+                <ul className="pl-5 list-disc">
                   {experience.responsibilities!.map(
                     (responsibility, respIndex) => (
                       <li
@@ -155,10 +152,10 @@ const CV = () => {
 
       {/* Education */}
       <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 shadow">
-        <p className="font-bold italic">Education</p>
+        <p className="italic font-bold">Education</p>
         {education.map((edu, index) => (
           <div key={index}>
-            <h2 className="mb-2 flex items-end gap-2 font-bold">
+            <h2 className="flex items-end gap-2 mb-2 font-bold">
               <Image
                 src={`/cv-images/${toKebabCase(edu.institution)}.png`}
                 alt={`Logo for ${edu.institution}`}
@@ -177,12 +174,12 @@ const CV = () => {
 
       {/* Certificatons */}
       <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 shadow">
-        <p className="font-bold italic">Certifications</p>
+        <p className="italic font-bold">Certifications</p>
         <ul className="grid grid-cols-1 gap-2 md:grid-cols-2">
           {certifications.map((cert, index) => (
             <li
               key={index}
-              className="rounded-md border bg-white p-2 shadow-sm"
+              className="p-2 bg-white border rounded-md shadow-sm"
             >
               {cert}
             </li>
@@ -192,7 +189,7 @@ const CV = () => {
 
       {/* Software and Tools */}
       <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 shadow">
-        <p className="font-bold italic">Software & Tools</p>
+        <p className="italic font-bold">Software & Tools</p>
         <ul>
           <SoftwareList software={additionalInformation.software} />
         </ul>

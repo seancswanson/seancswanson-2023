@@ -8,16 +8,16 @@ import { useState } from "react";
 
 const LogoAndName = () => (
   <Link href="/" className="flex h-full gap-4">
-    <div className="logo-container m-auto w-16 rounded-full shadow-sm">
+    <div className="w-16 m-auto rounded-full shadow-sm logo-container">
       <Image
-        className="logo w-full rounded-full"
+        className="w-full rounded-full logo"
         src={swansongLogo}
         alt="Swansong Logo"
       />
     </div>
-    <div className="name-container flex flex-col">
-      <span className="name block text-3xl font-extrabold">Sean Swanson</span>
-      <span className="name flex items-center justify-start gap-2 italic">
+    <div className="flex flex-col name-container">
+      <span className="block text-3xl font-extrabold name">Sean Swanson</span>
+      <span className="flex items-center justify-start gap-2 italic name">
         Web Dev <span className="text-xs">❖</span> Helpful Human
       </span>
     </div>
@@ -31,7 +31,7 @@ interface LinkProps {
 
 const LinkItem = ({ href, number, title }: LinkProps) => (
   <li className="w-full border-t border-slate-600 md:w-3/12">
-    <Link href={href} className="group flex flex-col">
+    <Link href={href} className="flex flex-col group">
       <div className="flex items-center justify-between">
         <span>
           {number}
@@ -66,9 +66,9 @@ export const Header = () => {
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } absolute top-0 left-0 z-50 h-screen w-full bg-white  py-4 px-6`}
+        } absolute top-0 left-0 z-50 text-[20px] h-screen w-full bg-white  py-4 px-6`}
       >
-        <div className="flex w-full items-start justify-between">
+        <div className="flex items-start justify-between w-full">
           <LogoAndName />
           <button className="p-2 text-lg" onClick={handleMenuClick}>
             &times;
@@ -79,21 +79,21 @@ export const Header = () => {
           <LinkItem href="/art" number="002" title="Art" />
           <LinkItem href="/blog" number="003" title="Blog" />
           <li className="w-12">
-            <Link href="/cv" className="group flex flex-col">
-              <span className="hocus:border-slate-6800 self-center border-2 border-slate-600 px-2 font-extrabold transition-all hocus:bg-slate-800 hocus:text-white">
+            <Link href="/cv" className="flex flex-col group">
+              <span className="self-center px-2 font-extrabold transition-all border-2 hocus:border-slate-6800 border-slate-600 hocus:bg-slate-800 hocus:text-white">
                 CV
               </span>
             </Link>
           </li>
         </ul>
       </div>
-      <ul className="hidden justify-end gap-8 pt-2 md:flex">
+      <ul className="justify-end hidden gap-8 pt-2 md:flex">
         <LinkItem href="/dev" number="001" title="Dev" />
         <LinkItem href="/art" number="002" title="Art" />
         <LinkItem href="/blog" number="003" title="Blog" />
         <li className="w-12">
-          <Link href="/cv" className="group flex flex-col">
-            <span className="self-center border-2 border-slate-600 px-2 font-extrabold transition-all hocus:border-slate-800 hocus:bg-slate-800 hocus:text-white">
+          <Link href="/cv" className="flex flex-col group">
+            <span className="self-center px-2 font-extrabold transition-all border-2 border-slate-600 hocus:border-slate-800 hocus:bg-slate-800 hocus:text-white">
               CV
             </span>
           </Link>

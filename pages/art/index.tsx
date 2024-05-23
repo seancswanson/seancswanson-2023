@@ -4,22 +4,20 @@ import { ProjectTile } from "../../components/ProjectTile";
 import Layout from "../../components/layout";
 import Link from "next/link";
 import { toKebabCase } from "../../lib/util";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 const Art = () => {
   artProjects;
   return (
     <Layout>
-      <div className="breadcrumbs mb-4 text-xs font-bold uppercase text-blue-500 opacity-50 transition-opacity duration-75 hover:opacity-100">
-        /{" "}
-        <Link
-          href="/art"
-          className="border-b-2 border-transparent transition-all hover:border-blue-500"
-        >
-          Art
-        </Link>
-      </div>
-      <h1 className="mb-4 text-3xl">Art Projects</h1>
-      <div className="grid grid-cols-2 grid-rows-2 justify-items-center gap-4 sm:grid md:grid md:grid-cols-4 md:grid-rows-1">
+      <Breadcrumbs
+        items={[
+          { title: "Home", href: "/" },
+          { title: "Art", href: "/art" },
+        ]}
+      />
+      <h1 className="mb-8 text-3xl font-bold">Art Projects</h1>
+      <div className="grid grid-cols-2 grid-rows-2 gap-8 justify-space-around sm:grid md:grid md:grid-cols-3 md:grid-rows-1">
         {artProjects.map((project: ArtProject, key: number) => (
           <Fragment key={key}>
             <ProjectTile
