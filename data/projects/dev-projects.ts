@@ -622,22 +622,22 @@ Successfully contributed to an interactive archive that allows users to explore 
   {
     title: "The Way and Its Virtue",
     description: `
-### Project Overview
+## Project Overview
 Developed "The Way and Its Virtue," an open-source, web-based comparative reader for the Tao Te Ching. This project was inspired by Igor Bedesqui's "The Manual" and merges my decade-long interest in philosophy with my passion for web development.
 
-### Purpose
+## Purpose
 To provide an enriching experience for those exploring the Tao Te Ching, offering fresh insights and a meaningful exploration of this ancient text.
 
-### Core Features and Technology
+## Core Features and Technology
 - **Astro**: Built with Astro for a modern, performant web experience.
 - **TypeScript**: Utilized TypeScript for robust, type-safe code.
 - **Tailwind**: Styled with Tailwind for a responsive and visually appealing design.
 - **Additional Features**: Includes dark mode, view transitions, intuitive sharing options, and more.
 
-### User Experience
+## User Experience
 Offers a comparative reading experience of the Tao Te Ching, designed to be accessible and engaging for both long-time enthusiasts and those newly curious about Taoist philosophy.
 
-### Outcome
+## Outcome
 Created a platform that allows users to delve deeper into the Tao Te Ching, providing a space for exploration and reflection on its profound wisdom.
     `,
     type: "Web App",
