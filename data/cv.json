@@ -10,6 +10,15 @@
     "summary": "A passionate and skilled front-end developer with experience building with technologies such as HTML, CSS w/ SCSS, JavaScript w/ TypeScript, Angular, CMS, 3rd Party APIs. Strong problem-solving abilities and a proven ability to work effectively in an agile team environment. A lifelong learner with a proven ability to teach and lead others. My diverse range of interests allow me to tackle most challenges in the software development life cycle, from design to DevOps, with a well-rounded and empathetic perspective.",
     "professionalExperience": [
         {
+            "company": "DISCOVERY EDUCATION",
+            "location": "Remote",
+            "showLogo": true,
+            "title": "Website/Digital Marketing Manager",
+            "startDate": "Oct 2023",
+            "endDate": "Present",
+            "responsibilities": ["Promoted after DreamBox Learning was acquired by Discovery Education."]
+        },
+        {
             "company": "DREAMBOX LEARNING",
             "location": "Bellevue, WA",
             "showLogo": true,
@@ -17,7 +26,7 @@
                 {
                     "title": "Website/Digital Marketing Manager",
                     "startDate": "Feb 2023",
-                    "endDate": "Present",
+                    "endDate": "Oct 2023",
                     "responsibilities": [
                         "Collaborated with stakeholders across the org to create and distribute content, improving brand visibility and customer engagement",
                         "Successfully managed and lead wide range of projects including the sunsetting of two major product websites.",

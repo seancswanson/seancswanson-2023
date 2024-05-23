@@ -28,6 +28,7 @@ const CV = () => {
       console.error("Error fetching and saving the file:", error);
     }
   };
+
   const SoftwareList = ({
     software,
   }: {
@@ -105,6 +106,7 @@ const CV = () => {
               {experience.company}, {experience.location}
             </h2>
 
+            {/* Check if the company has multiple positions */}
             {experience.positions && experience.positions.length > 1 ? (
               experience.positions.map((position, posIndex) => (
                 <div key={posIndex} className="mb-8 last:mb-0">
@@ -128,7 +130,7 @@ const CV = () => {
               ))
             ) : (
               <>
-                <h3 className="mb-2 underline">
+                <h3 className="mb-2 font-semibold">
                   {experience.title} ({experience.startDate} -{" "}
                   {experience.endDate || "Present"})
                 </h3>
@@ -172,7 +174,7 @@ const CV = () => {
         ))}
       </div>
 
-      {/* Certificatons */}
+      {/* Certifications */}
       <div className="mt-4 flex flex-col gap-2 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 shadow">
         <p className="italic font-bold">Certifications</p>
         <ul className="grid grid-cols-1 gap-2 md:grid-cols-2">
