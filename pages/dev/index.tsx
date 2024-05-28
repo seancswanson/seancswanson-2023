@@ -28,6 +28,7 @@ const Dev = () => {
                 infoUrl: `/dev/${project.slug}`,
                 tech: project.tech,
                 featuredTech: project.featuredTech,
+                blurDataURL: project.blurDataBase64,
               }}
             />
           </Fragment>

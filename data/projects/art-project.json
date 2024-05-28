@@ -1,0 +1,271 @@
+[
+    {
+        "title": "Sacrifice",
+        "type": "animation",
+        "mediaCategory": "Digital Mixed Media",
+        "created_at": "2022-05-22T15:29:42.800-05:00",
+        "updated_at": "2022-09-06T11:29:09.917-05:00",
+        "slug": "sacrifice",
+        "featured": true,
+        "published_at": "2022-05-22T15:29:42.787-05:00",
+        "hash_id": "3qQ9gB",
+        "permalink": "https://www.artstation.com/artwork/3qQ9gB",
+        "tech": [
+            "Blender",
+            "Davinci Resolve",
+            "Photoshop"
+        ],
+        "featuredTech": [
+            "Blender"
+        ],
+        "media": {
+            "still_url": "public/art/sacrifice-still",
+            "animation_preview": "public/art/sacrifice-preview.webm",
+            "animation_full": "public/art/sacrifice-full.webm"
+        }
+    },
+    {
+        "title": "Southern Freeway",
+        "type": "still",
+        "mediaCategory": "Digital Mixed Media",
+        "created_at": "2022-01-01T00:00:00.000-00:00",
+        "updated_at": "2022-01-01T00:00:00.000-00:00",
+        "slug": "southern-freeway",
+        "featured": false,
+        "published_at": "2022-08-30T00:00:00.000-00:00",
+        "hash_id": "lDlJNz",
+        "permalink": "https://www.artstation.com/artwork/lDlJNz",
+        "tech": [
+            "Blender",
+            "DALL-E 2"
+        ],
+        "featuredTech": [
+            "Blender"
+        ],
+        "media": {
+            "still_url": "public/art/southern-freeway-still"
+        }
+    },
+    {
+        "title": "Sacrifice II",
+        "type": "youtube",
+        "mediaCategory": "Digital Mixed Media",
+        "created_at": "2021-01-24T21:26:49.679-06:00",
+        "updated_at": "2021-01-24T21:26:49.679-06:00",
+        "slug": "sacrifice-ii",
+        "featured": false,
+        "published_at": "2021-01-24T21:26:49.679-06:00",
+        "hash_id": "rAKwGm",
+        "permalink": "https://www.youtube.com/watch?v=MNdOG5oNWE8",
+        "tech": [
+            "Blender",
+            "Davinci Resolve",
+            "Photoshop"
+        ],
+        "featuredTech": [
+            "Blender"
+        ],
+        "media": {
+            "youtube_id": "MNdOG5oNWE8",
+            "still_url": "public/art/sacrifice-ii-still"
+        }
+    },
+    {
+        "title": "Zero 7 'The Garden' Remix",
+        "type": "animation",
+        "mediaCategory": "Digital Mixed Media",
+        "created_at": "2021-10-20T12:33:22.906-05:00",
+        "updated_at": "2022-11-15T01:37:16.050-06:00",
+        "slug": "zero-7-the-garden-remix",
+        "featured": false,
+        "published_at": "2021-10-20T12:33:22.889-05:00",
+        "hash_id": "8eQZNG",
+        "permalink": "https://www.artstation.com/artwork/8eQZNG",
+        "tech": [
+            "Blender",
+            "Davinci Resolve",
+            "Photoshop"
+        ],
+        "featuredTech": [
+            "Blender"
+        ],
+        "media": {
+            "still_url": "public/art/zero-7-the-garden-remix-still",
+            "animation_preview": "public/art/zero-7-the-garden-remix-preview.webm",
+            "animation_full": "public/art/zero-7-the-garden-remix-full.webm"
+        }
+    },
+    {
+        "title": "Zero 7 'When It Falls' Remix",
+        "type": "animation",
+        "mediaCategory": "Digital Mixed Media",
+        "created_at": "2021-01-24T21:25:42.240-06:00",
+        "updated_at": "2021-03-27T22:20:55.764-05:00",
+        "slug": "zero-7-when-it-falls-remix",
+        "featured": true,
+        "published_at": "2021-01-24T21:26:49.679-06:00",
+        "hash_id": "rAKwGm",
+        "permalink": "https://www.artstation.com/artwork/rAKwGm",
+        "tech": [
+            "Blender",
+            "Davinci Resolve",
+            "Photoshop"
+        ],
+        "featuredTech": [
+            "Blender"
+        ],
+        "media": {
+            "still_url": "public/art/zero-7-when-it-falls-remix-still",
+            "animation_preview": "public/art/zero-7-when-it-falls-remix-preview.webm",
+            "animation_full": "public/art/zero-7-when-it-falls-remix-full.webm"
+        }
+    },
+    {
+        "title": "Alterations - System Infinity EP Visuals",
+        "type": "youtube",
+        "mediaCategory": "Digital Mixed Media",
+        "created_at": "2021-01-24T21:25:42.240-06:00",
+        "updated_at": "2021-03-27T22:20:55.764-05:00",
+        "slug": "alterations-system-infinity-ep-visuals",
+        "featured": false,
+        "published_at": "2021-01-24T21:26:49.679-06:00",
+        "hash_id": "rAKwGm",
+        "permalink": "https://www.youtube.com/watch?v=iSqwFhvr_ys",
+        "tech": [
+            "Blender",
+            "Davinci Resolve",
+            "Photoshop"
+        ],
+        "featuredTech": [
+            "Blender"
+        ],
+        "media": {
+            "youtube_id": "iSqwFhvr_ys",
+            "still_url": "public/art/alterations---system-infinity-ep-visuals-still"
+        }
+    },
+    {
+        "title": "Zahara - Alibi Promo",
+        "type": "animation",
+        "mediaCategory": "Digital Mixed Media",
+        "created_at": "2021-01-24T21:26:49.679-06:00",
+        "updated_at": "2021-01-24T21:26:49.679-06:00",
+        "slug": "zahara-alibi-promo",
+        "featured": true,
+        "published_at": "2021-01-24T21:26:49.679-06:00",
+        "hash_id": "rAKwGm",
+        "permalink": "https://www.artstation.com/artwork/LRlALK",
+        "tech": [
+            "Blender",
+            "Davinci Resolve"
+        ],
+        "featuredTech": [
+            "Blender"
+        ],
+        "media": {
+            "still_url": "public/art/zahara-alibi-promo-still",
+            "animation_preview": "public/art/zahara-alibi-promo-preview.webm",
+            "animation_full": "public/art/zahara-alibi-promo-full.webm"
+        }
+    },
+    {
+        "title": "Is that... a JoJo reference?",
+        "type": "animation",
+        "mediaCategory": "Digital Mixed Media",
+        "created_at": "2021-07-12T14:15:09.786-05:00",
+        "updated_at": "2021-12-08T19:01:04.628-06:00",
+        "slug": "is-that-a-jojo-reference",
+        "featured": true,
+        "published_at": "2021-07-12T14:15:09.766-05:00",
+        "hash_id": "nYznvo",
+        "permalink": "https://www.artstation.com/artwork/nYznvo",
+        "tech": [
+            "Blender",
+            "Davinci Resolve",
+            "Photoshop"
+        ],
+        "featuredTech": [
+            "Blender"
+        ],
+        "media": {
+            "still_url": "public/art/is-that-a-jojo-reference-still",
+            "animation_preview": "public/art/is-that-a-jojo-reference-preview.webm",
+            "animation_full": "public/art/is-that-a-jojo-reference-full.webm"
+        }
+    },
+    {
+        "title": "Sol Amulet",
+        "type": "animation",
+        "mediaCategory": "Digital Mixed Media",
+        "created_at": "2021-06-03T20:53:04.341-05:00",
+        "updated_at": "2021-12-08T19:00:49.700-06:00",
+        "slug": "sol-amulet",
+        "featured": false,
+        "published_at": "2021-06-03T20:53:04.329-05:00",
+        "hash_id": "v2qrg6",
+        "permalink": "https://www.artstation.com/artwork/v2qrg6",
+        "tech": [
+            "Blender",
+            "Davinci Resolve",
+            "Photoshop"
+        ],
+        "featuredTech": [
+            "Blender"
+        ],
+        "media": {
+            "still_url": "public/art/sol-amulet-still",
+            "animation_preview": "public/art/sol-amulet-preview.webm",
+            "animation_full": "public/art/sol-amulet-full.webm"
+        }
+    },
+    {
+        "title": "Heirloom",
+        "type": "animation",
+        "mediaCategory": "Digital Mixed Media",
+        "created_at": "2021-06-03T21:03:27.212-05:00",
+        "updated_at": "2021-07-17T14:26:59.824-05:00",
+        "slug": "heirloom",
+        "featured": false,
+        "published_at": "2021-06-03T21:03:27.184-05:00",
+        "hash_id": "D5Ry0G",
+        "permalink": "https://www.artstation.com/artwork/D5Ry0G",
+        "tech": [
+            "Blender",
+            "Davinci Resolve",
+            "Photoshop"
+        ],
+        "featuredTech": [
+            "Blender"
+        ],
+        "media": {
+            "still_url": "public/art/heirloom-still",
+            "animation_preview": "public/art/heirloom-preview.webm",
+            "animation_full": "public/art/heirloom-full.webm"
+        }
+    },
+    {
+        "title": "Doctor Who?",
+        "type": "animation",
+        "mediaCategory": "Digital Mixed Media",
+        "created_at": "2021-01-27T18:39:09.028-06:00",
+        "updated_at": "2021-10-20T12:36:49.695-05:00",
+        "slug": "doctor-who",
+        "featured": false,
+        "published_at": "2021-01-27T18:39:09.018-06:00",
+        "hash_id": "9mQWOQ",
+        "permalink": "https://www.artstation.com/artwork/9mQWOQ",
+        "tech": [
+            "Blender",
+            "Davinci Resolve",
+            "Photoshop"
+        ],
+        "featuredTech": [
+            "Blender"
+        ],
+        "media": {
+            "still_url": "public/art/doctor-who-still",
+            "animation_preview": "public/art/doctor-who-preview.webm",
+            "animation_full": "public/art/doctor-who-full.webm"
+        }
+    }
+]

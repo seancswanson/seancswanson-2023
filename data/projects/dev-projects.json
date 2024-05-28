@@ -1,0 +1,321 @@
+[
+  {
+    "title": "The Way and Its Virtue",
+    "type": "Web App",
+    "slug": "the-way-and-its-virtue",
+    "featured": true,
+    "tech": [
+      "Web",
+      "Astro.js",
+      "JavaScript"
+    ],
+    "featuredTech": [
+      "Astro.js",
+      "JavaScript"
+    ],
+    "infoUrl": "",
+    "liveUrl": "https://www.thewayanditsvirtue.com/",
+    "repoUrl": "https://github.com/seancswanson/the-way-and-its-virtue/"
+  },
+  {
+    "title": "Poliscope",
+    "type": "Web App",
+    "slug": "poliscope",
+    "featured": true,
+    "tech": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript",
+      "Tailwind",
+      "ChatGPT"
+    ],
+    "featuredTech": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript",
+      "Tailwind",
+      "ChatGPT"
+    ],
+    "infoUrl": "",
+    "liveUrl": "https://poliscope.vercel.app/",
+    "repoUrl": "https://github.com/seancswanson/poliscope"
+  },
+  {
+    "title": "The Majesty of the 36 Views of Mt. Fuji",
+    "type": "Web App",
+    "slug": "the-majesty-of-the-36-views-of-mt-fuji",
+    "featured": true,
+    "tech": [
+      "TypeScript",
+      "Angular",
+      "OpenSeadragon"
+    ],
+    "featuredTech": [
+      "TypeScript",
+      "Angular",
+      "OpenSeadragon"
+    ],
+    "infoUrl": "",
+    "liveUrl": "https://osd-woodblocks-angular.pages.dev/home",
+    "repoUrl": "https://github.com/seancswanson/osd-woodblocks-angular"
+  },
+  {
+    "title": "Naka Studio",
+    "type": "Web App",
+    "slug": "naka-studio",
+    "featured": false,
+    "tech": [
+      "Astro.js",
+      "SSG",
+      "Tailwind",
+      "HTML",
+      "CSS"
+    ],
+    "featuredTech": [
+      "TypeScript",
+      "Angular",
+      "OpenSeadragon"
+    ],
+    "infoUrl": "",
+    "liveUrl": "https://naka.studio",
+    "repoUrl": "https://github.com/seancswanson/naka-studio-www"
+  },
+  {
+    "title": "Cypher Queenz",
+    "type": "Web App",
+    "slug": "cypher-queenz",
+    "featured": true,
+    "tech": [
+      "Astro",
+      "Sanity CMS",
+      "SSG",
+      "Tailwind"
+    ],
+    "featuredTech": [
+      "apollo",
+      "sanity",
+      "SSG"
+    ],
+    "infoUrl": "",
+    "liveUrl": "https://www.cypherqueenz.com",
+    "repoUrl": "https://github.com/seancswanson/cypherqueenz-www"
+  },
+  {
+    "title": "Chairman of the Board",
+    "type": "Web App",
+    "slug": "chairman-of-the-board",
+    "featured": false,
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "jQuery"
+    ],
+    "featuredTech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "jQuery"
+    ],
+    "liveUrl": "https://seancswanson.github.io/chairman-of-the-board/",
+    "infoUrl": "",
+    "repoUrl": "https://github.com/seancswanson/chairman-of-the-board"
+  },
+  {
+    "title": "OP-T3",
+    "type": "Web App",
+    "slug": "op-t3",
+    "featured": false,
+    "tech": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "tRPC",
+      "Prisma",
+      "MySQL"
+    ],
+    "featuredTech": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "tRPC",
+      "Prisma",
+      "MySQL"
+    ],
+    "liveUrl": "https://op-t3.vercel.app/",
+    "infoUrl": "",
+    "repoUrl": "https://github.com/seancswanson/op-t3"
+  },
+  {
+    "title": "DreamBox Learning Insights Dashboard - Growth Report",
+    "type": "Web App",
+    "slug": "dreambox-growth-report",
+    "featured": false,
+    "tech": [
+      "Angular",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "SCSS"
+    ],
+    "featuredTech": [
+      "Angular",
+      "JavaScript"
+    ],
+    "liveUrl": "",
+    "infoUrl": "",
+    "repoUrl": ""
+  },
+  {
+    "title": "DreamBox Learning Insights Dashboard - Educator Usage Report",
+    "type": "Web App",
+    "slug": "dreambox-educator-usage-report",
+    "featured": false,
+    "tech": [
+      "Angular",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "SCSS"
+    ],
+    "featuredTech": [
+      "Angular",
+      "JavaScript"
+    ],
+    "liveUrl": "",
+    "infoUrl": "",
+    "repoUrl": ""
+  },
+  {
+    "title": "DreamBox Learning Insights Dashboard - Predictive Insights Report",
+    "type": "Web App",
+    "slug": "dreambox-predictive-insights",
+    "featured": false,
+    "tech": [
+      "Angular",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "SCSS"
+    ],
+    "featuredTech": [
+      "Angular",
+      "JavaScript"
+    ],
+    "liveUrl": "",
+    "infoUrl": "",
+    "repoUrl": ""
+  },
+  {
+    "title": "Internal ChatGPT Support App",
+    "type": "Web App",
+    "slug": "internal-chatgpt-support-app",
+    "featured": false,
+    "tech": [
+      "Azure OpenAI Studio",
+      "React",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "CSS"
+    ],
+    "featuredTech": [
+      "Azure OpenAI Studio",
+      "Angular"
+    ],
+    "liveUrl": "",
+    "infoUrl": "#",
+    "repoUrl": ""
+  },
+  {
+    "title": "Ed Hardy Interactives",
+    "type": "Web App",
+    "slug": "ed-hardy-interactives",
+    "featured": false,
+    "tech": [
+      "JavaScript",
+      "HTML",
+      "HTML Canvas"
+    ],
+    "featuredTech": [
+      "JavaScript",
+      "HTML Canvas"
+    ],
+    "liveUrl": "",
+    "infoUrl": "https://www.famsf.org/exhibitions/ed-hardy",
+    "repoUrl": ""
+  },
+  {
+    "title": "Traditions of the Ancestors",
+    "type": "Web App",
+    "slug": "traditions-of-the-ancestors",
+    "featured": false,
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "featuredTech": [
+      "JavaScript"
+    ],
+    "liveUrl": "https://www.tota.world",
+    "infoUrl": "",
+    "repoUrl": ""
+  },
+  {
+    "title": "Living Worlds",
+    "type": "Mobile App - iOS & Android",
+    "slug": "living-worlds",
+    "featured": false,
+    "tech": [
+      "iOS",
+      "Android",
+      "JavaScript",
+      "HTML"
+    ],
+    "featuredTech": [
+      "JavaScript",
+      "HTML"
+    ],
+    "liveUrl": "",
+    "infoUrl": "https://pixfabrik.com/livingworlds/",
+    "repoUrl": ""
+  },
+  {
+    "title": "Andy Warhol Interactive",
+    "type": "Web App",
+    "slug": "andy-warhol-interactive",
+    "featured": false,
+    "tech": [
+      "JavaScript",
+      "HTML",
+      "Canvas"
+    ],
+    "featuredTech": [
+      "JavaScript",
+      "Canvas"
+    ],
+    "liveUrl": "",
+    "infoUrl": "https://museum.stanford.edu/exhibitions/contact-warhol-photography-without-end",
+    "repoUrl": ""
+  },
+  {
+    "title": "Knoll Interactive Archive",
+    "type": "Web App",
+    "slug": "knoll-interactive-archive",
+    "featured": false,
+    "tech": [
+      "Web",
+      "Pixi.js",
+      "Hammer.js",
+      "JavaScript"
+    ],
+    "featuredTech": [
+      "Pixi.js",
+      "Hammer.js"
+    ],
+    "infoUrl": "",
+    "liveUrl": "https://www.knoll.com/the-archive/",
+    "repoUrl": ""
+  }
+]

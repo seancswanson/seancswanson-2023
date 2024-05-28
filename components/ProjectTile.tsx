@@ -18,12 +18,20 @@ interface Project {
   tech: string[];
   featuredTech: string[];
   media?: any;
+  blurDataURL?: string;
 }
 
 export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
   const [videoError, setVideoError] = useState(false);
 
   const kebabTitle = toKebabCase(project.title);
+  const blurDataBase64 = project.blurDataURL;
+  const videoStyle = {
+    backgroundImage: `url(${blurDataBase64})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+  };
 
   return (
     <Link
@@ -35,11 +43,13 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
         {isVideoThumbnail ? (
           videoError ? (
             <Image
-              src={`/art/${kebabTitle}-still.webp`}
+              src={`/art/${kebabTitle}-still.png`}
               width="250"
               height="250"
+              placeholder="blur"
+              blurDataURL={project.blurDataURL}
               alt={project.title}
-              className="object-cover object-center w-full h-full rounded-md"
+              className="h-full w-full rounded-md object-cover object-center"
             />
           ) : (
             <video
@@ -49,7 +59,8 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
               muted
               playsInline
               autoPlay
-              className="object-cover object-center w-full h-full rounded-md"
+              style={videoStyle}
+              className={`project-tile-video h-full w-full rounded-md  object-cover object-center`}
               onError={() => setVideoError(true)}
             />
           )
@@ -58,14 +69,16 @@ export const ProjectTile = ({ project, isVideoThumbnail }: Props) => {
             src={project.media || `/project-images/${kebabTitle}.png`}
             width="250"
             height="250"
+            placeholder="blur"
+            blurDataURL={project.blurDataURL}
             alt={project.title}
-            className="object-cover object-center w-full h-full rounded-md"
+            className="h-full w-full rounded-md object-cover object-center"
           />
         )}
-        <div className="transition-opacity duration-75 rounded-md shadow-md opacity-0 group-hover:opacity-100">
+        <div className="rounded-md opacity-0 shadow-md transition-opacity duration-75 group-hover:opacity-100">
           <div className="absolute top-0 left-0 h-full w-full cursor-pointer rounded-md border border-slate-800 bg-[rgba(0,0,0,0.85)] text-3xl font-extrabold text-white">
             {project.title}
-            <span className="inline-block ml-2">
+            <span className="ml-2 inline-block">
               <Image
                 src={upRightArrowWhite}
                 width="20"
