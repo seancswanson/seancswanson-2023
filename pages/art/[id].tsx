@@ -1,8 +1,8 @@
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import Toggle from 'react-toggle';
-import 'react-toggle/style.css';
+import Toggle from "react-toggle";
+import "react-toggle/style.css";
 import YouTube from "react-youtube";
 import { toKebabCase } from "../../lib/util";
 import artProjects, { ArtProject } from "../../data/projects/art-projects";
@@ -11,14 +11,36 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import { useState } from "react";
 
 const PlayButton = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke="white" style={{ transform: 'translate(2px, -1px)' }}>
-    <path strokeLinecap="round" strokeLinejoin="round" fill="white" d="M6 4v16l12-8-12-8z" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 25 25"
+    stroke="white"
+    style={{ transform: "translate(2px, -1px)" }}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="white"
+      d="M6 4v16l12-8-12-8z"
+    />
   </svg>
 );
 
 const PauseButton = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white">
-    <path strokeLinecap="round" strokeLinejoin="round" fill="white" strokeWidth={4} d="M14 5v14M6 5v14" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="white"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="white"
+      strokeWidth={4}
+      d="M14 5v14M6 5v14"
+    />
   </svg>
 );
 
@@ -56,7 +78,7 @@ export default function ArtProjectComponent(project: { project: ArtProject }) {
           },
         ]}
       />
-      <h1 className="mb-8 text-3xl font-bold text-center rounded-sm">
+      <h1 className="mb-8 rounded-sm text-center text-3xl font-bold">
         {project.project.title}
       </h1>
 
@@ -72,25 +94,27 @@ export default function ArtProjectComponent(project: { project: ArtProject }) {
 
         {project.project.type === "animation" && (
           <>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="mb-4 flex items-center gap-2">
               <span>Still</span>
               <Toggle
                 defaultChecked={showAnimation}
                 icons={{
                   checked: <PlayButton />,
                   unchecked: <PauseButton />,
-                }} aria-label="Toggle Preview Animation"
+                }}
+                aria-label="Toggle Preview Animation"
                 onChange={toggleMedia}
               />
               <span>Animation</span>
             </div>
-            <div className="relative flex flex-col max-w-md min-h-[450px]">
+            <div className="relative flex min-h-[450px] max-w-md flex-col">
               <div
-                className={`absolute transition-opacity duration-500 ease-in-out translate-x-[-50%] min-w-[400px] ${showAnimation ? "opacity-100" : "opacity-0"
-                  }`}
+                className={`absolute min-w-[400px] translate-x-[-50%] transition-opacity duration-500 ease-in-out ${
+                  showAnimation ? "opacity-100" : "opacity-0"
+                }`}
               >
                 <video
-                  className="rounded shadow-lg min-h-[400px] bg-black"
+                  className="min-h-[400px] rounded bg-black shadow-lg"
                   autoPlay
                   loop
                   muted
@@ -98,22 +122,25 @@ export default function ArtProjectComponent(project: { project: ArtProject }) {
                   controls
                   src={project.project.media.animation_full}
                 />
-                <span className="mt-2 text-xs text-center uppercase opacity-75">
+                <span className="mt-2 text-center text-xs uppercase opacity-75">
                   Animation
                 </span>
               </div>
               <div
-                className={`absolute transition-opacity duration-500 ease-in-out translate-x-[-50%] min-w-[400px]  ${showAnimation ? "opacity-0" : "opacity-100"
-                  }`}
+                className={`absolute min-w-[400px] translate-x-[-50%] transition-opacity duration-500 ease-in-out  ${
+                  showAnimation ? "opacity-0" : "opacity-100"
+                }`}
               >
                 <Image
                   src={`/art/${toKebabCase(project.project.title)}-still.webp`}
                   width="500"
                   height="500"
                   alt={project.project.title}
-                  className="object-cover object-center w-full h-full rounded"
+                  placeholder="blur"
+                  blurDataURL={project.project.media.blurDataURL}
+                  className="h-full w-full rounded object-cover object-center"
                 />
-                <span className="mt-2 text-xs text-center uppercase opacity-75">
+                <span className="mt-2 text-center text-xs uppercase opacity-75">
                   Still
                 </span>
               </div>
@@ -121,20 +148,23 @@ export default function ArtProjectComponent(project: { project: ArtProject }) {
           </>
         )}
 
-        {project.project.type !== "youtube" && project.project.type !== "animation" && (
-          <div className="mx-auto">
-            <Image
-              src={`/art/${toKebabCase(project.project.title)}-still.webp`}
-              width="500"
-              height="500"
-              alt={project.project.title}
-              className="object-cover object-center w-full h-full rounded-md"
-            />
-          </div>
-        )}
+        {project.project.type !== "youtube" &&
+          project.project.type !== "animation" && (
+            <div className="mx-auto">
+              <Image
+                src={`/art/${toKebabCase(project.project.title)}-still.webp`}
+                width="500"
+                height="500"
+                alt={project.project.title}
+                placeholder="blur"
+                blurDataURL={project.project.media.blurDataURL}
+                className="h-full w-full rounded-md object-cover object-center"
+              />
+            </div>
+          )}
       </div>
 
-      <div className="mt-4 flex flex-col text-xl gap-4 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 shadow">
+      <div className="mt-4 flex flex-col gap-4 rounded-lg border border-slate-200 bg-[rgba(255,255,255,0.8)] p-6 text-xl shadow">
         <div>
           <p>
             <b>
@@ -142,7 +172,9 @@ export default function ArtProjectComponent(project: { project: ArtProject }) {
             </b>
             , {parsedCreationDate.getFullYear()}
           </p>
-          <p className="text-slate-800 text-[17px]">{project.project.mediaCategory}</p>
+          <p className="text-[17px] text-slate-800">
+            {project.project.mediaCategory}
+          </p>
         </div>
         <div className="description">
           {project.project.description.split("\n").map((paragraph, index) => (
@@ -155,7 +187,7 @@ export default function ArtProjectComponent(project: { project: ArtProject }) {
           Tools used:
           <div className="flex flex-wrap gap-2">
             {project.project.tech.map((technology, index) => (
-              <span key={index} className="px-3 border border-black rounded-sm">
+              <span key={index} className="rounded-sm border border-black px-3">
                 {technology}
               </span>
             ))}

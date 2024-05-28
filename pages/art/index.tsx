@@ -2,7 +2,6 @@ import artProjects, { ArtProject } from "../../data/projects/art-projects";
 import { Fragment } from "react";
 import { ProjectTile } from "../../components/ProjectTile";
 import Layout from "../../components/layout";
-import Link from "next/link";
 import { toKebabCase } from "../../lib/util";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
@@ -17,7 +16,7 @@ const Art = () => {
         ]}
       />
       <h1 className="mb-8 text-3xl font-bold">Art Projects</h1>
-      <div className="grid grid-cols-2 grid-rows-2 gap-8 justify-space-around sm:grid md:grid md:grid-cols-3 md:grid-rows-1">
+      <div className="justify-space-around grid grid-cols-2 grid-rows-2 gap-8 sm:grid md:grid md:grid-cols-3 md:grid-rows-1">
         {artProjects.map((project: ArtProject, key: number) => (
           <Fragment key={key}>
             <ProjectTile
@@ -36,6 +35,7 @@ const Art = () => {
                   : `/art/${toKebabCase(project.title)}-still.webp`,
                 tech: project.tech,
                 featuredTech: project.featuredTech,
+                blurDataURL: project.media.blurDataURL,
               }}
             />
           </Fragment>

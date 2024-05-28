@@ -49,12 +49,12 @@ export default function Home({
         <Hero />
         <div className="py-8">
           <h2 className="mb-8 text-2xl font-extrabold">Featured Projects</h2>
-          <div className="flex flex-col w-full gap-6 justify-evenly">
+          <div className="flex w-full flex-col justify-evenly gap-6">
             <div className="flex flex-col gap-2">
               <div className="flex justify-between">
                 <h3
                   aria-label="Web Development Projects"
-                  className="relative self-start p-2 text-2xl font-bold text-center rounded-sm"
+                  className="relative self-start rounded-sm p-2 text-center text-2xl font-bold"
                 >
                   <Link href="/dev">
                     WebDev
@@ -65,7 +65,7 @@ export default function Home({
                   </Link>
                 </h3>
               </div>
-              <div className="grid grid-cols-2 grid-rows-2 gap-4 mb-2 justify-items-center md:grid-cols-4 md:grid-rows-1">
+              <div className="mb-2 grid grid-cols-2 grid-rows-2 justify-items-center gap-4 md:grid-cols-4 md:grid-rows-1">
                 {DevProjects.filter((project) => project.featured).map(
                   (project, key) => (
                     <Fragment key={key}>
@@ -80,6 +80,7 @@ export default function Home({
                           infoUrl: `/dev/${project.slug}`,
                           tech: project.tech,
                           featuredTech: project.featuredTech,
+                          blurDataURL: project.blurDataBase64,
                         }}
                       />
                     </Fragment>
@@ -89,7 +90,7 @@ export default function Home({
               <Link
                 aria-label="View all Web Development Projects"
                 href="/dev"
-                className="flex items-center self-end justify-center w-1/2 gap-2 p-2 px-2 m-auto text-sm transition-all duration-75 border-2 group border-slate-600 hocus:border-slate-800 hocus:bg-slate-800 hocus:text-white hocus:opacity-100 md:m-0 md:w-auto md:py-2"
+                className="group m-auto flex w-1/2 items-center justify-center gap-2 self-end border-2 border-slate-600 p-2 px-2 text-sm transition-all duration-75 hocus:border-slate-800 hocus:bg-slate-800 hocus:text-white hocus:opacity-100 md:m-0 md:w-auto md:py-2"
               >
                 View all{" "}
                 <Image
@@ -101,11 +102,11 @@ export default function Home({
                 />
               </Link>
             </div>
-            <div className="flex flex-col w-full gap-2 ">
+            <div className="flex w-full flex-col gap-2 ">
               <div className="flex justify-between">
                 <h3
                   aria-label="Art Projects"
-                  className="relative self-start p-2 text-2xl font-bold text-center rounded-sm"
+                  className="relative self-start rounded-sm p-2 text-center text-2xl font-bold"
                 >
                   Art
                   <span className="absolute left-[-7px] top-[-7px] text-3xl font-normal tracking-tighter opacity-10">
@@ -115,7 +116,7 @@ export default function Home({
                 </h3>
               </div>
 
-              <div className="grid grid-cols-2 grid-rows-2 gap-4 mb-2 justify-items-center sm:grid md:grid md:grid-cols-4 md:grid-rows-1">
+              <div className="mb-2 grid grid-cols-2 grid-rows-2 justify-items-center gap-4 sm:grid md:grid md:grid-cols-4 md:grid-rows-1">
                 {ArtProjects.filter((project) => project.featured)
                   .sort((a, b) => (a.title > b.title ? -1 : 1))
                   .map((project, key) => (
@@ -139,6 +140,7 @@ export default function Home({
                               )}-still.webp`,
                           tech: project.tech,
                           featuredTech: project.featuredTech,
+                          blurDataURL: project.media.blurDataURL,
                         }}
                       />
                     </Fragment>
@@ -146,7 +148,7 @@ export default function Home({
               </div>
               <Link
                 href="/art"
-                className="flex items-center self-end justify-center w-1/2 gap-2 p-2 px-2 m-auto text-sm transition-all duration-75 border-2 group border-slate-600 hocus:border-slate-800 hocus:bg-slate-800 hocus:text-white hocus:opacity-100 md:m-0 md:w-auto md:py-2"
+                className="group m-auto flex w-1/2 items-center justify-center gap-2 self-end border-2 border-slate-600 p-2 px-2 text-sm transition-all duration-75 hocus:border-slate-800 hocus:bg-slate-800 hocus:text-white hocus:opacity-100 md:m-0 md:w-auto md:py-2"
               >
                 View all{" "}
                 <Image
@@ -159,10 +161,10 @@ export default function Home({
                 />
               </Link>
             </div>
-            <div className="flex flex-col w-full gap-2 ">
+            <div className="flex w-full flex-col gap-2 ">
               <h3
                 aria-label="Blog Posts"
-                className="relative self-start p-2 text-2xl font-bold text-center rounded-sm"
+                className="relative self-start rounded-sm p-2 text-center text-2xl font-bold"
               >
                 Blog
                 <span className="absolute left-[-7px] top-[-7px] text-3xl font-normal tracking-tighter opacity-10">
@@ -170,7 +172,7 @@ export default function Home({
                   003
                 </span>
               </h3>{" "}
-              <div className="flex flex-col gap-6 mb-2">
+              <div className="mb-2 flex flex-col gap-6">
                 {BlogPosts.map((post, i) => (
                   <FeaturedBlogPost
                     key={i}
@@ -189,7 +191,7 @@ export default function Home({
               <Link
                 aria-label="View all Blog Posts"
                 href="/blog"
-                className="flex items-center self-end justify-center w-1/2 gap-2 p-2 px-2 m-auto text-sm transition-all duration-75 border-2 group border-slate-600 hocus:border-slate-800 hocus:bg-slate-800 hocus:text-white hocus:opacity-100 md:m-0 md:w-auto md:py-2"
+                className="group m-auto flex w-1/2 items-center justify-center gap-2 self-end border-2 border-slate-600 p-2 px-2 text-sm transition-all duration-75 hocus:border-slate-800 hocus:bg-slate-800 hocus:text-white hocus:opacity-100 md:m-0 md:w-auto md:py-2"
               >
                 View all{" "}
                 <Image

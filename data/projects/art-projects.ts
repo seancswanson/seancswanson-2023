@@ -19,6 +19,7 @@ export interface Media {
   animation_preview?: string;
   animation_full?: string;
   youtube_id?: string;
+  blurDataURL?: string;
 }
 
 export interface ArtProject {
@@ -55,6 +56,8 @@ const data: ArtProject[] = [
     tech: ["Blender", "Davinci Resolve", "Photoshop"],
     featuredTech: ["Blender"],
     media: {
+      blurDataURL:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR4nGNwNHf4//P/qwu3gqzdGLiZBR+fm//21joDRSMGGw29zrLMVdMqnPQtGLQlpY3VNIxU5cWYuQFQbRJTl2FZOQAAAABJRU5ErkJggg==",
       animation_preview: sacrificePreview,
       animation_full: sacrificeFull,
     },
@@ -74,7 +77,10 @@ const data: ArtProject[] = [
     permalink: "https://www.artstation.com/artwork/lDlJNz", // replace with actual value
     tech: ["Blender", "DALL-E 2"],
     featuredTech: ["Blender"],
-    media: {},
+    media: {
+      blurDataURL:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP0lEQVR4nAE0AMv/ADKF9jWG+hl46SqA8QBzuf+M0f9GjccAGTAA1/P/yvH/qcjuAAwWAKmv0g8VJw0UJ3F6osKNGTBGNsLoAAAAAElFTkSuQmCC",
+    },
   },
   {
     title: "Sacrifice II",
@@ -92,6 +98,9 @@ const data: ArtProject[] = [
     tech: ["Blender", "Davinci Resolve", "Photoshop"],
     featuredTech: ["Blender"],
     media: {
+      blurDataURL:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nAFEALv/AEo/I/+ykWn/rY1j/y0jDv8AUDsb///uwv//47P/W0Mk/wBgSif/blg4/2VOLv9bRCb/ABoLAP9YQBz/WD4b/yASAP+XYiAh08EbiQAAAABJRU5ErkJggg==",
+
       youtube_id: "MNdOG5oNWE8",
     },
   },
@@ -111,6 +120,8 @@ const data: ArtProject[] = [
     tech: ["Blender", "Davinci Resolve", "Photoshop"],
     featuredTech: ["Blender"],
     media: {
+      blurDataURL:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR4nGNQ0tIWEpdiYONk5uJhiIiPe/D61rr1y/0D/Riq6stffLr3+/97GycHBgYWVgY2bk5BIW4BIQCh8Q/RBM1HIwAAAABJRU5ErkJggg==",
       animation_preview: theGardenPreview,
       animation_full: theGardenFull,
     },
@@ -131,6 +142,8 @@ const data: ArtProject[] = [
     tech: ["Blender", "Davinci Resolve", "Photoshop"],
     featuredTech: ["Blender"],
     media: {
+      blurDataURL:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP0lEQVR4nAE0AMv/ABwAQSgCQl8yVSkBQwAUAD2veW7/5YebbGEAHAA75rSS//amonBjABoAP2I1VP/ntNKef6uTFDf0xBGQAAAAAElFTkSuQmCC",
       animation_preview: whenItFallsFull,
       animation_full: whenItFallsFull,
     },
@@ -151,6 +164,8 @@ const data: ArtProject[] = [
     tech: ["Blender", "Davinci Resolve", "Photoshop"],
     featuredTech: ["Blender"],
     media: {
+      blurDataURL:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP0lEQVR4nAE0AMv/AJSUgLHGlu7/xG53UQDcvbLivXXgzYBYQxUARiNQYjccU0lGGAAAAG9MjH9dhFlLVLGTgqLaFqbvg6/UAAAAAElFTkSuQmCC",
       youtube_id: "iSqwFhvr_ys",
     },
   },
@@ -170,6 +185,8 @@ const data: ArtProject[] = [
     tech: ["Blender", "Davinci Resolve"],
     featuredTech: ["Blender"],
     media: {
+      blurDataURL:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR4nGOoSnCQY2dQFWUojbNnkGBhCDaXvL6mXVWalyHYSf/ricX/3+6tSAtiWDWpJNrPzsFEpa88DgB9shExz58zbgAAAABJRU5ErkJggg==",
       animation_preview: zaharaAlibiPreview,
       animation_full: zaharaAlibiFull,
     },
@@ -190,6 +207,8 @@ const data: ArtProject[] = [
     tech: ["Blender", "Davinci Resolve", "Photoshop"],
     featuredTech: ["Blender"],
     media: {
+      blurDataURL:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAS0lEQVR4nBXGMQ5AQBRF0df4JiYS5rNclTWoLEans4EpdYhiVnDFqY4kYWakIfFfVYhs80ReF7o0ImsinBmOndD2yN0p90u5HmozPo0LH7rcvH20AAAAAElFTSuQmC",
       animation_preview: jojoPreview,
       animation_full: jojoFull,
     },
@@ -210,6 +229,8 @@ const data: ArtProject[] = [
     tech: ["Blender", "Davinci Resolve", "Photoshop"],
     featuredTech: ["Blender"],
     media: {
+      blurDataURL:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOElEQVR4nGNgZ2dnY2Xh5eFgZ2dnYGBgMDQ0MdAzArEYGBh+/vh/8PAjEIuVlTUtNj4hKoaZhRkArW0JKMO7SNgAAAAASUVORK5CYII=",
       animation_preview: solAmuletPreview,
       animation_full: solAmuletFull,
     },
@@ -230,6 +251,8 @@ const data: ArtProject[] = [
     tech: ["Blender", "Davinci Resolve", "Photoshop"],
     featuredTech: ["Blender"],
     media: {
+      blurDataURL:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP0lEQVR4nAE0AMv/AEA7OEI9PiAYFaCVkABqa3n/+v/MtKTs3tYAX19y3MzPjFUkzaqTACQAAHlVTX5IIoNSOlD6FnlNuqaWAAAAAElFTkSuQmCC",
       animation_preview: heirloomPreview,
       animation_full: heirloomFull,
     },
@@ -250,6 +273,8 @@ const data: ArtProject[] = [
     tech: ["Blender", "Davinci Resolve", "Photoshop"],
     featuredTech: ["Blender"],
     media: {
+      blurDataURL:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP0lEQVR4nAE0AMv/ALzH1cjQ3OXq8fr7/QCqr7W7wcior7m9wMUAMzc0QEZMAAsqAA0pAIiRnKywuwMvTRw6Uz+eGfLBwPbuAAAAAElFTkSuQmCC",
       animation_preview: doctorWhoPreview,
       animation_full: doctorWhoFull,
     },

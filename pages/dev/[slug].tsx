@@ -32,19 +32,23 @@ export default function DevProjectComponent(project: { project: DevProject }) {
           },
         ]}
       />
-      <h1 className="mb-8 text-3xl font-bold text-center rounded-sm">
+      <h1 className="mb-8 rounded-sm text-center text-3xl font-bold">
         {project.project.title}
       </h1>
 
-      <div className="flex flex-col justify-between gap-2 mb-8 font-bold sm:flex-row">
+      <div className="mb-8 flex flex-col justify-between gap-2 font-bold sm:flex-row">
         <div className="basis-[50%]">
           <Image
             src={`/project-images/${kebabTitle}.png`}
             alt={project.project.title}
             width={400}
             height={400}
+            placeholder="blur"
+            blurDataURL={project.project.blurDataBase64}
             className={`${
-              project.project.slug === "living-worlds" ? "rendering-pixelated" : ""
+              project.project.slug === "living-worlds"
+                ? "rendering-pixelated"
+                : ""
             } h-full w-full rounded-md object-cover object-center shadow-sm`}
           />
         </div>
@@ -54,15 +58,19 @@ export default function DevProjectComponent(project: { project: DevProject }) {
             alt={project.project.title}
             width={400}
             height={400}
+            placeholder="blur"
+            blurDataURL={project.project.blurDataBase64}
             className={`${
-              project.project.slug === "living-worlds" ? "rendering-pixelated" : ""
+              project.project.slug === "living-worlds"
+                ? "rendering-pixelated"
+                : ""
             } h-full w-full rounded-md object-cover object-center shadow-sm`}
           />
         </div>
       </div>
 
-      <div className="flex flex-col justify-center md:mb-8 md:gap-4 md:flex-row">
-        <div className="flex flex-col items-center justify-center gap-2 p-6 rounded-lg ">
+      <div className="flex flex-col justify-center md:mb-8 md:flex-row md:gap-4">
+        <div className="flex flex-col items-center justify-center gap-2 rounded-lg p-6 ">
           <p className="text-xl font-bold">
             <span>{project.project.title}</span>
           </p>
@@ -70,7 +78,10 @@ export default function DevProjectComponent(project: { project: DevProject }) {
           <div className="tools">
             <div className="flex flex-wrap gap-2">
               {project.project.tech.map((technology, index) => (
-                <span key={index} className="px-3 border border-black rounded-sm">
+                <span
+                  key={index}
+                  className="rounded-sm border border-black px-3"
+                >
                   {technology}
                 </span>
               ))}
@@ -78,9 +89,11 @@ export default function DevProjectComponent(project: { project: DevProject }) {
           </div>
         </div>
 
-        {(project.project.liveUrl || (project.project.infoUrl && project.project.infoUrl !== "#") || project.project.repoUrl) && (
-          <div className="flex flex-col items-center justify-center p-6 rounded-lg">
-            <div className="flex gap-2 md:flex-col links">
+        {(project.project.liveUrl ||
+          (project.project.infoUrl && project.project.infoUrl !== "#") ||
+          project.project.repoUrl) && (
+          <div className="flex flex-col items-center justify-center rounded-lg p-6">
+            <div className="links flex gap-2 md:flex-col">
               {project.project.liveUrl && (
                 <a
                   href={project.project.liveUrl}

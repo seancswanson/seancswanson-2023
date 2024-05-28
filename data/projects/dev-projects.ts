@@ -9,6 +9,7 @@ export interface DevProject {
   infoUrl: string;
   liveUrl: string;
   repoUrl: string;
+  blurDataBase64: string;
 }
 
 const data: DevProject[] = [
@@ -41,6 +42,8 @@ Created a platform that allows users to delve deeper into the Tao Te Ching, prov
     infoUrl: "",
     liveUrl: "https://www.thewayanditsvirtue.com/",
     repoUrl: "https://github.com/seancswanson/the-way-and-its-virtue/",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAARElEQVR4nD3JIRFAQQgFQCSSAFga0OkaUYAKRGCGPLhz72a++GLVEjNjZj4iAupu3HuRmagq0O7+GxEgM8M5B+4OVcUDmrwnypi46eEAAAAASUVORK5CYII=",
   },
   {
     title: "Poliscope",
@@ -79,6 +82,8 @@ Successfully created a platform that aims to inform and engage voters, encouragi
     infoUrl: "",
     liveUrl: "https://poliscope.vercel.app/",
     repoUrl: "https://github.com/seancswanson/poliscope",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nAFEALv/AP/y+P/r5Pj/4Ov//6re//8Az4eM/yAoQP83FSj/3vD//wCUJDH/ADp3/3YAJf//6/n/AFcAAP+JACD/2XJx///N0P8lvCsNaqK6RwAAAABJRU5ErkJggg==",
   },
   {
     title: "The Majesty of the 36 Views of Mt. Fuji",
@@ -118,6 +123,8 @@ Successfully built a modern tribute to Katsushika Hokusai, providing art enthusi
     infoUrl: "",
     liveUrl: "https://osd-woodblocks-angular.pages.dev/home",
     repoUrl: "https://github.com/seancswanson/osd-woodblocks-angular",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP0lEQVR4nAE0AMv/APTnxci+pYyLfuDUtACmqJ8iKTQmLDX/99kALDU3SE5RjIuAbmlbABAWGERPUyIqLgEMCqV3FIgcKVD2AAAAAElFTkSuQmCC",
   },
   {
     title: "Naka Studio",
@@ -158,6 +165,8 @@ Delivered a modern, SEO-optimized website that effectively represents Naka Studi
     infoUrl: "",
     liveUrl: "https://naka.studio",
     repoUrl: "https://github.com/seancswanson/naka-studio-www",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nAFEALv/AO7/7f95l3n/ABsA/7/cyf8Ac5Ny/3GRcv8AHwD/XH1d/wBskHz/BTQj/ypQNP+hv6P/AL7fyP9NcVf/ABMA/8rq1f8NayWvDmSgxQAAAABJRU5ErkJggg==",
   },
   {
     title: "Cypher Queenz",
@@ -199,6 +208,8 @@ Successfully created an engaging platform that promotes CypherQueenz, making it 
     infoUrl: "",
     liveUrl: "https://www.cypherqueenz.com",
     repoUrl: "https://github.com/seancswanson/cypherqueenz-www",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nAFEALv/ACiHsv8rZZD/Jmqn/zak6v8APX6v/yYLDv8nAAD/a97a/wCtenf/RSsU/ygCAP+L4tD/AP/Fef/b1Zv/xdzH/9L///+3xiep/jt0wQAAAABJRU5ErkJggg==",
   },
   {
     title: "Chairman of the Board",
@@ -238,6 +249,8 @@ Delivered an entertaining web game that offers a humorous take on the corporate 
     liveUrl: "https://seancswanson.github.io/chairman-of-the-board/",
     infoUrl: "",
     repoUrl: "https://github.com/seancswanson/chairman-of-the-board",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP0lEQVR4nDXDsQkAQQgEQBNbMDAQg+tLBBEbNbqi9uDhB4aYGZn5FRFQROBXVaCZwb0Xu4vuBqkqzjkwM7g7HslJI1kajBiNAAAAAElFTkSuQmCC",
   },
   {
     title: "OP-T3",
@@ -286,6 +299,8 @@ Successfully built a space for "JoJo's Bizarre Adventure" fans to rank and discu
     liveUrl: "https://op-t3.vercel.app/",
     infoUrl: "",
     repoUrl: "https://github.com/seancswanson/op-t3",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nAFEALv/ADI0Sv8wM0P/KzVB/5GRj/8AMTVB/2ZYSf+hmYb/l5F//wBoa3L/7tnC///23P8GBgj/AMm9sP/HwLr/eHd2/xcZHP+ouCWJKgU75wAAAABJRU5ErkJggg==",
   },
   {
     title: "DreamBox Learning Insights Dashboard - Growth Report",
@@ -326,6 +341,8 @@ Delivered a feature that facilitates effective growth reporting, enhancing the a
     liveUrl: "",
     infoUrl: "",
     repoUrl: "",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAATElEQVR4nGPglNT6z8Cp8l/HPvQ/n5zRfwYGDqX/y88f/X/g////7OJa/xkYOJX/X/l96//6+w/AKhk4JHX/m9qF/rdwDPrPJq79HwDqox6MzK5JzgAAAABJRU5ErkJggg==",
   },
   {
     title: "DreamBox Learning Insights Dashboard - Educator Usage Report",
@@ -366,6 +383,8 @@ Successfully created a feature that enhances the user experience by providing de
     liveUrl: "",
     infoUrl: "",
     repoUrl: "",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nAFEALv/AAkZKv8ADCX/LD9V/w4eMv8AAAgh/6fPxv/A////BhUp/wAFEyn/1Pvc/7Pj4/8EEyn/ACMvQ/86Q1n/Q0tc/x0qP//2ux9zQ6KrHAAAAABJRU5ErkJggg==",
   },
   {
     title: "DreamBox Learning Insights Dashboard - Predictive Insights Report",
@@ -406,6 +425,8 @@ Successfully launched the Predictive Insights feature, receiving positive feedba
     liveUrl: "",
     infoUrl: "",
     repoUrl: "",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nAFEALv/AAkZKv8ACST/LD9V/w4eMv8AAAQg/6fPxv++////BRUp/wAIFiz/1v7d/7Xl5f8GFir/ACk2Sf8+SF//R1Bh/yU0R//5lx/MVOKctgAAAABJRU5ErkJggg==",
   },
   {
     title: "Internal ChatGPT Support App",
@@ -452,6 +473,8 @@ The project was well-received, showcasing its potential to enhance operational e
     liveUrl: "",
     infoUrl: "#",
     repoUrl: "",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAASUlEQVR4nGO4fPnS/9+/vv1/9+7d/3Pnzv1nMPYI+y/tm/BfTIjvv7yC4n8GZjWL/wxSBv+FBHj/Kysr/2cAafnxA6LlxIkT/wFjwyh6Bx7/nQAAAABJRU5ErkJggg==",
   },
   {
     title: "Ed Hardy Interactives",
@@ -491,6 +514,8 @@ Successfully delivered interactive experiences that enhanced the exhibition, pro
     liveUrl: "",
     infoUrl: "https://www.famsf.org/exhibitions/ed-hardy",
     repoUrl: "",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR4nGPoy4s0YGAwZmRoT3JnsJNmMBBh0GZgqAgyYdg4qTjUUqss1vPzsysMN66cS/C3LUmP+vv7JwBhsBJzw3fOYwAAAABJRU5ErkJggg==",
   },
   {
     title: "Traditions of the Ancestors",
@@ -530,6 +555,8 @@ Successfully contributed to a platform that fosters cultural understanding and c
     liveUrl: "https://www.tota.world",
     infoUrl: "",
     repoUrl: "",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP0lEQVR4nAE0AMv/AObu8EJgZgAnLr7MzgBxiYyPoqZ9k5ZAX2MAT2xxg5ibhJmcWHR4AN7n6QAnLgAZH97n6ob4GEjky07UAAAAAElFTkSuQmCC",
   },
   {
     title: "Living Worlds",
@@ -569,6 +596,8 @@ Delivered a well-received app that brings Mark Ferrari's pixel art scenes to lif
     liveUrl: "",
     infoUrl: "https://pixfabrik.com/livingworlds/",
     repoUrl: "",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nAFEALv/AEpHav/18///lZzn/w0SJP8AMjFN/66j3v9qbJf/DRQm/wATGS//MzxZ/0BLY/8XGiz/ABsZNf99h6j/ho2x/w0CHf+tfiE0rEi1EAAAAABJRU5ErkJggg==",
   },
   {
     title: "Andy Warhol Interactive",
@@ -609,6 +638,8 @@ Successfully delivered an interactive experience that enriched the exhibition, p
     infoUrl:
       "https://museum.stanford.edu/exhibitions/contact-warhol-photography-without-end",
     repoUrl: "",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAO0lEQVR4nGPQUJGICfMO8XVUkRVmkJfkLi9O/f/vx/LWRgZxfgZBTobFC2duXDwbxOFjYVCQ5NNUlgAAgRANu4SDUmkAAAAASUVORK5CYII=",
   },
   {
     title: "Knoll Interactive Archive",
@@ -640,7 +671,8 @@ The platform offers users an interactive way to explore the history of Knoll, in
 
 Successfully contributed to an interactive archive that allows users to explore Knoll's history in an engaging and informative way.
 
-`, type: "Web App",
+`,
+    type: "Web App",
     slug: "knoll-interactive-archive",
     featured: false,
     tech: ["Web", "Pixi.js", "Hammer.js", "JavaScript"],
@@ -648,8 +680,9 @@ Successfully contributed to an interactive archive that allows users to explore 
     infoUrl: "",
     liveUrl: "https://www.knoll.com/the-archive/",
     repoUrl: "",
+    blurDataBase64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAP0lEQVR4nAE0AMv/AJ+fn6Wjo5SUlMLCwgDFxMQxLCs5ODerq6wAqqqpGRYVNzMyiIiIAPv8/NfX19HQzry6ubJPG9U94sIrAAAAAElFTkSuQmCC",
   },
-
 ];
 
 export default data;
