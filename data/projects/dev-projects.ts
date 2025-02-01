@@ -132,7 +132,7 @@ Successfully built a modern tribute to Katsushika Hokusai, providing art enthusi
     description: `
 ## Project Overview
 
-Developed a website for Naka Studio, an upscale beauty studio in Seattle, WA.
+The clean, nature-inspired aesthetic reflects their boutique status while streamlining the booking experience for their clientele.
 
 ## Purpose
 
@@ -146,7 +146,7 @@ To create a visually appealing and informative online presence for Naka Studio, 
 
 ## User Experience
 
-The website provides a responsive design, detailed service information, and personalized content about the founder, Alisha Nakamura.
+The website provides a responsive design, detailed service information, and personalized content about the founder.
 
 ## Development Insights
 
