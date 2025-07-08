@@ -53,7 +53,7 @@ export const Hero = () => {
               based in Seattle, WA. 
             </p>
             <p className="mb-8 text-gray-900 md:mb-4">
-I'm passionate about stories: telling them, discovering them, and helping others share theirs through code, design, and digital experiences. Whether I'm building interactive web applications, crafting user journeys, or collaborating across teams, I approach every project as an opportunity to connect people through meaningful narratives.
+I&apos;m passionate about stories: telling them, discovering them, and helping others share theirs through code, design, and digital experiences. Whether I&apos;m building interactive web applications, crafting user journeys, or collaborating across teams, I approach every project as an opportunity to connect people through meaningful narratives.
             </p>
             <p className="relative mb-8 text-gray-900 md:mb-4">
               Currently, I&apos;m the{" "}
