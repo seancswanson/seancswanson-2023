@@ -53,18 +53,14 @@ export const Hero = () => {
               based in Seattle, WA. 
             </p>
             <p className="mb-8 text-gray-900 md:mb-4">
-            Passionate about every aspect of software development, from ideation to execution 
-            and project management to DevOps, I tackle challenges throughout the development 
-            life cycle with a well-rounded and empathetic perspective.
+I'm passionate about stories: telling them, discovering them, and helping others share theirs through code, design, and digital experiences. Whether I'm building interactive web applications, crafting user journeys, or collaborating across teams, I approach every project as an opportunity to connect people through meaningful narratives.
             </p>
             <p className="relative mb-8 text-gray-900 md:mb-4">
               Currently, I&apos;m the{" "}
               <HighlightedText key={3} rotation={rotations[3]}>
                 Website/Digital Marketing Manager
               </HighlightedText>
-              at <span className="whitespace-nowrap">Discovery Education</span>,
-              where I enhance brand visibility, boost customer engagement, and ensure efficient, 
-              compliant web solutions through modern web development and project management.
+              at <span className="whitespace-nowrap">Discovery Education</span>, where I lead cross-functional projects related to our marketing websites. From ideation to execution, project management to DevOps, I tackle challenges throughout the development life cycle with a well-rounded and empathetic perspective.
             </p>
           </div>
         </div>
