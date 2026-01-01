@@ -28,10 +28,12 @@ const MerryXmasHmb = () => {
           </button>
           {isOpen && (
             <div className="mt-6">
-              <p className="text-3xl">Your gift comes in 2 parts: </p>
-              <ol>
+              <p className="text-3xl">
+                Your gift comes in <em>at least</em> 2 parts:{" "}
+              </p>
+              <ol className="text-2xl">
                 <li>
-                  1. something that will be delivered in a couple weeks... &
+                  1. something that will be delivered in a couple weeks... 👀 &
                 </li>
                 <li>
                   2. 6 months membership to{" "}
@@ -41,7 +43,7 @@ const MerryXmasHmb = () => {
                   >
                     Garrity Tools&apos; Tool-of-the-Month Club
                   </a>
-                  !
+                  !!!
                 </li>
               </ol>
             </div>
